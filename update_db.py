@@ -25,6 +25,10 @@ NARCOTICS_LOCALISATION_URL = "https://github.com/SerbiaStrong-220/space-station-
 GASES_URL = "https://github.com/SerbiaStrong-220/space-station-14/raw/master/Resources/Prototypes/Reagents/gases.yml"
 GASES_LOCALISATION_URL = "https://github.com/SerbiaStrong-220/space-station-14/raw/master/Resources/Locale/ru-RU/reagents/meta/gases.ftl"
 
+# биология
+BIOLOGY_URL = "https://github.com/SerbiaStrong-220/space-station-14/raw/master/Resources/Prototypes/Reagents/biological.yml"
+BIOLOGY_LOCALISATION_URL = "https://github.com/SerbiaStrong-220/space-station-14/raw/master/Resources/Locale/ru-RU/reagents/meta/biological.ftl"
+
 # все съедобное и питьевое
 FOOD_URL = "https://github.com/SerbiaStrong-220/space-station-14/raw/dev/Resources/Prototypes/Reagents/Consumable/Food/food.yml"
 DRINKS_URL = "https://github.com/SerbiaStrong-220/space-station-14/raw/master/Resources/Prototypes/Reagents/Consumable/Drink/drinks.yml"
@@ -32,7 +36,8 @@ DRINKS_LOCALISATION_URL = "https://github.com/SerbiaStrong-220/space-station-14/
 FOOD_LOCALISATION_URL = "https://github.com/SerbiaStrong-220/space-station-14/raw/master/Resources/Locale/ru-RU/reagents/meta/consumable/food/ingredients.ftl"
 
 localisation_list = [MEDICINE_LOCALISATION_URL, ELEMENTS_LOCALISATION_URL, TOXINS_LOCALISATION_URL,
-                     GASES_LOCALISATION_URL, DRINKS_LOCALISATION_URL, FOOD_LOCALISATION_URL, NARCOTICS_LOCALISATION_URL]
+                     GASES_LOCALISATION_URL, DRINKS_LOCALISATION_URL, FOOD_LOCALISATION_URL,
+                     BIOLOGY_LOCALISATION_URL, NARCOTICS_LOCALISATION_URL]
 
 
 class Reagent:
@@ -64,13 +69,18 @@ class Reagent:
 
 
 def load_localisation():
-    data = {"elements": {}, "reagents": {}, "gases": {}, "food": {}, "drinks": {}, "total": {}}
+    # TODO: почистить
+    data = {"elements": {}, "reagents": {}, "toxins": {}, "gases": {}, "food": {}, "drinks": {}, "biology": {},
+            "total": {}}
     elements = yaml.load(requests.get(ELEMENTS_URL).content.decode("utf-8"), Loader=yaml.SafeLoader)
     for element in elements:
         data["elements"][element["id"]] = {"name": element["name"], "desc": element["desc"]}
     reagents = yaml.load(requests.get(REAGENTS_URL).content.decode("utf-8"), Loader=yaml.SafeLoader)
     for reagent in reagents:
         data["reagents"][reagent["id"]] = {"name": reagent["name"], "desc": reagent["desc"]}
+    toxins = yaml.load(requests.get(TOXINS_URL).content.decode("utf-8"), Loader=yaml.SafeLoader)
+    for toxin in toxins:
+        data["toxins"][toxin["id"]] = {"name": toxin["name"], "desc": toxin["desc"]}
     gases = yaml.load(requests.get(GASES_URL).content.decode("utf-8"), Loader=yaml.SafeLoader)
     for gase in gases:
         data["gases"][gase["id"]] = {"name": gase["name"], "desc": gase["desc"]}
@@ -80,6 +90,9 @@ def load_localisation():
     drinks = yaml.load(requests.get(DRINKS_URL).content.decode("utf-8"), Loader=yaml.SafeLoader)
     for drink in drinks:
         data["drinks"][drink["id"]] = {"name": drink["name"], "desc": drink["desc"]}
+    biology = yaml.load(requests.get(BIOLOGY_URL).content.decode("utf-8"), Loader=yaml.SafeLoader)
+    for item in biology:
+        data["biology"][item["id"]] = {"name": item["name"], "desc": item["desc"]}
 
     for url in localisation_list:
         content = requests.get(url).content.decode("utf-8")
@@ -99,12 +112,16 @@ def localise(key: str) -> str:
             return data["total"].get(data["elements"][key]["name"])
         elif key in data["reagents"]:
             return data["total"].get(data["reagents"][key]["name"])
+        elif key in data["toxins"]:
+            return data["total"].get(data["toxins"][key]["name"])
         elif key in data["gases"]:
             return data["total"].get(data["gases"][key]["name"])
         elif key in data["food"]:
             return data["total"].get(data["food"][key]["name"])
         elif key in data["drinks"]:
             return data["total"].get(data["drinks"][key]["name"])
+        elif key in data["biology"]:
+            return data["total"].get(data["biology"][key]["name"])
         elif key in data["total"]:
             return data["total"][key]
         else:
