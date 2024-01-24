@@ -90,10 +90,10 @@ if option_react:
 
 
 	comps = {}
-	# Распределяем (пока не учитывает части и глубину)
+	# Распределяем (пока не учитывает большую глубину)
 	for i in db[option_react]:
 		if i[0] == False:
-			comps[i[1]] = part
+			comps[i[1]] = part * i[2]
 		elif i[0] == True:
 			# Перебираем составные
 			for el in db[i[1]]:
@@ -101,9 +101,9 @@ if option_react:
 					print("############")
 					print(part)
 					print(parted[i[1]])
-					comps[el[1]] = parted[i[1]]
+					comps[el[1]] = parted[i[1]] * i[2]
 				else:
-					comps[el[1]] += parted[i[1]]
+					comps[el[1]] += parted[i[1]] * i[2]
 
 	# Выводим результат
 	for i in comps:
