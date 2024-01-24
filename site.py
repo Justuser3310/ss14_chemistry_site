@@ -47,8 +47,8 @@ with star:
 with amount:
 	option_amount = st.selectbox(
 		label = '0',
-		options = [100],
-		index = 0,
+		options = [30, 50, 100, 300, 1000],
+		index = 2,
 		placeholder = 'Объём',
 		label_visibility = 'collapsed'
 	)
@@ -101,4 +101,4 @@ if option_react:
 				else:
 					comps[el[1]] += parted[i[1]]
 
-comps
+	comps
