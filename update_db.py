@@ -51,14 +51,20 @@ class Reagent:
 
     @property
     def recipe(self):
-        result = [self.heat]
+        #result = [self.heat]
+        result = []
         for item in self.__recipe:
-            result.append([item, self.__recipe[item]["amount"], self.__recipe[item]["reagent"]])
+            # Приводим к НОРМАЛЬНОМУ виду
+            # "Бикаридин": [ [0, "Углерод", 1], [1, "Инапровалин"] ]
+
+            #result.append([item, self.__recipe[item]["amount"], self.__recipe[item]["reagent"]])
+            result.append([ self.__recipe[item]["reagent"], item, self.__recipe[item]["amount"] ])
         return result
 
     def dict(self):
-        return {"name": self.name, "desc": self.description, "recipe": self.recipe}
-
+        # Нам нужен только рецепт
+#        return {"name": self.name, "desc": self.description, "recipe": self.recipe}
+        return self.recipe
 
 def load_localisation():
     data = {}
