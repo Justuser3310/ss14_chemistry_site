@@ -96,4 +96,6 @@ for item in yaml.load(requests.get(RECIPES_URL).content.decode("utf-8"), Loader=
 
 reagents = [Reagent(init_data=content[item]) for item in content if "reactants" in content[item]]
 
-write_db({x.name: x.dict() for x in reagents})
+db = {x.name: x.dict() for x in reagents}
+with open("db.json", mode="w", encoding="utf-8") as db_file:
+        json.dump(db, db_file, ensure_ascii=False, indent=2)
