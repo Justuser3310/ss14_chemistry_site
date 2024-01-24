@@ -1,10 +1,5 @@
 import streamlit as st
 
-df = {
-	'first column': [1, 2, 3, 4],
-	'second column': [10, 20, 30, 40]
-}
-
 ## LOAD DB ##
 
 #{
@@ -24,29 +19,86 @@ df = {
 #
 # Список составных: ["Кислород", "Сахар", "Углерод"]
 
+from db import *
+
+db = read_db()
+els = list(db.keys())
+
 #############
 
+
+#### UI ####
 
 # Set columns
 react, star, amount = st.columns([73, 7, 20])
 
 with react:
-	option = st.selectbox(
+	option_react = st.selectbox(
 		label = '0',
-		options = df['first column'],
+		options = els,
 		index = None,
 		placeholder = 'Реакция',
-		label_visibility = 'collapsed'
+		label_visibility = 'collapsed',
 	)
 
 with star:
 	st.button(':orange[:star:]')
 
 with amount:
-	option = st.selectbox(
+	option_amount = st.selectbox(
 		label = '0',
 		options = [100],
 		index = 0,
 		placeholder = 'Объём',
 		label_visibility = 'collapsed'
 	)
+
+
+#### CALCULATE RECIPE ####
+
+if option_react:
+	parts = 0
+	part = 0
+	vol = option_amount
+
+	# Определяем 1 часть
+	for i in db[option_react]:
+		parts += i[2]
+	part = vol // parts
+
+	# Название: количество (локальные части)
+	parted = {}
+	# Проверяем конфликты с сложными частями: 48 != 50
+	lparts = 0 ; lpart = 0
+	for i in db[option_react]:
+		if i[0] == 1:
+			# Перебираем составные
+			for el in db[i[1]]:
+				lparts += el[2]
+			# 50//3 ~ 16    16 * 3 = 48
+			lpart = (part//lparts) * lparts
+			if lpart < part:
+				part = lpart
+
+			parted[i[1]] = part//lparts
+	# part = 48
+	# parted["Инапровалин"] = 16
+
+
+	comps = {}
+	# Распределяем (пока не учитывает части и глубину)
+	for i in db[option_react]:
+		if i[0] == 0:
+			comps[i[1]] = part
+		elif i[0] == 1:
+			# Перебираем составные
+			for el in db[i[1]]:
+				if el[1] not in comps:
+					print("############")
+					print(part)
+					print(parted[i[1]])
+					comps[el[1]] = parted[i[1]]
+				else:
+					comps[el[1]] += parted[i[1]]
+
+comps
