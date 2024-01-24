@@ -31,12 +31,14 @@ BIOLOGY_LOCALISATION_URL = "https://github.com/SerbiaStrong-220/space-station-14
 
 # все съедобное и питьевое
 FOOD_URL = "https://github.com/SerbiaStrong-220/space-station-14/raw/dev/Resources/Prototypes/Reagents/Consumable/Food/food.yml"
+CONDIMENTS_URL = "https://github.com/SerbiaStrong-220/space-station-14/raw/master/Resources/Prototypes/Reagents/Consumable/Food/condiments.yml"
 DRINKS_URL = "https://github.com/SerbiaStrong-220/space-station-14/raw/master/Resources/Prototypes/Reagents/Consumable/Drink/drinks.yml"
+CONDIMENTS_LOCALISATION_URL = "https://github.com/SerbiaStrong-220/space-station-14/raw/master/Resources/Locale/ru-RU/reagents/meta/consumable/food/condiments.ftl"
 DRINKS_LOCALISATION_URL = "https://github.com/SerbiaStrong-220/space-station-14/raw/master/Resources/Locale/ru-RU/reagents/meta/consumable/drink/drinks.ftl"
 FOOD_LOCALISATION_URL = "https://github.com/SerbiaStrong-220/space-station-14/raw/master/Resources/Locale/ru-RU/reagents/meta/consumable/food/ingredients.ftl"
 
 localisation_list = [MEDICINE_LOCALISATION_URL, ELEMENTS_LOCALISATION_URL, TOXINS_LOCALISATION_URL,
-                     GASES_LOCALISATION_URL, DRINKS_LOCALISATION_URL, FOOD_LOCALISATION_URL,
+                     GASES_LOCALISATION_URL, DRINKS_LOCALISATION_URL, FOOD_LOCALISATION_URL, CONDIMENTS_LOCALISATION_URL,
                      BIOLOGY_LOCALISATION_URL, NARCOTICS_LOCALISATION_URL]
 
 
@@ -70,7 +72,7 @@ class Reagent:
 
 def load_localisation():
     # TODO: почистить
-    data = {"elements": {}, "reagents": {}, "toxins": {}, "gases": {}, "food": {}, "drinks": {}, "biology": {},
+    data = {"elements": {}, "reagents": {}, "toxins": {}, "gases": {}, "food": {}, "drinks": {}, "condiments": {}, "biology": {},
             "total": {}}
     elements = yaml.load(requests.get(ELEMENTS_URL).content.decode("utf-8"), Loader=yaml.SafeLoader)
     for element in elements:
@@ -93,6 +95,9 @@ def load_localisation():
     biology = yaml.load(requests.get(BIOLOGY_URL).content.decode("utf-8"), Loader=yaml.SafeLoader)
     for item in biology:
         data["biology"][item["id"]] = {"name": item["name"], "desc": item["desc"]}
+    condiments = yaml.load(requests.get(CONDIMENTS_URL).content.decode("utf-8"), Loader=yaml.SafeLoader)
+    for item in condiments:
+        data["condiments"][item["id"]] = {"name": item["name"], "desc": item["desc"]}
 
     for url in localisation_list:
         content = requests.get(url).content.decode("utf-8")
