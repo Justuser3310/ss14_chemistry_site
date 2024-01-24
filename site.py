@@ -71,7 +71,7 @@ if option_react:
 	# Проверяем конфликты с сложными частями: 48 != 50
 	lparts = 0 ; lpart = 0
 	for i in db[option_react]:
-		if i[0] == 1:
+		if i[0] == True:
 			# Перебираем составные
 			for el in db[i[1]]:
 				lparts += el[2]
@@ -88,9 +88,9 @@ if option_react:
 	comps = {}
 	# Распределяем (пока не учитывает части и глубину)
 	for i in db[option_react]:
-		if i[0] == 0:
+		if i[0] == False:
 			comps[i[1]] = part
-		elif i[0] == 1:
+		elif i[0] == True:
 			# Перебираем составные
 			for el in db[i[1]]:
 				if el[1] not in comps:
