@@ -98,9 +98,6 @@ if option_react:
 			# Перебираем составные
 			for el in db[i[1]]:
 				if el[1] not in comps:
-					print("############")
-					print(part)
-					print(parted[i[1]])
 					comps[el[1]] = parted[i[1]] * i[2]
 				else:
 					comps[el[1]] += parted[i[1]] * i[2]
