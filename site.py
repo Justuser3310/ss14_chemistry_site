@@ -69,7 +69,8 @@ if option_react:
 	# Делаем около-кратным 10 и 15
 	# !!ЭКСПЕРЕМЕНТАЛЬНОЕ!!
 	part = round(part/10)*10
-	part = round(part/15)*15
+	if part%10 != 0:
+		part = round(part/15)*15
 
 	# Название: количество (локальные части)
 	parted = {}
