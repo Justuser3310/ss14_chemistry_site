@@ -69,6 +69,8 @@ class Reagent:
     @property
     def recipe(self):
         result = []
+        if not self.__recipe:
+            return result
         for item in self.__recipe:
             # Приводим к НОРМАЛЬНОМУ виду
             # "Бикаридин": [ [0, "Углерод", 1], [1, "Инапровалин"] ]
@@ -129,7 +131,7 @@ for item in yaml.load(requests.get(RECIPES_URL).content.decode("utf-8"), Loader=
         item["reactants"]}
     content[item["id"]]["products"] = item["products"]
 
-reagents = [Reagent(init_data=content[item]) for item in content if "reactants" in content[item]]
+reagents = [Reagent(init_data=content[item]) for item in content]  # if "reactants" in content[item]]
 
 db = {x.name: x.recipe for x in reagents}
 with open("db.json", mode="w", encoding="utf-8") as db_file:
