@@ -9,6 +9,8 @@ yaml.SafeLoader.add_multi_constructor("", lambda loader, tag_suffix, node: None)
 REAGENTS_URL = "https://github.com/SerbiaStrong-220/space-station-14/raw/master/Resources/Prototypes/Reagents/medicine.yml"
 MEDICINE_LOCALISATION_URL = "https://github.com/SerbiaStrong-220/space-station-14/raw/master/Resources/Locale/ru-RU/reagents/meta/medicine.ftl"
 RECIPES_URL = "https://github.com/SerbiaStrong-220/space-station-14/raw/master/Resources/Prototypes/Recipes/Reactions/medicine.yml"
+CHEMICALS_URL = "https://github.com/SerbiaStrong-220/space-station-14/raw/master/Resources/Prototypes/Reagents/chemicals.yml"
+CHEMICALS_LOCALISATION_URL = "https://github.com/SerbiaStrong-220/space-station-14/raw/master/Resources/Locale/ru-RU/reagents/meta/chemicals.ftl"
 
 # элементы раздатчика химикатов
 ELEMENTS_URL = "https://github.com/SerbiaStrong-220/space-station-14/raw/master/Resources/Prototypes/Reagents/elements.yml"
@@ -29,17 +31,21 @@ GASES_LOCALISATION_URL = "https://github.com/SerbiaStrong-220/space-station-14/r
 BIOLOGY_URL = "https://github.com/SerbiaStrong-220/space-station-14/raw/master/Resources/Prototypes/Reagents/biological.yml"
 BIOLOGY_LOCALISATION_URL = "https://github.com/SerbiaStrong-220/space-station-14/raw/master/Resources/Locale/ru-RU/reagents/meta/biological.ftl"
 
+# ботаника
+BOTANY_URL = "https://github.com/SerbiaStrong-220/space-station-14/raw/master/Resources/Prototypes/Reagents/botany.yml"
+BOTANY_LOCALISATION_URL = "https://github.com/SerbiaStrong-220/space-station-14/raw/master/Resources/Locale/ru-RU/reagents/meta/botany.ftl"
+
 # все съедобное и питьевое
 FOOD_URL = "https://github.com/SerbiaStrong-220/space-station-14/raw/dev/Resources/Prototypes/Reagents/Consumable/Food/food.yml"
 CONDIMENTS_URL = "https://github.com/SerbiaStrong-220/space-station-14/raw/master/Resources/Prototypes/Reagents/Consumable/Food/condiments.yml"
+INGREDIENTS_URL = "https://github.com/SerbiaStrong-220/space-station-14/raw/master/Resources/Prototypes/Reagents/Consumable/Food/ingredients.yml"
 DRINKS_URL = "https://github.com/SerbiaStrong-220/space-station-14/raw/master/Resources/Prototypes/Reagents/Consumable/Drink/drinks.yml"
+ALCOHOL_URL = "https://github.com/SerbiaStrong-220/space-station-14/raw/master/Resources/Prototypes/Reagents/Consumable/Drink/alcohol.yml"
+INGREDIENTS_LOCALISATION_URL = "https://github.com/SerbiaStrong-220/space-station-14/raw/master/Resources/Locale/ru-RU/reagents/meta/consumable/food/ingredients.ftl"
+ALCOHOL_LOCALISATION_URL = "https://github.com/SerbiaStrong-220/space-station-14/raw/master/Resources/Locale/ru-RU/reagents/meta/consumable/drink/alcohol.ftl"
 CONDIMENTS_LOCALISATION_URL = "https://github.com/SerbiaStrong-220/space-station-14/raw/master/Resources/Locale/ru-RU/reagents/meta/consumable/food/condiments.ftl"
 DRINKS_LOCALISATION_URL = "https://github.com/SerbiaStrong-220/space-station-14/raw/master/Resources/Locale/ru-RU/reagents/meta/consumable/drink/drinks.ftl"
 FOOD_LOCALISATION_URL = "https://github.com/SerbiaStrong-220/space-station-14/raw/master/Resources/Locale/ru-RU/reagents/meta/consumable/food/ingredients.ftl"
-
-localisation_list = [MEDICINE_LOCALISATION_URL, ELEMENTS_LOCALISATION_URL, TOXINS_LOCALISATION_URL,
-                     GASES_LOCALISATION_URL, DRINKS_LOCALISATION_URL, FOOD_LOCALISATION_URL, CONDIMENTS_LOCALISATION_URL,
-                     BIOLOGY_LOCALISATION_URL, NARCOTICS_LOCALISATION_URL]
 
 
 class Reagent:
@@ -71,64 +77,37 @@ class Reagent:
 
 
 def load_localisation():
-    # TODO: почистить
-    data = {"elements": {}, "reagents": {}, "toxins": {}, "gases": {}, "food": {}, "drinks": {}, "condiments": {}, "biology": {},
-            "total": {}}
-    elements = yaml.load(requests.get(ELEMENTS_URL).content.decode("utf-8"), Loader=yaml.SafeLoader)
-    for element in elements:
-        data["elements"][element["id"]] = {"name": element["name"], "desc": element["desc"]}
-    reagents = yaml.load(requests.get(REAGENTS_URL).content.decode("utf-8"), Loader=yaml.SafeLoader)
-    for reagent in reagents:
-        data["reagents"][reagent["id"]] = {"name": reagent["name"], "desc": reagent["desc"]}
-    toxins = yaml.load(requests.get(TOXINS_URL).content.decode("utf-8"), Loader=yaml.SafeLoader)
-    for toxin in toxins:
-        data["toxins"][toxin["id"]] = {"name": toxin["name"], "desc": toxin["desc"]}
-    gases = yaml.load(requests.get(GASES_URL).content.decode("utf-8"), Loader=yaml.SafeLoader)
-    for gase in gases:
-        data["gases"][gase["id"]] = {"name": gase["name"], "desc": gase["desc"]}
-    food = yaml.load(requests.get(FOOD_URL).content.decode("utf-8"), Loader=yaml.SafeLoader)
-    for item in food:
-        data["food"][item["id"]] = {"name": item["name"], "desc": item["desc"]}
-    drinks = yaml.load(requests.get(DRINKS_URL).content.decode("utf-8"), Loader=yaml.SafeLoader)
-    for drink in drinks:
-        data["drinks"][drink["id"]] = {"name": drink["name"], "desc": drink["desc"]}
-    biology = yaml.load(requests.get(BIOLOGY_URL).content.decode("utf-8"), Loader=yaml.SafeLoader)
-    for item in biology:
-        data["biology"][item["id"]] = {"name": item["name"], "desc": item["desc"]}
-    condiments = yaml.load(requests.get(CONDIMENTS_URL).content.decode("utf-8"), Loader=yaml.SafeLoader)
-    for item in condiments:
-        data["condiments"][item["id"]] = {"name": item["name"], "desc": item["desc"]}
+    data = {"elements": {}, "placeholders": {}}
+    elements_urls = [ELEMENTS_URL, REAGENTS_URL, TOXINS_URL, GASES_URL, FOOD_URL, DRINKS_URL, BIOLOGY_URL,
+                     CONDIMENTS_URL, BOTANY_URL, ALCOHOL_URL, CHEMICALS_URL, INGREDIENTS_URL]
+    for url in elements_urls:
+        response = yaml.load(requests.get(url).content.decode("utf-8"), Loader=yaml.SafeLoader)
+        for i in response:
+            data["elements"][i["id"]] = {"name": i["name"], "desc": i["desc"]}
 
-    for url in localisation_list:
-        content = requests.get(url).content.decode("utf-8")
-        for entry in parse(content).body:
+    localisation_urls = [MEDICINE_LOCALISATION_URL, ELEMENTS_LOCALISATION_URL, TOXINS_LOCALISATION_URL,
+                         GASES_LOCALISATION_URL, DRINKS_LOCALISATION_URL, FOOD_LOCALISATION_URL,
+                         CONDIMENTS_LOCALISATION_URL, BIOLOGY_LOCALISATION_URL, NARCOTICS_LOCALISATION_URL,
+                         BOTANY_LOCALISATION_URL, ALCOHOL_LOCALISATION_URL, CHEMICALS_LOCALISATION_URL,
+                         INGREDIENTS_LOCALISATION_URL]
+
+    for url in localisation_urls:
+        response = requests.get(url).content.decode("utf-8")
+        for entry in parse(response).body:
             if isinstance(entry, ast.Message):
-                data["total"][entry.id.name] = entry.value.elements[0].value
+                data["placeholders"][entry.id.name] = entry.value.elements[0].value
 
     with open("locale.json", mode="w", encoding="utf-8") as localisation_file:
         json.dump(data, localisation_file, ensure_ascii=False, indent=2)
 
 
 def localise(key: str) -> str:
-    # TODO: почистить это говно
     with open("locale.json", mode="r", encoding="utf-8") as file:
         data = json.load(file)
-        if key in data["elements"]:
-            return data["total"].get(data["elements"][key]["name"])
-        elif key in data["reagents"]:
-            return data["total"].get(data["reagents"][key]["name"])
-        elif key in data["toxins"]:
-            return data["total"].get(data["toxins"][key]["name"])
-        elif key in data["gases"]:
-            return data["total"].get(data["gases"][key]["name"])
-        elif key in data["food"]:
-            return data["total"].get(data["food"][key]["name"])
-        elif key in data["drinks"]:
-            return data["total"].get(data["drinks"][key]["name"])
-        elif key in data["biology"]:
-            return data["total"].get(data["biology"][key]["name"])
-        elif key in data["total"]:
-            return data["total"][key]
+        if "-" in key:  # если это placeholder
+            return data["placeholders"].get(key, f"[p] {key}")
+        elif key in data["elements"]:
+            return localise(data["elements"][key]["name"])
         else:
             return f"[!] {key}"
 
@@ -151,8 +130,6 @@ for item in yaml.load(requests.get(RECIPES_URL).content.decode("utf-8"), Loader=
     content[item["id"]]["products"] = item["products"]
 
 reagents = [Reagent(init_data=content[item]) for item in content if "reactants" in content[item]]
-print(reagents[0].name)
-print(reagents[0].recipe)
 
 db = {x.name: x.recipe for x in reagents}
 with open("db.json", mode="w", encoding="utf-8") as db_file:
