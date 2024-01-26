@@ -62,18 +62,19 @@ class Reagent:
     def name(self):
         return localise(self.__name).capitalize()
 
-    @property
-    def description(self):
-        return localise(self.__desc)
+#    @property
+#    def description(self):
+#        return localise(self.__desc)
 
     @property
     def recipe(self):
         result = []
         if not self.__recipe:
-            return result
+            return None #return result #[False, "", 0]
         for item in self.__recipe:
             # Приводим к НОРМАЛЬНОМУ виду
             # "Бикаридин": [ [0, "Углерод", 1], [1, "Инапровалин"] ]
+            print(self.__recipe)
             result.append([self.__recipe[item]["reagent"], localise(item).capitalize(), self.__recipe[item]["amount"]])
         return result
 
@@ -113,16 +114,19 @@ def localise(key: str) -> str:
         else:
             return f"[!] {key}"
 
-
-load_localisation()
+# Показатель прогресса
+from tqdm import tqdm
 
 content = {}
 
-for item in yaml.load(requests.get(REAGENTS_URL).content.decode("utf-8"), Loader=yaml.SafeLoader):
+def yml_load(url):
+	return yaml.load(requests.get(url).content.decode("utf-8"), Loader=yaml.SafeLoader)
+
+for item in tqdm(yml_load(REAGENTS_URL), desc='reagents'):
     content[item["id"]] = {"name": item["name"], "desc": item["desc"]}
-for item in yaml.load(requests.get(TOXINS_URL).content.decode("utf-8"), Loader=yaml.SafeLoader):
+for item in tqdm(yml_load(TOXINS_URL), desc='toxins'):
     content[item["id"]] = {"name": item["name"], "desc": item["desc"]}
-for item in yaml.load(requests.get(RECIPES_URL).content.decode("utf-8"), Loader=yaml.SafeLoader):
+for item in tqdm(yml_load(RECIPES_URL), desc='recipies'):
     if item["id"] not in content:
         continue
     content[item["id"]]["heat"] = "minTemp" in item
@@ -131,8 +135,11 @@ for item in yaml.load(requests.get(RECIPES_URL).content.decode("utf-8"), Loader=
         item["reactants"]}
     content[item["id"]]["products"] = item["products"]
 
-reagents = [Reagent(init_data=content[item]) for item in content]  # if "reactants" in content[item]]
+#                                                                TODO: Включать ли токсины без крафта? (некоторые имеют крафт)
+reagents = [Reagent(init_data=content[item]) for item in content if "reactants" in content[item]]
 
 db = {x.name: x.recipe for x in reagents}
-with open("db.json", mode="w", encoding="utf-8") as db_file:
-    json.dump(db, db_file, ensure_ascii=False, indent=2)
+#with open("db.json", mode="w", encoding="utf-8") as db_file:
+#    json.dump(db, db_file, ensure_ascii=False, indent=2)
+from db import *
+write_db(db)
