@@ -1,4 +1,3 @@
-# TODO: переделать
 import os
 import json
 
@@ -16,6 +15,6 @@ def read_db():
 	return db
 
 def write_db(db):
-	js = json.dumps(db, indent=2)
-	with open("db.json", "w") as outfile:
+	js = json.dumps(db, indent=2, ensure_ascii=False)
+	with open("db.json", "w", encoding="utf-8") as outfile:
 		outfile.write(js)
