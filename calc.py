@@ -12,16 +12,11 @@ def sround(num):
 	num = floor(num)
 
 	# Подмены
-	rep = [[16,15], [33,30]]
+	rep = [[16,15], [33,30], [21,20], [12,10], [8,5]]
 
 	for i in rep:
 		if num == i[0]:
 			num = i[1]
-	# Делаем около-кратным 10 и 15
-#	if abs(num - round(num/10)*10) <= 1:
-#		num = round(num/10)*10
-#	if abs(num - round(num/15)*15) <= 1:
-#		num = round(num/15)*15
 
 	return num
 
@@ -31,11 +26,18 @@ def calc(el, amount, main = False):
 		recipe = {}
 
 	comps = db[el][1:] # Получаем составные
+	out = db[el][0] #Количество на выходе
 
 	# Считаем количество частей
 	parts = 0
 	for i in comps:
 		parts += i[1]
+
+	# Делаем поправку на выход
+	if out < parts:
+		print(el, ': ',out,' < ', parts)
+		parts = out
+
 	# Считаем 1 часть
 	part = sround(amount/parts)
 
@@ -63,15 +65,10 @@ def calc(el, amount, main = False):
 					recipe[i[0]] += part*i[1]
 
 	if main:
+		print('PART: ', part)
 		return [recipe, parts*part]
 	else:
+		print('PART: ', part)
 		return part*parts
 
-#calc("Бикаридин", 100)
-#calc("Эпинефрин", 100)
 #print( calc("Лексорин", 100, True))
-#calc("Амбузол", 100)
-#calc("Амбузол плюс", 100)
-#print( calc("Аммиак", 100, True) )
-
-#print(recipe)
