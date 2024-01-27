@@ -49,34 +49,41 @@ FOOD_LOCALISATION_URL = "https://github.com/SerbiaStrong-220/space-station-14/ra
 
 
 class Reagent:
-    def __init__(self, init_data: dict):
-        self.__name: str = init_data.get("name")
-        self.__desc: str = init_data.get("desc")
-        self.__recipe: dict = init_data.get("reactants")
-        self.__product = init_data.get("products")
-        # raw значения которые обработаны
+	def __init__(self, init_data: dict):
+		self.__name: str = init_data.get("name")
+#		self.__desc: str = init_data.get("desc")
+		self.__recipe: dict = init_data.get("reactants")
+		self.__product = init_data.get("products")
+		# raw значения которые обработаны
 
-        self.heat: bool = init_data.get("heat")
+		self.heat: bool = init_data.get("heat")
 
-    @property
-    def name(self):
-        return localise(self.__name).capitalize()
+	@property
+	def name(self):
+		return localise(self.__name).capitalize()
 
-#    @property
-#    def description(self):
-#        return localise(self.__desc)
+#		@property
+#		def description(self):
+#			return localise(self.__desc)
 
-    @property
-    def recipe(self):
-        result = []
-        if not self.__recipe:
-            return None #return result #[False, "", 0]
-        for item in self.__recipe:
-            # Приводим к НОРМАЛЬНОМУ виду
-            # "Бикаридин": [ [0, "Углерод", 1], [1, "Инапровалин"] ]
-            print(self.__recipe)
-            result.append([self.__recipe[item]["reagent"], localise(item).capitalize(), self.__recipe[item]["amount"]])
-        return result
+	@property
+	def recipe(self):
+		result = []
+
+		# Добавляем количество в итоге
+		react_res = self.__product
+		for i in react_res:
+			result.append(react_res[i])
+
+			if not self.__recipe:
+				return None #return result #[False, "", 0]
+			for item in self.__recipe:
+					# "Бикаридин": [ [0, "Углерод", 1], [1, "Инапровалин", 1] ]
+					#result.append([self.__recipe[item]["reagent"], localise(item).capitalize(), self.__recipe[item]["amount"]])
+					# "Бикаридин": [ 2, ["Углерод", 1], ["Инапровалин", 1] ]
+					result.append([localise(item).capitalize(), self.__recipe[item]['amount']])
+			#print(result)
+			return result
 
 
 def load_localisation():
@@ -117,6 +124,11 @@ def localise(key: str) -> str:
 # Показатель прогресса
 from tqdm import tqdm
 
+# Загрузить локализацию если нету файла
+import os
+if not os.path.exists('locale.json'):
+	load_localisation()
+
 content = {}
 
 def yml_load(url):
@@ -134,12 +146,12 @@ for item in tqdm(yml_load(RECIPES_URL), desc='recipies'):
         element: {"amount": item["reactants"][element]["amount"], "reagent": element in content} for element in
         item["reactants"]}
     content[item["id"]]["products"] = item["products"]
+#    print(item["products"])
 
 #                                                                TODO: Включать ли токсины без крафта? (некоторые имеют крафт)
 reagents = [Reagent(init_data=content[item]) for item in content if "reactants" in content[item]]
 
 db = {x.name: x.recipe for x in reagents}
-#with open("db.json", mode="w", encoding="utf-8") as db_file:
-#    json.dump(db, db_file, ensure_ascii=False, indent=2)
+
 from db import *
 write_db(db)
