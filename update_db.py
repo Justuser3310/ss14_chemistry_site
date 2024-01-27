@@ -75,15 +75,15 @@ class Reagent:
 		for i in react_res:
 			result.append(react_res[i])
 
-			if not self.__recipe:
-				return None #return result #[False, "", 0]
-			for item in self.__recipe:
-					# "Бикаридин": [ [0, "Углерод", 1], [1, "Инапровалин", 1] ]
-					#result.append([self.__recipe[item]["reagent"], localise(item).capitalize(), self.__recipe[item]["amount"]])
-					# "Бикаридин": [ 2, ["Углерод", 1], ["Инапровалин", 1] ]
-					result.append([localise(item).capitalize(), self.__recipe[item]['amount']])
-			#print(result)
-			return result
+		if not self.__recipe:
+			return None #return result #[False, "", 0]
+		for item in self.__recipe:
+				# "Бикаридин": [ [0, "Углерод", 1], [1, "Инапровалин", 1] ]
+#				result.append([self.__recipe[item]["reagent"], localise(item).capitalize(), self.__recipe[item]["amount"]])
+				# "Бикаридин": [ 2, ["Углерод", 1], ["Инапровалин", 1] ]
+				result.append([localise(item).capitalize(), self.__recipe[item]['amount']])
+		#print(result)
+		return result
 
 
 def load_localisation():
