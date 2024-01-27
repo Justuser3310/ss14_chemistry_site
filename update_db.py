@@ -6,18 +6,21 @@ from fluent.syntax import parse, ast
 yaml.SafeLoader.add_multi_constructor("", lambda loader, tag_suffix, node: None)
 
 # медицинские реагентов
-REAGENTS_URL = "https://github.com/SerbiaStrong-220/space-station-14/raw/master/Resources/Prototypes/Reagents/medicine.yml"
-MEDICINE_LOCALISATION_URL = "https://github.com/SerbiaStrong-220/space-station-14/raw/master/Resources/Locale/ru-RU/reagents/meta/medicine.ftl"
-RECIPES_URL = "https://github.com/SerbiaStrong-220/space-station-14/raw/master/Resources/Prototypes/Recipes/Reactions/medicine.yml"
-CHEMICALS_URL = "https://github.com/SerbiaStrong-220/space-station-14/raw/master/Resources/Prototypes/Reagents/chemicals.yml"
-CHEMICALS_LOCALISATION_URL = "https://github.com/SerbiaStrong-220/space-station-14/raw/master/Resources/Locale/ru-RU/reagents/meta/chemicals.ftl"
+MEDICINE_R = "https://github.com/SerbiaStrong-220/space-station-14/raw/master/Resources/Prototypes/Reagents/medicine.yml"
+MEDICINE = "https://github.com/SerbiaStrong-220/space-station-14/raw/master/Resources/Prototypes/Recipes/Reactions/medicine.yml"
+MEDICINE_LOCALISATION = "https://github.com/SerbiaStrong-220/space-station-14/raw/master/Resources/Locale/ru-RU/reagents/meta/medicine.ftl"
+
+
+CHEMICALS_R = "https://github.com/SerbiaStrong-220/space-station-14/raw/master/Resources/Prototypes/Reagents/chemicals.yml"
+CHEMICALS = "https://github.com/SerbiaStrong-220/space-station-14/raw/master/Resources/Prototypes/Recipes/Reactions/chemicals.yml"
+CHEMICALS_LOCALISATION= "https://github.com/SerbiaStrong-220/space-station-14/raw/master/Resources/Locale/ru-RU/reagents/meta/chemicals.ftl"
 
 # элементы раздатчика химикатов
 ELEMENTS_URL = "https://github.com/SerbiaStrong-220/space-station-14/raw/master/Resources/Prototypes/Reagents/elements.yml"
 ELEMENTS_LOCALISATION_URL = "https://github.com/SerbiaStrong-220/space-station-14/raw/master/Resources/Locale/ru-RU/reagents/meta/elements.ftl"
 
 # токсины
-TOXINS_URL = "https://github.com/SerbiaStrong-220/space-station-14/raw/master/Resources/Prototypes/Reagents/toxins.yml"
+TOXINS = "https://github.com/SerbiaStrong-220/space-station-14/raw/master/Resources/Prototypes/Reagents/toxins.yml"
 TOXINS_LOCALISATION_URL = "https://github.com/SerbiaStrong-220/space-station-14/raw/master/Resources/Locale/ru-RU/reagents/meta/toxins.ftl"
 
 # локализация наркотиков/наркотических препаратов
@@ -32,12 +35,13 @@ BIOLOGY_URL = "https://github.com/SerbiaStrong-220/space-station-14/raw/master/R
 BIOLOGY_LOCALISATION_URL = "https://github.com/SerbiaStrong-220/space-station-14/raw/master/Resources/Locale/ru-RU/reagents/meta/biological.ftl"
 
 # ботаника
-BOTANY_URL = "https://github.com/SerbiaStrong-220/space-station-14/raw/master/Resources/Prototypes/Reagents/botany.yml"
+BOTANY = "https://github.com/SerbiaStrong-220/space-station-14/raw/master/Resources/Prototypes/Reagents/botany.yml"
 BOTANY_LOCALISATION_URL = "https://github.com/SerbiaStrong-220/space-station-14/raw/master/Resources/Locale/ru-RU/reagents/meta/botany.ftl"
 
 # все съедобное и питьевое
-FOOD_URL = "https://github.com/SerbiaStrong-220/space-station-14/raw/dev/Resources/Prototypes/Reagents/Consumable/Food/food.yml"
-CONDIMENTS_URL = "https://github.com/SerbiaStrong-220/space-station-14/raw/master/Resources/Prototypes/Reagents/Consumable/Food/condiments.yml"
+FOOD = "https://github.com/SerbiaStrong-220/space-station-14/raw/dev/Resources/Prototypes/Reagents/Consumable/Food/food.yml"
+FOOD_R = "https://github.com/SerbiaStrong-220/space-station-14/raw/master/Resources/Prototypes/Reagents/Consumable/Food/condiments.yml"
+
 INGREDIENTS_URL = "https://github.com/SerbiaStrong-220/space-station-14/raw/master/Resources/Prototypes/Reagents/Consumable/Food/ingredients.yml"
 DRINKS_URL = "https://github.com/SerbiaStrong-220/space-station-14/raw/master/Resources/Prototypes/Reagents/Consumable/Drink/drinks.yml"
 ALCOHOL_URL = "https://github.com/SerbiaStrong-220/space-station-14/raw/master/Resources/Prototypes/Reagents/Consumable/Drink/alcohol.yml"
@@ -73,10 +77,11 @@ class Reagent:
 		# Добавляем количество в итоге
 		react_res = self.__product
 		for i in react_res:
-			result.append(react_res[i])
+			if i.lower() == self.__name.replace('reagent-name-','',1).replace('-','',1):
+				result.append(react_res[i])
 
 		if not self.__recipe:
-			return None #return result #[False, "", 0]
+			return None
 		for item in self.__recipe:
 				# "Бикаридин": [ [0, "Углерод", 1], [1, "Инапровалин", 1] ]
 #				result.append([self.__recipe[item]["reagent"], localise(item).capitalize(), self.__recipe[item]["amount"]])
@@ -95,10 +100,10 @@ def load_localisation():
         for i in response:
             data["elements"][i["id"]] = {"name": i["name"], "desc": i["desc"]}
 
-    localisation_urls = [MEDICINE_LOCALISATION_URL, ELEMENTS_LOCALISATION_URL, TOXINS_LOCALISATION_URL,
+    localisation_urls = [MEDICINE_LOCALISATION, ELEMENTS_LOCALISATION_URL, TOXINS_LOCALISATION_URL,
                          GASES_LOCALISATION_URL, DRINKS_LOCALISATION_URL, FOOD_LOCALISATION_URL,
                          CONDIMENTS_LOCALISATION_URL, BIOLOGY_LOCALISATION_URL, NARCOTICS_LOCALISATION_URL,
-                         BOTANY_LOCALISATION_URL, ALCOHOL_LOCALISATION_URL, CHEMICALS_LOCALISATION_URL,
+                         BOTANY_LOCALISATION_URL, ALCOHOL_LOCALISATION_URL, CHEMICALS_LOCALISATION,
                          INGREDIENTS_LOCALISATION_URL]
 
     for url in localisation_urls:
@@ -112,14 +117,15 @@ def load_localisation():
 
 
 def localise(key: str) -> str:
-    with open("locale.json", mode="r", encoding="utf-8") as file:
-        data = json.load(file)
-        if "-" in key:  # если это placeholder
-            return data["placeholders"].get(key, f"[p] {key}")
-        elif key in data["elements"]:
-            return localise(data["elements"][key]["name"])
-        else:
-            return f"[!] {key}"
+	with open("locale.json", mode="r", encoding="utf-8") as file:
+		data = json.load(file)
+		if "-" in key:  # если это placeholder
+			return data["placeholders"].get(key, f"[p] {key}")
+		elif key in data["elements"]:
+			return localise(data["elements"][key]["name"])
+		else:
+			print('No localisation: ', key)
+			return f"[!] {key}"
 
 # Показатель прогресса
 from tqdm import tqdm
@@ -134,19 +140,35 @@ content = {}
 def yml_load(url):
 	return yaml.load(requests.get(url).content.decode("utf-8"), Loader=yaml.SafeLoader)
 
-for item in tqdm(yml_load(REAGENTS_URL), desc='reagents'):
-    content[item["id"]] = {"name": item["name"], "desc": item["desc"]}
-for item in tqdm(yml_load(TOXINS_URL), desc='toxins'):
-    content[item["id"]] = {"name": item["name"], "desc": item["desc"]}
-for item in tqdm(yml_load(RECIPES_URL), desc='recipies'):
-    if item["id"] not in content:
-        continue
-    content[item["id"]]["heat"] = "minTemp" in item
-    content[item["id"]]["reactants"] = {
-        element: {"amount": item["reactants"][element]["amount"], "reagent": element in content} for element in
-        item["reactants"]}
-    content[item["id"]]["products"] = item["products"]
-#    print(item["products"])
+
+def load_reagents(url,name):
+	for item in tqdm(yml_load(url), desc=name+'_reagents'):
+		content[item["id"]] = {"name": item["name"], "desc": item["desc"]}
+
+def load_recipes(url,name):
+	global content
+	for item in tqdm(yml_load(url), desc=name+'_recipes'):
+#		print(item["id"])
+		if item["id"] not in content:
+			continue
+		content[item["id"]]["heat"] = "minTemp" in item
+		content[item["id"]]["reactants"] = {
+			element: {"amount": item["reactants"][element]["amount"], "reagent": element in content} for element in
+			item["reactants"]}
+		content[item["id"]]["products"] = item["products"]
+
+load_reagents(BOTANY, 'botany')
+load_reagents(TOXINS, 'toxins')
+
+load_reagents(MEDICINE_R, 'medecine')
+load_recipes(MEDICINE, 'medecine')
+
+load_reagents(CHEMICALS_R, 'chemicals')
+load_recipes(CHEMICALS, 'chemicals')
+
+load_reagents(FOOD_R, 'food')
+load_recipes(FOOD, 'food')
+
 
 #                                                                TODO: Включать ли токсины без крафта? (некоторые имеют крафт)
 reagents = [Reagent(init_data=content[item]) for item in content if "reactants" in content[item]]
