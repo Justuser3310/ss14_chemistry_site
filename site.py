@@ -44,6 +44,8 @@ html.Div([
 
 ####### ЛОГИКА ##########
 
+from calc import *
+
 @callback(
 	Output('output', 'children'),
 	Input('reaction', 'value'),
@@ -51,69 +53,8 @@ html.Div([
 )
 def update_output(reaction, amount):
 	if reaction:
-		print(reaction)
-#		return f'You have selected {tt}'
-		parts = 0
-		part = 0
-		vol = amount
+		comps, res = calc(reaction, amount, main = True)
 
-		# Определяем 1 часть
-		for i in db[reaction]:
-			parts += i[2]
-		part = vol // parts
-
-		# Делаем около-кратным 10 и 15
-		# !!ЭКСПЕРЕМЕНТАЛЬНОЕ!!
-		part = round(part/10)*10
-		if part%10 != 0:
-			part = round(part/15)*15
-
-
-		# Название: количество (локальные части)
-		parted = {}
-		# Проверяем конфликты с составными частями: 48 != 50
-		lparts = 0 ; lpart = 0
-		for i in db[reaction]:
-			# TODO: только i[1] in db ?
-			if i[0] == True and i[1] in db:
-				# Перебираем составные
-				for el in db[i[1]]:
-					lparts += el[2]
-				# 50//3 ~ 16    16 * 3 = 48
-				lpart = (part//lparts) * lparts
-				if lpart < part:
-					part = lpart
-
-				parted[i[1]] = [part, lparts]
-		# part = 48
-		# parted["Инапровалин"] = [48, 3]
-		# 48 - 1 часть, 3 - кол. частей
-
-
-		comps = {}
-		# Распределяем (пока не учитывает большую глубину)
-		for i in db[reaction]:
-			if i[0] == False:
-				if i[1] == "Плазма":
-					comps[i[1]] = 1
-				else:
-					comps[i[1]] = part * i[2]
-			elif i[0] == True and i[1] not in db:
-				# Фикс Вестина и т.п. (нету крафта, но отмечено как есть)
-				comps[i[1]] = part * i[2]
-			elif i[0] == True and i[1] in db:
-				# Перебираем составные
-				for el in db[i[1]]:
-					if el[1] == "Плазма":
-						comps[el[1]] = 1
-					else:
-						if el[1] not in comps:
-							comps[el[1]] = int( parted[i[1]][0]/parted[i[1]][1] * el[2] )
-						else:
-							comps[el[1]] += int( parted[i[1]][0]/parted[i[1]][1] * el[2] )
-
-
-		print(comps)
 		# Форматирование для HTML
 		result = []
 		for i in comps:
@@ -121,11 +62,12 @@ def update_output(reaction, amount):
 , style={'background-color': '#3f3b17', 'margin-top': 10, 'border-radius': 10, 'padding': 15, 'font-family': '"Source Sans Pro", sans-serif', 'font-size': '120%'}) )
 
 		# Выходное вещество
-		result.append( html.Div(f'{reaction}: {part*parts}'
+		result.append( html.Div(f'{reaction}: {res}'
 , style={'background-color': '#183929', 'margin-top': 10, 'border-radius': 10, 'padding': 15, 'font-family': '"Source Sans Pro", sans-serif', 'font-size': '120%'}) )
 
-		print(result)
+
 		return result
+
 
 #########################
 
