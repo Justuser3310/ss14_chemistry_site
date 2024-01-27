@@ -55,71 +55,81 @@ with amount:
 
 
 #### CALCULATE RECIPE ####
+from calc import *
 
 if option_react:
-	parts = 0
-	part = 0
-	vol = option_amount
-
-	# Определяем 1 часть
-	for i in db[option_react]:
-		parts += i[2]
-	part = vol // parts
-
-	# Делаем около-кратным 10 и 15
-	# !!ЭКСПЕРЕМЕНТАЛЬНОЕ!!
-	part = round(part/10)*10
-	if part%10 != 0:
-		part = round(part/15)*15
-
-	# Название: количество (локальные части)
-	parted = {}
-	# Проверяем конфликты с составными частями: 48 != 50
-	lparts = 0 ; lpart = 0
-	for i in db[option_react]:
-		if i[0] == True:
-			# Перебираем составные
-			for el in db[i[1]]:
-				lparts += el[2]
-			# 50//3 ~ 16    16 * 3 = 48
-			lpart = (part//lparts) * lparts
-			if lpart < part:
-				part = lpart
-
-			parted[i[1]] = [part, lparts]
-	# part = 48
-	# parted["Инапровалин"] = [48, 3]
-	# 48 - 1 часть, 3 - кол. частей
-
-	# Фикс для плазмы в составных частях
-#	for i in db[option_react]:
-#		if i[0] == True:
-#			for el in db[i[1]]:
-#				if el[1] == "Плазма":
-#					parted[i[1]][0]
-#					parted[i[1]][1] -= 2
-
-	comps = {}
-	# Распределяем (пока не учитывает большую глубину)
-	for i in db[option_react]:
-		if i[0] == False:
-			if i[1] == "Плазма":
-				comps[i[1]] = 1
-			else:
-				comps[i[1]] = part * i[2]
-		elif i[0] == True:
-			# Перебираем составные
-			for el in db[i[1]]:
-				if el[1] == "Плазма":
-					comps[el[1]] = 1
-				else:
-					if el[1] not in comps:
-						comps[el[1]] = int( parted[i[1]][0]/parted[i[1]][1] * el[2] )
-					else:
-						comps[el[1]] += int( parted[i[1]][0]/parted[i[1]][1] * el[2] )
+	comps, res = calc(option_react, option_amount, True)
 
 	# Выводим результат
 	for i in comps:
 		st.warning(f'{i}: {comps[i]}')
 
-	st.success(f'{option_react}: {part*parts}')
+	st.success(f'{option_react}: {res}')
+
+
+	# parts = 0
+	# part = 0
+	# vol = option_amount
+
+	# # Определяем 1 часть
+	# for i in db[option_react]:
+		# parts += i[2]
+	# part = vol // parts
+
+	# # Делаем около-кратным 10 и 15
+	# # !!ЭКСПЕРЕМЕНТАЛЬНОЕ!!
+	# part = round(part/10)*10
+	# if part%10 != 0:
+		# part = round(part/15)*15
+
+	# # Название: количество (локальные части)
+	# parted = {}
+	# # Проверяем конфликты с составными частями: 48 != 50
+	# lparts = 0 ; lpart = 0
+	# for i in db[option_react]:
+		# if i[0] == True:
+			# # Перебираем составные
+			# for el in db[i[1]]:
+				# lparts += el[2]
+			# # 50//3 ~ 16    16 * 3 = 48
+			# lpart = (part//lparts) * lparts
+			# if lpart < part:
+				# part = lpart
+
+			# parted[i[1]] = [part, lparts]
+	# # part = 48
+	# # parted["Инапровалин"] = [48, 3]
+	# # 48 - 1 часть, 3 - кол. частей
+
+	# # Фикс для плазмы в составных частях
+# #	for i in db[option_react]:
+# #		if i[0] == True:
+# #			for el in db[i[1]]:
+# #				if el[1] == "Плазма":
+# #					parted[i[1]][0]
+# #					parted[i[1]][1] -= 2
+
+	# comps = {}
+	# # Распределяем (пока не учитывает большую глубину)
+	# for i in db[option_react]:
+		# if i[0] == False:
+			# if i[1] == "Плазма":
+				# comps[i[1]] = 1
+			# else:
+				# comps[i[1]] = part * i[2]
+		# elif i[0] == True:
+			# # Перебираем составные
+			# for el in db[i[1]]:
+				# if el[1] == "Плазма":
+					# comps[el[1]] = 1
+				# else:
+					# if el[1] not in comps:
+						# comps[el[1]] = int( parted[i[1]][0]/parted[i[1]][1] * el[2] )
+					# else:
+						# comps[el[1]] += int( parted[i[1]][0]/parted[i[1]][1] * el[2] )
+
+	# # Выводим результат
+	# for i in comps:
+		# st.warning(f'{i}: {comps[i]}')
+
+	# st.success(f'{option_react}: {part*parts}')
