@@ -7,8 +7,26 @@ els = list(db.keys())
 ###### ОФОРМЛЕНИЕ #######
 
 from dash import Dash, dcc, html, Input, Output,callback
-
 app = Dash(__name__)
+
+
+# Форматируем список для красоты
+def list_form(ll):
+	global db
+
+	formatted = []
+	imgs = {'medicine': '💊',
+					'chemicals': '🧪'}
+
+	for i in ll:
+		print(db[i][1])
+		if db[i][1] in imgs:
+			formatted.append(imgs[db[i][1]] + ' ' + i)
+		else:
+			formatted.append(i)
+
+	return formatted
+
 
 app.layout = html.Div([
 
@@ -16,7 +34,7 @@ app.layout = html.Div([
 html.Div([
 	# Реакция
 	html.Div([
-		dcc.Dropdown(els, id='reaction', placeholder="Реакция", maxHeight=500, style={'font-size': '120%'})
+		dcc.Dropdown(list_form(els), id='reaction', placeholder="Реакция", maxHeight=500, style={'font-size': '120%'})
 	], style={'flex': 4}),
 
 	# Объём
@@ -53,6 +71,7 @@ from calc import *
 )
 def update_output(reaction, amount):
 	if reaction:
+		reaction = reaction[2:]
 		comps, res = calc(reaction, amount, main = True)
 
 		# Форматирование для HTML

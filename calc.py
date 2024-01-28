@@ -25,7 +25,7 @@ def calc(el, amount, main = False):
 	if main:
 		recipe = {}
 
-	comps = db[el][1:] # Получаем составные
+	comps = db[el][2:] # Получаем составные
 	out = db[el][0] #Количество на выходе
 
 	# Считаем количество частей
