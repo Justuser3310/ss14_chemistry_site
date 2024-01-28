@@ -12,7 +12,7 @@ def sround(num):
 	num = floor(num)
 
 	# Подмены
-	rep = [[16,15], [33,30], [21,20], [12,10], [8,5]]
+	rep = [[16,15], [33,30], [21,20], [12,10], [8,5], [6,5]]
 
 	for i in rep:
 		if num == i[0]:
@@ -34,9 +34,17 @@ def calc(el, amount, main = False):
 		parts += i[1]
 
 	# Делаем поправку на выход
-	if out < parts:
+	while out < parts:
+		# Предварительная часть
+		part = sround(amount/parts)
 		print(el, ': ',out,' < ', parts)
-		parts = out
+		# Если итоговый объём <= входного объёма
+		if (parts+1)*part <= amount:
+			parts += 1
+		else:
+			break
+
+#		parts = out
 
 	# Считаем 1 часть
 	part = sround(amount/parts)
