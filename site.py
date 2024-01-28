@@ -7,7 +7,7 @@ els = list(db.keys())
 ###### ОФОРМЛЕНИЕ #######
 
 from dash import Dash, dcc, html, Input, Output,callback
-app = Dash(__name__)
+app = Dash(__name__, title="SS14 Tools")
 
 
 # Форматируем список для красоты
@@ -19,7 +19,7 @@ def list_form(ll):
 					'chemicals': '🧪'}
 
 	for i in ll:
-		print(db[i][1])
+		#print(db[i][1])
 		if db[i][1] in imgs:
 			formatted.append(imgs[db[i][1]] + ' ' + i)
 		else:
@@ -93,5 +93,5 @@ def update_output(reaction, amount):
 
 
 if __name__ == '__main__':
-	app.run(debug=True)
-#	app.run(debug=False)
+#	app.run(debug=True)
+	app.run(debug=False)
