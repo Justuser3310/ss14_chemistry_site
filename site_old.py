@@ -29,6 +29,8 @@ els = list(db.keys())
 
 #### UI ####
 
+st.subheader('Этот сайт больше не поддерживается, [новый адрес.](https://sstools.404.mn/)', divider='red')
+
 # Set columns
 react, star, amount = st.columns([73, 7, 20])
 
