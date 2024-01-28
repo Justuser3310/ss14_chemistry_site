@@ -74,7 +74,7 @@ def calc(el, amount, main = False):
 
 	if main:
 		print('PART: ', part)
-		return [recipe, parts*part]
+		return [recipe, out*part]
 	else:
 		print('PART: ', part)
 		return part*parts
