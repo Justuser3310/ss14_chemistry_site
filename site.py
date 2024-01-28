@@ -7,7 +7,7 @@ els = list(db.keys())
 ###### ОФОРМЛЕНИЕ #######
 
 from dash import Dash, dcc, html, Input, Output,callback
-app = Dash(__name__, title="SS14 Tools")
+app = Dash(__name__, title="SS14 Tools", update_title=None)
 
 
 # Форматируем список для красоты
