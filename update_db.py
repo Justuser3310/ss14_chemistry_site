@@ -39,9 +39,8 @@ BOTANY = "https://github.com/SerbiaStrong-220/space-station-14/raw/master/Resour
 BOTANY_LOCALISATION_URL = "https://github.com/SerbiaStrong-220/space-station-14/raw/master/Resources/Locale/ru-RU/reagents/meta/botany.ftl"
 
 # все съедобное и питьевое
-FOOD = "https://raw.githubusercontent.com/SerbiaStrong-220/space-station-14/master/Resources/Prototypes/Recipes/Reactions/chemicals.yml"
-FOOD_R = "https://github.com/SerbiaStrong-220/space-station-14/raw/master/Resources/Prototypes/Reagents/Consumable/Food/condiments.yml"
-FOOD_R_EX = "https://raw.githubusercontent.com/SerbiaStrong-220/space-station-14/master/Resources/Prototypes/Reagents/Consumable/Food/condiments.yml"
+FOOD = "https://github.com/SerbiaStrong-220/space-station-14/raw/master/Resources/Prototypes/Reagents/Consumable/Food/condiments.yml"
+FOOD_R = "https://raw.githubusercontent.com/SerbiaStrong-220/space-station-14/master/Resources/Prototypes/Reagents/Consumable/Food/condiments.yml"
 
 INGREDIENTS_URL = "https://github.com/SerbiaStrong-220/space-station-14/raw/master/Resources/Prototypes/Reagents/Consumable/Food/ingredients.yml"
 DRINKS_URL = "https://github.com/SerbiaStrong-220/space-station-14/raw/master/Resources/Prototypes/Reagents/Consumable/Drink/drinks.yml"
@@ -164,18 +163,16 @@ def load_recipes(url,name):
 
 load_reagents(BOTANY, 'botany')
 load_reagents(TOXINS, 'toxins')
-
 load_reagents(MEDICINE_R, 'medicine')
-load_recipes(MEDICINE, 'medicine')
-
 # Не загружается?
 load_reagents(CHEMICALS_R, 'chemicals')
-load_recipes(CHEMICALS, 'chemicals')
-
 #load_reagents(FOOD_R, 'food')
-load_reagents(FOOD_R_EX, 'food')
-load_recipes(FOOD, 'chemicals')
+load_reagents(FOOD_R, 'food')
 
+
+load_recipes(MEDICINE, 'medicine')
+load_recipes(CHEMICALS, 'chemicals')
+load_recipes(CHEMICALS, 'chemicals')
 
 #                                                                TODO: Включать ли токсины без крафта? (некоторые имеют крафт)
 reagents = [Reagent(init_data=content[item]) for item in content if "reactants" in content[item]]
