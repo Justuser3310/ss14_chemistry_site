@@ -39,8 +39,9 @@ BOTANY = "https://github.com/SerbiaStrong-220/space-station-14/raw/master/Resour
 BOTANY_LOCALISATION_URL = "https://github.com/SerbiaStrong-220/space-station-14/raw/master/Resources/Locale/ru-RU/reagents/meta/botany.ftl"
 
 # все съедобное и питьевое
-FOOD = "https://github.com/SerbiaStrong-220/space-station-14/raw/dev/Resources/Prototypes/Reagents/Consumable/Food/food.yml"
+FOOD = "https://raw.githubusercontent.com/SerbiaStrong-220/space-station-14/master/Resources/Prototypes/Recipes/Reactions/chemicals.yml"
 FOOD_R = "https://github.com/SerbiaStrong-220/space-station-14/raw/master/Resources/Prototypes/Reagents/Consumable/Food/condiments.yml"
+FOOD_R_EX = "https://raw.githubusercontent.com/SerbiaStrong-220/space-station-14/master/Resources/Prototypes/Reagents/Consumable/Food/condiments.yml"
 
 INGREDIENTS_URL = "https://github.com/SerbiaStrong-220/space-station-14/raw/master/Resources/Prototypes/Reagents/Consumable/Food/ingredients.yml"
 DRINKS_URL = "https://github.com/SerbiaStrong-220/space-station-14/raw/master/Resources/Prototypes/Reagents/Consumable/Drink/drinks.yml"
@@ -58,6 +59,7 @@ class Reagent:
 #		self.__desc: str = init_data.get("desc")
 		self.__recipe: dict = init_data.get("reactants")
 		self.__product = init_data.get("products")
+		self.__category = init_data.get("category")
 		# raw значения которые обработаны
 
 		self.heat: bool = init_data.get("heat")
@@ -80,11 +82,13 @@ class Reagent:
 			if i.lower() == self.__name.replace('reagent-name-','',1).replace('-','',1):
 				result.append(react_res[i])
 
+		# Добавляем категорию
+		print(self.__category)
+		result.append(self.__category)
+
 		if not self.__recipe:
 			return None
 		for item in self.__recipe:
-				# "Бикаридин": [ [0, "Углерод", 1], [1, "Инапровалин", 1] ]
-#				result.append([self.__recipe[item]["reagent"], localise(item).capitalize(), self.__recipe[item]["amount"]])
 				# "Бикаридин": [ 2, ["Углерод", 1], ["Инапровалин", 1] ]
 				result.append([localise(item).capitalize(), self.__recipe[item]['amount']])
 		#print(result)
@@ -156,18 +160,21 @@ def load_recipes(url,name):
 			element: {"amount": item["reactants"][element]["amount"], "reagent": element in content} for element in
 			item["reactants"]}
 		content[item["id"]]["products"] = item["products"]
+		content[item["id"]]["category"] = name
 
 load_reagents(BOTANY, 'botany')
 load_reagents(TOXINS, 'toxins')
 
-load_reagents(MEDICINE_R, 'medecine')
-load_recipes(MEDICINE, 'medecine')
+load_reagents(MEDICINE_R, 'medicine')
+load_recipes(MEDICINE, 'medicine')
 
+# Не загружается?
 load_reagents(CHEMICALS_R, 'chemicals')
 load_recipes(CHEMICALS, 'chemicals')
 
-load_reagents(FOOD_R, 'food')
-load_recipes(FOOD, 'food')
+#load_reagents(FOOD_R, 'food')
+load_reagents(FOOD_R_EX, 'food')
+load_recipes(FOOD, 'chemicals')
 
 
 #                                                                TODO: Включать ли токсины без крафта? (некоторые имеют крафт)
