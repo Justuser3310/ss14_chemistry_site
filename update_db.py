@@ -10,6 +10,7 @@ MEDICINE_R = "https://github.com/SerbiaStrong-220/space-station-14/raw/master/Re
 MEDICINE = "https://github.com/SerbiaStrong-220/space-station-14/raw/master/Resources/Prototypes/Recipes/Reactions/medicine.yml"
 MEDICINE_LOCALISATION = "https://github.com/SerbiaStrong-220/space-station-14/raw/master/Resources/Locale/ru-RU/reagents/meta/medicine.ftl"
 
+NARCOTICS_R = "https://raw.githubusercontent.com/SerbiaStrong-220/space-station-14/master/Resources/Prototypes/Reagents/narcotics.yml"
 
 CHEMICALS_R = "https://github.com/SerbiaStrong-220/space-station-14/raw/master/Resources/Prototypes/Reagents/chemicals.yml"
 CHEMICALS = "https://github.com/SerbiaStrong-220/space-station-14/raw/master/Resources/Prototypes/Recipes/Reactions/chemicals.yml"
@@ -20,7 +21,7 @@ ELEMENTS_URL = "https://github.com/SerbiaStrong-220/space-station-14/raw/master/
 ELEMENTS_LOCALISATION_URL = "https://github.com/SerbiaStrong-220/space-station-14/raw/master/Resources/Locale/ru-RU/reagents/meta/elements.ftl"
 
 # токсины
-TOXINS = "https://github.com/SerbiaStrong-220/space-station-14/raw/master/Resources/Prototypes/Reagents/toxins.yml"
+TOXINS_R = "https://github.com/SerbiaStrong-220/space-station-14/raw/master/Resources/Prototypes/Reagents/toxins.yml"
 TOXINS_LOCALISATION_URL = "https://github.com/SerbiaStrong-220/space-station-14/raw/master/Resources/Locale/ru-RU/reagents/meta/toxins.ftl"
 
 # локализация наркотиков/наркотических препаратов
@@ -35,12 +36,13 @@ BIOLOGY_URL = "https://github.com/SerbiaStrong-220/space-station-14/raw/master/R
 BIOLOGY_LOCALISATION_URL = "https://github.com/SerbiaStrong-220/space-station-14/raw/master/Resources/Locale/ru-RU/reagents/meta/biological.ftl"
 
 # ботаника
-BOTANY = "https://github.com/SerbiaStrong-220/space-station-14/raw/master/Resources/Prototypes/Reagents/botany.yml"
+BOTANY_R = "https://github.com/SerbiaStrong-220/space-station-14/raw/master/Resources/Prototypes/Reagents/botany.yml"
 BOTANY_LOCALISATION_URL = "https://github.com/SerbiaStrong-220/space-station-14/raw/master/Resources/Locale/ru-RU/reagents/meta/botany.ftl"
 
 # все съедобное и питьевое
-FOOD = "https://github.com/SerbiaStrong-220/space-station-14/raw/master/Resources/Prototypes/Reagents/Consumable/Food/condiments.yml"
+#FOOD = "https://github.com/SerbiaStrong-220/space-station-14/raw/master/Resources/Prototypes/Reagents/Consumable/Food/condiments.yml"
 FOOD_R = "https://raw.githubusercontent.com/SerbiaStrong-220/space-station-14/master/Resources/Prototypes/Reagents/Consumable/Food/condiments.yml"
+FOOD_R_EX = "https://raw.githubusercontent.com/SerbiaStrong-220/space-station-14/dev/Resources/Prototypes/Reagents/Consumable/Food/food.yml"
 
 INGREDIENTS_URL = "https://github.com/SerbiaStrong-220/space-station-14/raw/master/Resources/Prototypes/Reagents/Consumable/Food/ingredients.yml"
 DRINKS_URL = "https://github.com/SerbiaStrong-220/space-station-14/raw/master/Resources/Prototypes/Reagents/Consumable/Drink/drinks.yml"
@@ -93,30 +95,31 @@ class Reagent:
 		#print(result)
 		return result
 
-
+from db import *
 def load_localisation():
-    data = {"elements": {}, "placeholders": {}}
-    elements_urls = [ELEMENTS_URL, REAGENTS_URL, TOXINS_URL, GASES_URL, FOOD_URL, DRINKS_URL, BIOLOGY_URL,
-                     CONDIMENTS_URL, BOTANY_URL, ALCOHOL_URL, CHEMICALS_URL, INGREDIENTS_URL]
-    for url in elements_urls:
-        response = yaml.load(requests.get(url).content.decode("utf-8"), Loader=yaml.SafeLoader)
-        for i in response:
-            data["elements"][i["id"]] = {"name": i["name"], "desc": i["desc"]}
+	data = {"elements": {}, "placeholders": {}}
+	elements_urls = [ELEMENTS_URL, MEDICINE_R, TOXINS_R, GASES_URL, FOOD_R, FOOD_R_EX, DRINKS_URL, BIOLOGY_URL,
+								FOOD_R, BOTANY_R, ALCOHOL_URL, CHEMICALS_R, INGREDIENTS_URL, NARCOTICS_R]
+	for url in elements_urls:
+		response = yaml.load(requests.get(url).content.decode("utf-8"), Loader=yaml.SafeLoader)
+		for i in response:
+			data["elements"][i["id"]] = {"name": i["name"], "desc": i["desc"]}
 
-    localisation_urls = [MEDICINE_LOCALISATION, ELEMENTS_LOCALISATION_URL, TOXINS_LOCALISATION_URL,
-                         GASES_LOCALISATION_URL, DRINKS_LOCALISATION_URL, FOOD_LOCALISATION_URL,
-                         CONDIMENTS_LOCALISATION_URL, BIOLOGY_LOCALISATION_URL, NARCOTICS_LOCALISATION_URL,
-                         BOTANY_LOCALISATION_URL, ALCOHOL_LOCALISATION_URL, CHEMICALS_LOCALISATION,
-                         INGREDIENTS_LOCALISATION_URL]
+	localisation_urls = [MEDICINE_LOCALISATION, ELEMENTS_LOCALISATION_URL, TOXINS_LOCALISATION_URL,
+											GASES_LOCALISATION_URL, DRINKS_LOCALISATION_URL, FOOD_LOCALISATION_URL,
+											CONDIMENTS_LOCALISATION_URL, BIOLOGY_LOCALISATION_URL, NARCOTICS_LOCALISATION_URL,
+											BOTANY_LOCALISATION_URL, ALCOHOL_LOCALISATION_URL, CHEMICALS_LOCALISATION,
+											INGREDIENTS_LOCALISATION_URL]
 
-    for url in localisation_urls:
-        response = requests.get(url).content.decode("utf-8")
-        for entry in parse(response).body:
-            if isinstance(entry, ast.Message):
-                data["placeholders"][entry.id.name] = entry.value.elements[0].value
+	for url in localisation_urls:
+			response = requests.get(url).content.decode("utf-8")
+			for entry in parse(response).body:
+				if isinstance(entry, ast.Message):
+					data["placeholders"][entry.id.name] = entry.value.elements[0].value
 
-    with open("locale.json", mode="w", encoding="utf-8") as localisation_file:
-        json.dump(data, localisation_file, ensure_ascii=False, indent=2)
+	write_db(data, 'locale.json')
+#    with open("locale.json", mode="w", encoding="utf-8") as localisation_file:
+#        json.dump(data, localisation_file, ensure_ascii=False, indent=2)
 
 
 def localise(key: str) -> str:
@@ -161,17 +164,17 @@ def load_recipes(url,name):
 		content[item["id"]]["products"] = item["products"]
 		content[item["id"]]["category"] = name
 
-load_reagents(BOTANY, 'botany')
-load_reagents(TOXINS, 'toxins')
+load_reagents(BOTANY_R, 'botany')
+load_reagents(TOXINS_R, 'toxins')
 load_reagents(MEDICINE_R, 'medicine')
+load_reagents(NARCOTICS_R, 'narcotics')
 # Не загружается?
 load_reagents(CHEMICALS_R, 'chemicals')
-#load_reagents(FOOD_R, 'food')
 load_reagents(FOOD_R, 'food')
+load_reagents(FOOD_R_EX, 'food_ex')
 
 
 load_recipes(MEDICINE, 'medicine')
-load_recipes(CHEMICALS, 'chemicals')
 load_recipes(CHEMICALS, 'chemicals')
 
 #                                                                TODO: Включать ли токсины без крафта? (некоторые имеют крафт)
