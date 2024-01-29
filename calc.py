@@ -51,12 +51,12 @@ def sround(num, parts):
 	acc = [1,2,3,4,5]
 	num = floor(num)
 
+	if num == 0:
+		return 1
 	if num in acc:
 		return num
 	elif num%5 == 0:
 		return num
-	elif num == 0:
-		return 1
 
 	while num%5 != 0:
 		num -= 1
