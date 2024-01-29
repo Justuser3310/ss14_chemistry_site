@@ -1,0 +1,1900 @@
+{
+  "elements": {
+    "Aluminium": {
+      "name": "reagent-name-aluminium",
+      "desc": "reagent-desc-aluminium"
+    },
+    "Carbon": {
+      "name": "reagent-name-carbon",
+      "desc": "reagent-desc-carbon"
+    },
+    "Chlorine": {
+      "name": "reagent-name-chlorine",
+      "desc": "reagent-desc-chlorine"
+    },
+    "Copper": {
+      "name": "reagent-name-copper",
+      "desc": "reagent-desc-copper"
+    },
+    "Fluorine": {
+      "name": "reagent-name-fluorine",
+      "desc": "reagent-desc-fluorine"
+    },
+    "Gold": {
+      "name": "reagent-name-gold",
+      "desc": "reagent-desc-gold"
+    },
+    "Hydrogen": {
+      "name": "reagent-name-hydrogen",
+      "desc": "reagent-desc-hydrogen"
+    },
+    "Iodine": {
+      "name": "reagent-name-iodine",
+      "desc": "reagent-desc-iodine"
+    },
+    "Iron": {
+      "name": "reagent-name-iron",
+      "desc": "reagent-desc-iron"
+    },
+    "Lithium": {
+      "name": "reagent-name-lithium",
+      "desc": "reagent-desc-lithium"
+    },
+    "Mercury": {
+      "name": "reagent-name-mercury",
+      "desc": "reagent-desc-mercury"
+    },
+    "Potassium": {
+      "name": "reagent-name-potassium",
+      "desc": "reagent-desc-potassium"
+    },
+    "Phosphorus": {
+      "name": "reagent-name-phosphorus",
+      "desc": "reagent-desc-phosphorus"
+    },
+    "Radium": {
+      "name": "reagent-name-radium",
+      "desc": "reagent-desc-radium"
+    },
+    "Silicon": {
+      "name": "reagent-name-silicon",
+      "desc": "reagent-desc-silicon"
+    },
+    "Silver": {
+      "name": "reagent-name-silver",
+      "desc": "reagent-desc-silver"
+    },
+    "Sulfur": {
+      "name": "reagent-name-sulfur",
+      "desc": "reagent-desc-sulfur"
+    },
+    "Sodium": {
+      "name": "reagent-name-sodium",
+      "desc": "reagent-desc-sodium"
+    },
+    "Uranium": {
+      "name": "reagent-name-uranium",
+      "desc": "reagent-desc-uranium"
+    },
+    "Zinc": {
+      "name": "reagent-name-zinc",
+      "desc": "reagent-desc-zinc"
+    },
+    "Cryptobiolin": {
+      "name": "reagent-name-cryptobiolin",
+      "desc": "reagent-desc-cryptobiolin"
+    },
+    "Dylovene": {
+      "name": "reagent-name-dylovene",
+      "desc": "reagent-desc-dylovene"
+    },
+    "Diphenhydramine": {
+      "name": "reagent-name-diphenhydramine",
+      "desc": "reagent-desc-diphenhydramine"
+    },
+    "Ethylredoxrazine": {
+      "name": "reagent-name-ethylredoxrazine",
+      "desc": "reagent-desc-ethylredoxrazine"
+    },
+    "Arithrazine": {
+      "name": "reagent-name-arithrazine",
+      "desc": "reagent-desc-arithrazine"
+    },
+    "Bicaridine": {
+      "name": "reagent-name-bicaridine",
+      "desc": "reagent-desc-bicaridine"
+    },
+    "Cryoxadone": {
+      "name": "reagent-name-cryoxadone",
+      "desc": "reagent-desc-cryoxadone"
+    },
+    "Doxarubixadone": {
+      "name": "reagent-name-doxarubixadone",
+      "desc": "reagent-desc-doxarubixadone"
+    },
+    "Dermaline": {
+      "name": "reagent-name-dermaline",
+      "desc": "reagent-desc-dermaline"
+    },
+    "Dexalin": {
+      "name": "reagent-name-dexalin",
+      "desc": "reagent-desc-dexalin"
+    },
+    "DexalinPlus": {
+      "name": "reagent-name-dexalin-plus",
+      "desc": "reagent-desc-dexalin-plus"
+    },
+    "Epinephrine": {
+      "name": "reagent-name-epinephrine",
+      "desc": "reagent-desc-epinephrine"
+    },
+    "Hyronalin": {
+      "name": "reagent-name-hyronalin",
+      "desc": "reagent-desc-hyronalin"
+    },
+    "Ipecac": {
+      "name": "reagent-name-ipecac",
+      "desc": "reagent-desc-ipecac"
+    },
+    "Inaprovaline": {
+      "name": "reagent-name-inaprovaline",
+      "desc": "reagent-desc-inaprovaline"
+    },
+    "Kelotane": {
+      "name": "reagent-name-kelotane",
+      "desc": "reagent-desc-kelotane"
+    },
+    "Leporazine": {
+      "name": "reagent-name-leporazine",
+      "desc": "reagent-desc-leporazine"
+    },
+    "Barozine": {
+      "name": "reagent-name-barozine",
+      "desc": "reagent-desc-barozine"
+    },
+    "Phalanximine": {
+      "name": "reagent-name-phalanximine",
+      "desc": "reagent-desc-phalanximine"
+    },
+    "Ambuzol": {
+      "name": "reagent-name-ambuzol",
+      "desc": "reagent-desc-ambuzol"
+    },
+    "AmbuzolPlus": {
+      "name": "reagent-name-ambuzol-plus",
+      "desc": "reagent-desc-ambuzol-plus"
+    },
+    "PulpedBananaPeel": {
+      "name": "reagent-name-pulped-banana-peel",
+      "desc": "reagent-desc-pulped-banana-peel"
+    },
+    "Saline": {
+      "name": "reagent-name-saline",
+      "desc": "reagent-desc-saline"
+    },
+    "Siderlac": {
+      "name": "reagent-name-siderlac",
+      "desc": "reagent-desc-siderlac"
+    },
+    "Stellibinin": {
+      "name": "reagent-name-stellibinin",
+      "desc": "reagent-desc-stellibinin"
+    },
+    "Synaptizine": {
+      "name": "reagent-name-synaptizine",
+      "desc": "reagent-desc-synaptizine"
+    },
+    "TranexamicAcid": {
+      "name": "reagent-name-tranexamic-acid",
+      "desc": "reagent-desc-tranexamic-acid"
+    },
+    "Tricordrazine": {
+      "name": "reagent-name-tricordrazine",
+      "desc": "reagent-desc-tricordrazine"
+    },
+    "Lipozine": {
+      "name": "reagent-name-lipozine",
+      "desc": "reagent-desc-lipozine"
+    },
+    "Omnizine": {
+      "name": "reagent-name-omnizine",
+      "desc": "reagent-desc-omnizine"
+    },
+    "Ultravasculine": {
+      "name": "reagent-name-ultravasculine",
+      "desc": "reagent-desc-ultravasculine"
+    },
+    "Oculine": {
+      "name": "reagent-name-oculine",
+      "desc": "reagent-desc-oculine"
+    },
+    "Cognizine": {
+      "name": "reagent-name-cognizine",
+      "desc": "reagent-desc-cognizine"
+    },
+    "Ethyloxyephedrine": {
+      "name": "reagent-name-ethyloxyephedrine",
+      "desc": "reagent-desc-ethyloxyephedrine"
+    },
+    "Diphenylmethylamine": {
+      "name": "reagent-name-diphenylmethylamine",
+      "desc": "reagent-desc-diphenylmethylamine"
+    },
+    "Sigynate": {
+      "name": "reagent-name-sigynate",
+      "desc": "reagent-desc-sigynate"
+    },
+    "Lacerinol": {
+      "name": "reagent-name-lacerinol",
+      "desc": "reagent-desc-lacerinol"
+    },
+    "Puncturase": {
+      "name": "reagent-name-puncturase",
+      "desc": "reagent-desc-puncturase"
+    },
+    "Bruizine": {
+      "name": "reagent-name-bruizine",
+      "desc": "reagent-desc-bruizine"
+    },
+    "Holywater": {
+      "name": "reagent-name-holywater",
+      "desc": "reagent-desc-holywater"
+    },
+    "Pyrazine": {
+      "name": "reagent-name-pyrazine",
+      "desc": "reagent-desc-pyrazine"
+    },
+    "Insuzine": {
+      "name": "reagent-name-insuzine",
+      "desc": "reagent-desc-insuzine"
+    },
+    "Necrosol": {
+      "name": "reagent-name-necrosol",
+      "desc": "reagent-desc-necrosol"
+    },
+    "Aloxadone": {
+      "name": "reagent-name-aloxadone",
+      "desc": "reagent-desc-aloxadone"
+    },
+    "Toxin": {
+      "name": "reagent-name-toxin",
+      "desc": "reagent-desc-toxin"
+    },
+    "CarpoToxin": {
+      "name": "reagent-name-carpotoxin",
+      "desc": "reagent-desc-carpotoxin"
+    },
+    "ChloralHydrate": {
+      "name": "reagent-name-chloral-hydrate",
+      "desc": "reagent-desc-chloral-hydrate"
+    },
+    "Mold": {
+      "name": "reagent-name-mold",
+      "desc": "reagent-desc-mold"
+    },
+    "PolytrinicAcid": {
+      "name": "reagent-name-polytrinic-acid",
+      "desc": "reagent-desc-polytrinic-acid"
+    },
+    "FerrochromicAcid": {
+      "name": "reagent-name-ferrochromic-acid",
+      "desc": "reagent-desc-ferrochromic-acid"
+    },
+    "FluorosulfuricAcid": {
+      "name": "reagent-name-fluorosulfuric-acid",
+      "desc": "reagent-desc-fluorosulfuric-acid"
+    },
+    "SulfuricAcid": {
+      "name": "reagent-name-sulfuric-acid",
+      "desc": "reagent-desc-sulfuric-acid"
+    },
+    "UnstableMutagen": {
+      "name": "reagent-name-unstable-mutagen",
+      "desc": "reagent-desc-unstable-mutagen"
+    },
+    "HeartbreakerToxin": {
+      "name": "reagent-name-heartbreaker-toxin",
+      "desc": "reagent-desc-heartbreaker-toxin"
+    },
+    "Lexorin": {
+      "name": "reagent-name-lexorin",
+      "desc": "reagent-desc-lexorin"
+    },
+    "MindbreakerToxin": {
+      "name": "reagent-name-mindbreaker-toxin",
+      "desc": "reagent-desc-mindbreaker-toxin"
+    },
+    "Histamine": {
+      "name": "reagent-name-histamine",
+      "desc": "reagent-desc-histamine"
+    },
+    "Theobromine": {
+      "name": "reagent-name-theobromine",
+      "desc": "reagent-desc-theobromine"
+    },
+    "Amatoxin": {
+      "name": "reagent-name-amatoxin",
+      "desc": "reagent-desc-amatoxin"
+    },
+    "VentCrud": {
+      "name": "reagent-name-vent-crud",
+      "desc": "reagent-desc-vent-crud"
+    },
+    "Romerol": {
+      "name": "reagent-name-romerol",
+      "desc": "reagent-desc-romerol"
+    },
+    "UncookedAnimalProteins": {
+      "name": "reagent-name-uncooked-animal-proteins",
+      "desc": "reagent-desc-uncooked-animal-proteins"
+    },
+    "Allicin": {
+      "name": "reagent-name-allicin",
+      "desc": "reagent-desc-allicin"
+    },
+    "Pax": {
+      "name": "reagent-name-pax",
+      "desc": "reagent-desc-pax"
+    },
+    "Honk": {
+      "name": "reagent-name-honk",
+      "desc": "reagent-desc-honk"
+    },
+    "Lead": {
+      "name": "reagent-name-lead",
+      "desc": "reagent-desc-lead"
+    },
+    "Bungotoxin": {
+      "name": "reagent-name-bungotoxin",
+      "desc": "reagent-desc-bungotoxin"
+    },
+    "Vestine": {
+      "name": "reagent-name-vestine",
+      "desc": "reagent-desc-vestine"
+    },
+    "Tazinide": {
+      "name": "reagent-name-tazinide",
+      "desc": "reagent-desc-tazinide"
+    },
+    "Oxygen": {
+      "name": "reagent-name-oxygen",
+      "desc": "reagent-desc-oxygen"
+    },
+    "Plasma": {
+      "name": "reagent-name-plasma",
+      "desc": "reagent-desc-plasma"
+    },
+    "Tritium": {
+      "name": "reagent-name-tritium",
+      "desc": "reagent-desc-tritium"
+    },
+    "CarbonDioxide": {
+      "name": "reagent-name-carbon-dioxide",
+      "desc": "reagent-desc-carbon-dioxide"
+    },
+    "Nitrogen": {
+      "name": "reagent-name-nitrogen",
+      "desc": "reagent-desc-nitrogen"
+    },
+    "NitrousOxide": {
+      "name": "reagent-name-nitrous-oxide",
+      "desc": "reagent-desc-nitrous-oxide"
+    },
+    "Frezon": {
+      "name": "reagent-name-frezon",
+      "desc": "reagent-desc-frezon"
+    },
+    "Astrotame": {
+      "name": "reagent-name-astrotame",
+      "desc": "reagent-desc-astrotame"
+    },
+    "BbqSauce": {
+      "name": "reagent-name-bbq-sauce",
+      "desc": "reagent-desc-bbq-sauce"
+    },
+    "Cornoil": {
+      "name": "reagent-name-cornoil",
+      "desc": "reagent-desc-cornoil"
+    },
+    "Frostoil": {
+      "name": "reagent-name-frostoil",
+      "desc": "reagent-desc-frostoil"
+    },
+    "HorseradishSauce": {
+      "name": "reagent-name-horseradish-sauce",
+      "desc": "reagent-desc-horseradish-sauce"
+    },
+    "Hotsauce": {
+      "name": "reagent-name-hotsauce",
+      "desc": "reagent-desc-hotsauce"
+    },
+    "Ketchup": {
+      "name": "reagent-name-ketchup",
+      "desc": "reagent-desc-ketchup"
+    },
+    "Ketchunaise": {
+      "name": "reagent-name-ketchunaise",
+      "desc": "reagent-desc-ketchunaise"
+    },
+    "Mayo": {
+      "name": "reagent-name-mayo",
+      "desc": "reagent-desc-mayo"
+    },
+    "Mustard": {
+      "name": "reagent-name-mustard",
+      "desc": "reagent-desc-mustard"
+    },
+    "Vinaigrette": {
+      "name": "reagent-name-vinaigrette",
+      "desc": "reagent-desc-vinaigrette"
+    },
+    "Soysauce": {
+      "name": "reagent-name-soysauce",
+      "desc": "reagent-desc-soysauce"
+    },
+    "TableSalt": {
+      "name": "reagent-name-table-salt",
+      "desc": "reagent-desc-table-salt"
+    },
+    "Nutriment": {
+      "name": "reagent-name-nutriment",
+      "desc": "reagent-desc-nutriment"
+    },
+    "Vitamin": {
+      "name": "reagent-name-vitamin",
+      "desc": "reagent-desc-vitamin"
+    },
+    "Protein": {
+      "name": "reagent-name-protein",
+      "desc": "reagent-desc-protein"
+    },
+    "Sugar": {
+      "name": "reagent-name-sugar",
+      "desc": "reagent-desc-sugar"
+    },
+    "Coffee": {
+      "name": "reagent-name-coffee",
+      "desc": "reagent-desc-coffee"
+    },
+    "HotCocoa": {
+      "name": "reagent-name-hot-cocoa",
+      "desc": "reagent-desc-hot-cocoa"
+    },
+    "Cream": {
+      "name": "reagent-name-cream",
+      "desc": "reagent-desc-cream"
+    },
+    "CafeLatte": {
+      "name": "reagent-name-cafe-latte",
+      "desc": "reagent-desc-cafe-latte"
+    },
+    "GreenTea": {
+      "name": "reagent-name-green-tea",
+      "desc": "reagent-desc-green-tea"
+    },
+    "Grenadine": {
+      "name": "reagent-name-grenadine",
+      "desc": "reagent-desc-grenadine"
+    },
+    "IcedCoffee": {
+      "name": "reagent-name-iced-coffee",
+      "desc": "reagent-desc-iced-coffee"
+    },
+    "IcedGreenTea": {
+      "name": "reagent-name-iced-green-tea",
+      "desc": "reagent-desc-iced-green-tea"
+    },
+    "IcedTea": {
+      "name": "reagent-name-iced-tea",
+      "desc": "reagent-desc-iced-tea"
+    },
+    "JuiceBerryPoison": {
+      "name": "reagent-name-juice-berry-poison",
+      "desc": "reagent-desc-juice-berry-poison"
+    },
+    "Lemonade": {
+      "name": "reagent-name-lemonade",
+      "desc": "reagent-desc-lemonade"
+    },
+    "Milk": {
+      "name": "reagent-name-milk",
+      "desc": "reagent-desc-milk"
+    },
+    "MilkGoat": {
+      "name": "reagent-name-milk-goat",
+      "desc": "reagent-desc-milk-goat"
+    },
+    "MilkOat": {
+      "name": "reagent-name-milk-oat",
+      "desc": "reagent-desc-milk-oat"
+    },
+    "MilkSoy": {
+      "name": "reagent-name-milk-soy",
+      "desc": "reagent-desc-milk-soy"
+    },
+    "MilkSpoiled": {
+      "name": "reagent-name-milk-spoiled",
+      "desc": "reagent-desc-milk-spoiled"
+    },
+    "Nothing": {
+      "name": "reagent-name-nothing",
+      "desc": "reagent-desc-nothing"
+    },
+    "NuclearCola": {
+      "name": "reagent-name-nuclear-cola",
+      "desc": "reagent-desc-nuclear-cola"
+    },
+    "SodaWater": {
+      "name": "reagent-name-soda-water",
+      "desc": "reagent-desc-soda-water"
+    },
+    "SoyLatte": {
+      "name": "reagent-name-soy-latte",
+      "desc": "reagent-desc-soy-latte"
+    },
+    "Tea": {
+      "name": "reagent-name-tea",
+      "desc": "reagent-desc-tea"
+    },
+    "TonicWater": {
+      "name": "reagent-name-tonic-water",
+      "desc": "reagent-desc-tonic-water"
+    },
+    "Water": {
+      "name": "reagent-name-water",
+      "desc": "reagent-desc-water"
+    },
+    "Ice": {
+      "name": "reagent-name-ice",
+      "desc": "reagent-desc-ice"
+    },
+    "DryRamen": {
+      "name": "reagent-name-dry-ramen",
+      "desc": "reagent-desc-dry-ramen"
+    },
+    "HotRamen": {
+      "name": "reagent-name-hot-ramen",
+      "desc": "reagent-desc-hot-ramen"
+    },
+    "Pilk": {
+      "name": "reagent-name-pilk",
+      "desc": "reagent-desc-pilk"
+    },
+    "Posca": {
+      "name": "reagent-name-posca",
+      "desc": "reagent-desc-posca"
+    },
+    "KiraSpecial": {
+      "name": "reagent-name-kira-special",
+      "desc": "reagent-desc-kira-special"
+    },
+    "Rewriter": {
+      "name": "reagent-name-rewriter",
+      "desc": "reagent-desc-rewriter"
+    },
+    "Mopwata": {
+      "name": "reagent-name-mopwata",
+      "desc": "reagent-desc-mopwata"
+    },
+    "Blood": {
+      "name": "reagent-name-blood",
+      "desc": "reagent-desc-blood"
+    },
+    "InsectBlood": {
+      "name": "reagent-name-insect-blood",
+      "desc": "reagent-desc-insect-blood"
+    },
+    "Slime": {
+      "name": "reagent-name-slime",
+      "desc": "reagent-desc-slime"
+    },
+    "CopperBlood": {
+      "name": "reagent-name-hemocyanin-blood",
+      "desc": "reagent-desc-hemocyanin-blood"
+    },
+    "ZombieBlood": {
+      "name": "reagent-name-zombie-blood",
+      "desc": "reagent-desc-zombie-blood"
+    },
+    "Ichor": {
+      "name": "reagent-name-ichor",
+      "desc": "reagent-desc-ichor"
+    },
+    "Fat": {
+      "name": "reagent-name-fat",
+      "desc": "reagent-desc-fat"
+    },
+    "Vomit": {
+      "name": "reagent-name-vomit",
+      "desc": "reagent-desc-vomit"
+    },
+    "EZNutrient": {
+      "name": "reagent-name-e-z-nutrient",
+      "desc": "reagent-desc-e-z-nutrient"
+    },
+    "Left4Zed": {
+      "name": "reagent-name-left4-zed",
+      "desc": "reagent-desc-left4-zed"
+    },
+    "PestKiller": {
+      "name": "reagent-name-pest-killer",
+      "desc": "reagent-desc-pest-killer"
+    },
+    "PlantBGone": {
+      "name": "reagent-name-plant-b-gone",
+      "desc": "reagent-desc-plant-b-gone"
+    },
+    "RobustHarvest": {
+      "name": "reagent-name-robust-harvest",
+      "desc": "reagent-desc-robust-harvest"
+    },
+    "WeedKiller": {
+      "name": "reagent-name-weed-killer",
+      "desc": "reagent-desc-weed-killer"
+    },
+    "Ammonia": {
+      "name": "reagent-name-ammonia",
+      "desc": "reagent-desc-ammonia"
+    },
+    "Diethylamine": {
+      "name": "reagent-name-diethylamine",
+      "desc": "reagent-desc-diethylamine"
+    },
+    "Absinthe": {
+      "name": "reagent-name-absinthe",
+      "desc": "reagent-desc-absinthe"
+    },
+    "Ale": {
+      "name": "reagent-name-ale",
+      "desc": "reagent-desc-ale"
+    },
+    "Beer": {
+      "name": "reagent-name-beer",
+      "desc": "reagent-desc-beer"
+    },
+    "BlueCuracao": {
+      "name": "reagent-name-blue-curacao",
+      "desc": "reagent-desc-blue-curacao"
+    },
+    "Cognac": {
+      "name": "reagent-name-cognac",
+      "desc": "reagent-desc-cognac"
+    },
+    "DeadRum": {
+      "name": "reagent-name-dead-rum",
+      "desc": "reagent-desc-dead-rum"
+    },
+    "Ethanol": {
+      "name": "reagent-name-ethanol",
+      "desc": "reagent-desc-ethanol"
+    },
+    "Gin": {
+      "name": "reagent-name-gin",
+      "desc": "reagent-desc-gin"
+    },
+    "CoffeeLiqueur": {
+      "name": "reagent-name-coffeeliqueur",
+      "desc": "reagent-desc-coffeeliqueur"
+    },
+    "MelonLiquor": {
+      "name": "reagent-name-melon-liquor",
+      "desc": "reagent-desc-melon-liquor"
+    },
+    "NTCahors": {
+      "name": "reagent-name-n-t-cahors",
+      "desc": "reagent-desc-n-t-cahors"
+    },
+    "PoisonWine": {
+      "name": "reagent-name-poison-wine",
+      "desc": "reagent-desc-poison-wine"
+    },
+    "Rum": {
+      "name": "reagent-name-rum",
+      "desc": "reagent-desc-rum"
+    },
+    "Sake": {
+      "name": "reagent-name-sake",
+      "desc": "reagent-desc-sake"
+    },
+    "Tequila": {
+      "name": "reagent-name-tequila",
+      "desc": "reagent-desc-tequila"
+    },
+    "Vermouth": {
+      "name": "reagent-name-vermouth",
+      "desc": "reagent-desc-vermouth"
+    },
+    "Vodka": {
+      "name": "reagent-name-vodka",
+      "desc": "reagent-desc-vodka"
+    },
+    "Whiskey": {
+      "name": "reagent-name-whiskey",
+      "desc": "reagent-desc-whiskey"
+    },
+    "Wine": {
+      "name": "reagent-name-wine",
+      "desc": "reagent-desc-wine"
+    },
+    "Champagne": {
+      "name": "reagent-name-champagne",
+      "desc": "reagent-desc-champagne"
+    },
+    "AcidSpit": {
+      "name": "reagent-name-acid-spit",
+      "desc": "reagent-desc-acid-spit"
+    },
+    "AlliesCocktail": {
+      "name": "reagent-name-allies-cocktail",
+      "desc": "reagent-desc-allies-cocktail"
+    },
+    "Aloe": {
+      "name": "reagent-name-aloe",
+      "desc": "reagent-desc-aloe"
+    },
+    "Amasec": {
+      "name": "reagent-name-amasec",
+      "desc": "reagent-desc-amasec"
+    },
+    "Andalusia": {
+      "name": "reagent-name-andalusia",
+      "desc": "reagent-desc-andalusia"
+    },
+    "Antifreeze": {
+      "name": "reagent-name-antifreeze",
+      "desc": "reagent-desc-antifreeze"
+    },
+    "AtomicBomb": {
+      "name": "reagent-name-atomic-bomb",
+      "desc": "reagent-desc-atomic-bomb"
+    },
+    "B52": {
+      "name": "reagent-name-b52",
+      "desc": "reagent-desc-b52"
+    },
+    "BahamaMama": {
+      "name": "reagent-name-bahama-mama",
+      "desc": "reagent-desc-bahama-mama"
+    },
+    "BananaHonk": {
+      "name": "reagent-name-banana-honk",
+      "desc": "reagent-desc-banana-honk"
+    },
+    "Barefoot": {
+      "name": "reagent-name-barefoot",
+      "desc": "reagent-desc-barefoot"
+    },
+    "BeepskySmash": {
+      "name": "reagent-name-beepsky-smash",
+      "desc": "reagent-desc-beepsky-smash"
+    },
+    "BlackRussian": {
+      "name": "reagent-name-black-russian",
+      "desc": "reagent-desc-black-russian"
+    },
+    "BloodyMary": {
+      "name": "reagent-name-bloody-mary",
+      "desc": "reagent-desc-bloody-mary"
+    },
+    "Booger": {
+      "name": "reagent-name-booger",
+      "desc": "reagent-desc-booger"
+    },
+    "BraveBull": {
+      "name": "reagent-name-brave-bull",
+      "desc": "reagent-desc-brave-bull"
+    },
+    "CubaLibre": {
+      "name": "reagent-name-cuba-libre",
+      "desc": "reagent-desc-cuba-libre"
+    },
+    "DemonsBlood": {
+      "name": "reagent-name-demons-blood",
+      "desc": "reagent-desc-demons-blood"
+    },
+    "DevilsKiss": {
+      "name": "reagent-name-devils-kiss",
+      "desc": "reagent-desc-devils-kiss"
+    },
+    "DoctorsDelight": {
+      "name": "reagent-name-doctors-delight",
+      "desc": "reagent-desc-doctors-delight"
+    },
+    "DriestMartini": {
+      "name": "reagent-name-driest-martini",
+      "desc": "reagent-desc-driest-martini"
+    },
+    "ErikaSurprise": {
+      "name": "reagent-name-erika-surprise",
+      "desc": "reagent-desc-erika-surprise"
+    },
+    "GargleBlaster": {
+      "name": "reagent-name-gargle-blaster",
+      "desc": "reagent-desc-gargle-blaster"
+    },
+    "GinFizz": {
+      "name": "reagent-name-gin-fizz",
+      "desc": "reagent-desc-gin-fizz"
+    },
+    "GinTonic": {
+      "name": "reagent-name-gin-tonic",
+      "desc": "reagent-desc-gin-tonic"
+    },
+    "Gildlager": {
+      "name": "reagent-name-gildlager",
+      "desc": "reagent-desc-gildlager"
+    },
+    "Grog": {
+      "name": "reagent-name-grog",
+      "desc": "reagent-desc-grog"
+    },
+    "HippiesDelight": {
+      "name": "reagent-name-hippies-delight",
+      "desc": "reagent-desc-hippies-delight"
+    },
+    "Hooch": {
+      "name": "reagent-name-hooch",
+      "desc": "reagent-desc-hooch"
+    },
+    "IcedBeer": {
+      "name": "reagent-name-iced-beer",
+      "desc": "reagent-desc-iced-beer"
+    },
+    "IrishCarBomb": {
+      "name": "reagent-name-irish-car-bomb",
+      "desc": "reagent-desc-irish-car-bomb"
+    },
+    "IrishCream": {
+      "name": "reagent-name-irish-cream",
+      "desc": "reagent-desc-irish-cream"
+    },
+    "IrishCoffee": {
+      "name": "reagent-name-irish-coffee",
+      "desc": "reagent-desc-irish-coffee"
+    },
+    "LongIslandIcedTea": {
+      "name": "reagent-name-long-island-iced-tea",
+      "desc": "reagent-desc-long-island-iced-tea"
+    },
+    "Manhattan": {
+      "name": "reagent-name-manhattan",
+      "desc": "reagent-desc-manhattan"
+    },
+    "ManhattanProject": {
+      "name": "reagent-name-manhattan-project",
+      "desc": "reagent-desc-manhattan-project"
+    },
+    "ManlyDorf": {
+      "name": "reagent-name-manly-dorf",
+      "desc": "reagent-desc-manly-dorf"
+    },
+    "Margarita": {
+      "name": "reagent-name-margarita",
+      "desc": "reagent-desc-margarita"
+    },
+    "Martini": {
+      "name": "reagent-name-martini",
+      "desc": "reagent-desc-martini"
+    },
+    "Mead": {
+      "name": "reagent-name-mead",
+      "desc": "reagent-desc-mead"
+    },
+    "Mojito": {
+      "name": "reagent-name-mojito",
+      "desc": "reagent-desc-mojito"
+    },
+    "Moonshine": {
+      "name": "reagent-name-moonshine",
+      "desc": "reagent-desc-moonshine"
+    },
+    "Neurotoxin": {
+      "name": "reagent-name-neurotoxin",
+      "desc": "reagent-desc-neurotoxin"
+    },
+    "Patron": {
+      "name": "reagent-name-patron",
+      "desc": "reagent-desc-patron"
+    },
+    "RedMead": {
+      "name": "reagent-name-red-mead",
+      "desc": "reagent-desc-red-mead"
+    },
+    "Sbiten": {
+      "name": "reagent-name-sbiten",
+      "desc": "reagent-desc-sbiten"
+    },
+    "ScrewdriverCocktail": {
+      "name": "reagent-name-screwdriver-cocktail",
+      "desc": "reagent-desc-screwdriver-cocktail"
+    },
+    "CogChamp": {
+      "name": "reagent-name-cogchamp",
+      "desc": "reagent-desc-cogchamp"
+    },
+    "Silencer": {
+      "name": "reagent-name-silencer",
+      "desc": "reagent-desc-silencer"
+    },
+    "Singulo": {
+      "name": "reagent-name-singulo",
+      "desc": "reagent-desc-singulo"
+    },
+    "SnowWhite": {
+      "name": "reagent-name-snow-white",
+      "desc": "reagent-desc-snow-white"
+    },
+    "SuiDream": {
+      "name": "reagent-name-sui-dream",
+      "desc": "reagent-desc-sui-dream"
+    },
+    "SyndicateBomb": {
+      "name": "reagent-name-syndicate-bomb",
+      "desc": "reagent-desc-syndicate-bomb"
+    },
+    "TequilaSunrise": {
+      "name": "reagent-name-tequila-sunrise",
+      "desc": "reagent-desc-tequila-sunrise"
+    },
+    "TheMartinez": {
+      "name": "reagent-name-the-martinez",
+      "desc": "reagent-desc-the-martinez"
+    },
+    "ThreeMileIsland": {
+      "name": "reagent-name-three-mile-island",
+      "desc": "reagent-desc-three-mile-island"
+    },
+    "ToxinsSpecial": {
+      "name": "reagent-name-toxins-special",
+      "desc": "reagent-desc-toxins-special"
+    },
+    "VodkaMartini": {
+      "name": "reagent-name-vodka-martini",
+      "desc": "reagent-desc-vodka-martini"
+    },
+    "VodkaTonic": {
+      "name": "reagent-name-vodka-tonic",
+      "desc": "reagent-desc-vodka-tonic"
+    },
+    "WhiskeyCola": {
+      "name": "reagent-name-whiskey-cola",
+      "desc": "reagent-desc-whiskey-cola"
+    },
+    "WhiskeySoda": {
+      "name": "reagent-name-whiskey-soda",
+      "desc": "reagent-desc-whiskey-soda"
+    },
+    "WhiteGilgamesh": {
+      "name": "reagent-name-white-gilgamesh",
+      "desc": "reagent-desc-white-gilgamesh"
+    },
+    "WhiteRussian": {
+      "name": "reagent-name-white-russian",
+      "desc": "reagent-desc-white-russian"
+    },
+    "Acetone": {
+      "name": "reagent-name-acetone",
+      "desc": "reagent-desc-acetone"
+    },
+    "Phenol": {
+      "name": "reagent-name-phenol",
+      "desc": "reagent-desc-phenol"
+    },
+    "Charcoal": {
+      "name": "reagent-name-charcoal",
+      "desc": "reagent-desc-charcoal"
+    },
+    "Ash": {
+      "name": "reagent-name-ash",
+      "desc": "reagent-desc-ash"
+    },
+    "SodiumCarbonate": {
+      "name": "reagent-name-sodium-carbonate",
+      "desc": "reagent-desc-sodium-carbonate"
+    },
+    "Artifexium": {
+      "name": "reagent-name-artifexium",
+      "desc": "reagent-desc-artifexium"
+    },
+    "Benzene": {
+      "name": "reagent-name-benzene",
+      "desc": "reagent-desc-benzene"
+    },
+    "Hydroxide": {
+      "name": "reagent-name-hydroxide",
+      "desc": "reagent-desc-hydroxide"
+    },
+    "SodiumHydroxide": {
+      "name": "reagent-name-sodium-hydroxide",
+      "desc": "reagent-desc-sodium-hydroxide"
+    },
+    "Fersilicite": {
+      "name": "reagent-name-fersilicite",
+      "desc": "reagent-desc-fersilicite"
+    },
+    "SodiumPolyacrylate": {
+      "name": "reagent-name-sodium-polyacrylate",
+      "desc": "reagent-desc-sodium-polyacrylate"
+    },
+    "Cellulose": {
+      "name": "reagent-name-cellulose",
+      "desc": "reagent-desc-cellulose"
+    },
+    "Flour": {
+      "name": "reagent-name-flour",
+      "desc": "reagent-desc-flour"
+    },
+    "Cornmeal": {
+      "name": "reagent-name-cornmeal",
+      "desc": "reagent-desc-cornmeal"
+    },
+    "Oats": {
+      "name": "reagent-name-oats",
+      "desc": "reagent-desc-oats"
+    },
+    "Enzyme": {
+      "name": "reagent-name-enzyme",
+      "desc": "reagent-desc-enzyme"
+    },
+    "Egg": {
+      "name": "reagent-name-raw-egg",
+      "desc": "reagent-desc-raw-egg"
+    },
+    "EggCooked": {
+      "name": "reagent-name-egg",
+      "desc": "reagent-desc-egg"
+    },
+    "Blackpepper": {
+      "name": "reagent-name-blackpepper",
+      "desc": "reagent-desc-blackpepper"
+    },
+    "Vinegar": {
+      "name": "reagent-name-vinegar",
+      "desc": "reagent-desc-vinegar"
+    },
+    "Rice": {
+      "name": "reagent-name-rice",
+      "desc": "reagent-desc-rice"
+    },
+    "OilOlive": {
+      "name": "reagent-name-oil-olive",
+      "desc": "reagent-desc-oil-olive"
+    },
+    "Oil": {
+      "name": "reagent-name-oil",
+      "desc": "reagent-desc-oil"
+    },
+    "CapsaicinOil": {
+      "name": "reagent-name-capsaicin-oil",
+      "desc": "reagent-desc-capsaicin-oil"
+    },
+    "CocoaPowder": {
+      "name": "reagent-name-cocoapowder",
+      "desc": "reagent-desc-cocoapowder"
+    },
+    "Butter": {
+      "name": "reagent-name-butter",
+      "desc": "reagent-desc-butter"
+    },
+    "Desoxyephedrine": {
+      "name": "reagent-name-desoxyephedrine",
+      "desc": "reagent-desc-desoxyephedrine"
+    },
+    "Ephedrine": {
+      "name": "reagent-name-ephedrine",
+      "desc": "reagent-desc-ephedrine"
+    },
+    "Stimulants": {
+      "name": "reagent-name-stimulants",
+      "desc": "reagent-desc-stimulants"
+    },
+    "THC": {
+      "name": "reagent-name-thc",
+      "desc": "reagent-desc-thc"
+    },
+    "THCOil": {
+      "name": "reagent-name-thc-oil",
+      "desc": "reagent-desc-thc-oil"
+    },
+    "Nicotine": {
+      "name": "reagent-name-nicotine",
+      "desc": "reagent-desc-nicotine"
+    },
+    "Impedrezene": {
+      "name": "reagent-name-impedrezene",
+      "desc": "reagent-desc-impedrezene"
+    },
+    "SpaceDrugs": {
+      "name": "reagent-name-space-drugs",
+      "desc": "reagent-desc-space-drugs"
+    },
+    "Bananadine": {
+      "name": "reagent-name-bananadine",
+      "desc": "reagent-desc-bananadine"
+    },
+    "Nocturine": {
+      "name": "reagent-name-nocturine",
+      "desc": "reagent-desc-nocturine"
+    },
+    "MuteToxin": {
+      "name": "reagent-name-mute-toxin",
+      "desc": "reagent-desc-mute-toxin"
+    },
+    "NorepinephricAcid": {
+      "name": "reagent-name-norepinephric-acid",
+      "desc": "reagent-desc-norepinephric-acid"
+    },
+    "TearGas": {
+      "name": "reagent-name-tear-gas",
+      "desc": "reagent-desc-tear-gas"
+    },
+    "Cola": {
+      "name": "reagent-name-cola",
+      "desc": "reagent-desc-cola"
+    },
+    "ChangelingSting": {
+      "name": "reagent-name-changeling-sting",
+      "desc": "reagent-desc-changeling-sting"
+    },
+    "DrGibb": {
+      "name": "reagent-name-dr-gibb",
+      "desc": "reagent-desc-dr-gibb"
+    },
+    "EnergyDrink": {
+      "name": "reagent-name-energy-drink",
+      "desc": "reagent-desc-energy-drink"
+    },
+    "GrapeSoda": {
+      "name": "reagent-name-grape-soda",
+      "desc": "reagent-desc-grape-soda"
+    },
+    "IceCream": {
+      "name": "reagent-name-ice-cream",
+      "desc": "reagent-desc-ice-cream"
+    },
+    "LemonLime": {
+      "name": "reagent-name-lemon-lime",
+      "desc": "reagent-desc-lemon-lime"
+    },
+    "PwrGame": {
+      "name": "reagent-name-pwr-game",
+      "desc": "reagent-desc-pwr-game"
+    },
+    "RootBeer": {
+      "name": "reagent-name-root-beer",
+      "desc": "reagent-desc-root-beer"
+    },
+    "RootBeerFloat": {
+      "name": "reagent-name-root-beer-float",
+      "desc": "reagent-desc-root-beer-float"
+    },
+    "SpaceMountainWind": {
+      "name": "reagent-name-space-mountain-wind",
+      "desc": "reagent-desc-space-mountain-wind"
+    },
+    "SpaceUp": {
+      "name": "reagent-name-space-up",
+      "desc": "reagent-desc-space-up"
+    },
+    "Starkist": {
+      "name": "reagent-name-starkist",
+      "desc": "reagent-desc-starkist"
+    },
+    "FourteenLoko": {
+      "name": "reagent-name-fourteen-loko",
+      "desc": "reagent-desc-fourteen-loko"
+    },
+    "ShamblersJuice": {
+      "name": "reagent-name-shamblers-juice",
+      "desc": "reagent-desc-shamblers-juice"
+    },
+    "Thermite": {
+      "name": "reagent-name-thermite",
+      "desc": "reagent-desc-thermite"
+    },
+    "Napalm": {
+      "name": "reagent-name-napalm",
+      "desc": "reagent-desc-napalm"
+    },
+    "Phlogiston": {
+      "name": "reagent-name-phlogiston",
+      "desc": "reagent-desc-phlogiston"
+    },
+    "ChlorineTrifluoride": {
+      "name": "reagent-name-chlorine-trifluoride",
+      "desc": "reagent-desc-chlorine-trifluoride"
+    },
+    "FoamingAgent": {
+      "name": "reagent-name-foaming-agent",
+      "desc": "reagent-desc-foaming-agent"
+    },
+    "WeldingFuel": {
+      "name": "reagent-name-welding-fuel",
+      "desc": "reagent-desc-welding-fuel"
+    },
+    "Fluorosurfactant": {
+      "name": "reagent-name-fluorosurfactant",
+      "desc": "reagent-desc-fluorosurfactant"
+    },
+    "JuiceApple": {
+      "name": "reagent-name-juice-apple",
+      "desc": "reagent-desc-juice-apple"
+    },
+    "JuiceBanana": {
+      "name": "reagent-name-juice-banana",
+      "desc": "reagent-desc-juice-banana"
+    },
+    "JuiceBerry": {
+      "name": "reagent-name-juice-berry",
+      "desc": "reagent-desc-juice-berry"
+    },
+    "JuiceCarrot": {
+      "name": "reagent-name-juice-carrot",
+      "desc": "reagent-desc-juice-carrot"
+    },
+    "JuiceGrape": {
+      "name": "reagent-name-juice-grape",
+      "desc": "reagent-desc-juice-grape"
+    },
+    "JuiceLemon": {
+      "name": "reagent-name-juice-lemon",
+      "desc": "reagent-desc-juice-lemon"
+    },
+    "JuiceLime": {
+      "name": "reagent-name-juice-lime",
+      "desc": "reagent-desc-juice-lime"
+    },
+    "JuiceOrange": {
+      "name": "reagent-name-juice-orange",
+      "desc": "reagent-desc-juice-orange"
+    },
+    "JuicePineapple": {
+      "name": "reagent-name-juice-pineapple",
+      "desc": "reagent-desc-juice-pineapple"
+    },
+    "JuicePotato": {
+      "name": "reagent-name-juice-potato",
+      "desc": "reagent-desc-juice-potato"
+    },
+    "JuiceTomato": {
+      "name": "reagent-name-juice-tomato",
+      "desc": "reagent-desc-juice-tomato"
+    },
+    "JuiceWatermelon": {
+      "name": "reagent-name-juice-watermelon",
+      "desc": "reagent-desc-juice-watermelon"
+    }
+  },
+  "placeholders": {
+    "reagent-name-cryptobiolin": "криптобиолин",
+    "reagent-desc-cryptobiolin": "Вызывает растерянность и головокружение.",
+    "reagent-name-dylovene": "диловен",
+    "reagent-desc-dylovene": "Антитоксин широкого спектра действия, который лечит поражение организма токсинами. Передозировка вызывает рвоту, головокружение и боль.",
+    "reagent-name-diphenhydramine": "дифенгидрамин",
+    "reagent-desc-diphenhydramine": "Он же димедрол. Быстро очищает организм от гистамина, снижает нервозность и дрожь, лечит повреждения ядами.",
+    "reagent-name-arithrazine": "аритразин",
+    "reagent-desc-arithrazine": "Слегка нестабильный препарат, применяемый в самых крайних случаях радиационного отравления. Оказывает незначительное напряжение организма.",
+    "reagent-name-bicaridine": "бикаридин",
+    "reagent-desc-bicaridine": "Анальгетик, который очень эффективен при лечении механических повреждений. Он полезен для стабилизации состояния людей, которых сильно избили, а также для лечения менее опасных для жизни травм.",
+    "reagent-name-cryoxadone": "криоксадон",
+    "reagent-desc-cryoxadone": "Необходим для нормального функционирования криогеники. Исцеляет все стандартные типы повреждений, но работает только при температуре ниже 213 Кельвинов. В небольших дозах он способен лечить и оживлять растения.",
+    "reagent-name-doxarubixadone": "доксарубиксадон",
+    "reagent-desc-doxarubixadone": "Химикат криогенного действия. Лечит некоторые виды клеточных повреждений, нанесенных слаймами и неправильным использованием других химикатов.",
+    "reagent-name-dermaline": "дермалин",
+    "reagent-desc-dermaline": "Передовой препарат, более эффективный при лечении ожогов, чем Келотан.",
+    "reagent-name-dexalin": "дексалин",
+    "reagent-desc-dexalin": "Используется для лечения лёгкого кислородного голодания и кровопотери. Необходимый реагент для создания Дексалина плюс.",
+    "reagent-name-dexalin-plus": "дексалин плюс",
+    "reagent-desc-dexalin-plus": "Используется для лечения кислородного голодания и потери крови. Выводит Токсин хартбрейкер из кровеносной системы.",
+    "reagent-name-epinephrine": "эпинефрин",
+    "reagent-desc-epinephrine": "Эффективный стабилизирующий препарат, используемый для предотвращения смерти от асфиксии, а также для устранения незначительных повреждений пациентов, находящихся в критическом состоянии. Выводит Токсин хартбрейкер из кровеносной системы за счёт большего количества Эпинефрина, но может повышать уровень Гистамина. Помогает уменьшить время оглушения. Часто встречается в экстренных медипенах.",
+    "reagent-name-hyronalin": "хироналин",
+    "reagent-desc-hyronalin": "Слабый препарат для лечения радиационного поражения. Предшественник Аритразина и Фалангимина. Может вызывать рвоту.",
+    "reagent-name-ipecac": "ипекак",
+    "reagent-desc-ipecac": "Быстродействующий рвотный препарат. Применяется для остановки неметаболизированных ядов или сеансов массовой рвоты.",
+    "reagent-name-inaprovaline": "инапровалин",
+    "reagent-desc-inaprovaline": "Инапровалин это синаптический и кардио- стимулятор, широко используемый для купирования удушья при критических состояниях и уменьшения кровотечения. Используется во многих современных лекарственных препаратах.",
+    "reagent-name-kelotane": "келотан",
+    "reagent-desc-kelotane": "Лечит ожоги. Передозировка значительно снижает способность организма сохранять воду.",
+    "reagent-name-leporazine": "лепоразин",
+    "reagent-desc-leporazine": "Химический препарат, используемый для стабилизации температуры тела и быстрого лечения повреждений от холода. Отлично подходит для путешествий по космосу без скафандра, но не позволяет использовать криогенные капсулы.",
+    "reagent-name-barozine": "барозин",
+    "reagent-desc-barozine": "Сильнодействующий химикат, предотвращающий повреждения от давления. Оказывает сильное напряжение на организм.",
+    "reagent-name-phalanximine": "фалангимин",
+    "reagent-desc-phalanximine": "Современный препарат, используемый при лечении рака. Вызывает умеренное лучевое поражение организма и тошноту. Потенциально может удалить ген смерти у растений.",
+    "reagent-name-ambuzol": "амбузол",
+    "reagent-desc-ambuzol": "Высокотехнологичный препарат, способный остановить развитие зомби-вируса.",
+    "reagent-name-ambuzol-plus": "амбузол плюс",
+    "reagent-desc-ambuzol-plus": "Разработка будущего с использованием крови зараженного, прививает живых против инфекции.",
+    "reagent-name-pulped-banana-peel": "толчёная банановая кожура",
+    "reagent-desc-pulped-banana-peel": "Толченая банановая кожура обладает определенной эффективностью против кровотечений.",
+    "reagent-name-siderlac": "сидерлак",
+    "reagent-desc-siderlac": "Мощное противокоррозийное средство, получаемое из растений.",
+    "reagent-name-spaceacillin": "космоциллин",
+    "reagent-desc-spaceacillin": "Тета-лактамный антибиотик, эффективный против космических болезней. Побочные эффекты могут включать онкологические заболевания. После приема внутрь рекомендуется использовать фалангимин.",
+    "reagent-name-stellibinin": "стеллибинин",
+    "reagent-desc-stellibinin": "Антитоксин природного происхождения, обладающий особенной эффективностью против аматоксина.",
+    "reagent-name-synaptizine": "синаптизин",
+    "reagent-desc-synaptizine": "Токсичный препарат, сокращающий продолжительность оглушения и нокдауна вдвое.",
+    "reagent-name-tranexamic-acid": "транексамовая кислота",
+    "reagent-desc-tranexamic-acid": "Препарат, способствующий свертыванию крови, применяемый для остановки обильного кровотечения. При передозировке вызывает ещё более сильное кровотечение. Часто встречается в экстренных медипенах.",
+    "reagent-name-tricordrazine": "трикордразин",
+    "reagent-desc-tricordrazine": "Стимулятор широкого спектра действия, изначально созданный на основе кордразина. Лечит лёгкие повреждения всех основных типов, если пользователь не сильно ранен в целом. Лучше всего использовать в качестве добавки к другим лекарственным средствам.",
+    "reagent-name-lipozine": "липозин",
+    "reagent-desc-lipozine": "Химическое вещество, ускоряющее метаболизм, в результате чего пользователь быстрее испытывает чувство голода.",
+    "reagent-name-omnizine": "омнизин",
+    "reagent-desc-omnizine": "Смягчающая молочноватая жидкость с радужным оттенком. Известная теория заговора гласит, что его происхождение остается тайной, потому что раскрытие секрета его производства сделало бы большинство коммерческих фармацевтических препаратов ненужными.",
+    "reagent-name-ultravasculine": "ультраваскулин",
+    "reagent-desc-ultravasculine": "Сложный антитоксин, который быстро выводит токсины, вызывая при этом незначительное напряжение организма. Реагирует с гистамином, дублируя себя и одновременно вымывая его. Передозировка вызывает сильную боль.",
+    "reagent-name-oculine": "окулин",
+    "reagent-desc-oculine": "Простой солевой раствор, используемый для лечения повреждений глаз при приеме внутрь.",
+    "reagent-name-ethylredoxrazine": "этилредоксразин",
+    "reagent-desc-ethylredoxrazine": "Нейтрализует действие алкоголя в кровеносной системе. Несмотря на то, что он часто нужен, заказывают его редко.",
+    "reagent-name-cognizine": "когнизин",
+    "reagent-desc-cognizine": "Таинственное химическое вещество, способное сделать любое неразумное существо разумным.",
+    "reagent-name-ethyloxyephedrine": "этилоксиэфедрин",
+    "reagent-desc-ethyloxyephedrine": "Слегка нестабильный препарат, производное дезоксиэфедрина, применяемый в основном для профилактики нарколепсии.",
+    "reagent-name-diphenylmethylamine": "дифенилметиламин",
+    "reagent-desc-diphenylmethylamine": "Более стабильное лекарственное средство, чем этилоксиэфедрин. Полезен для поддержания бодрости.",
+    "reagent-name-sigynate": "сигинат",
+    "reagent-desc-sigynate": "Густой розовый сироп, полезный для нейтрализации кислот и смягчения повреждений, вызванных кислотами. Сладкий на вкус!",
+    "reagent-name-saline": "физраствор",
+    "reagent-desc-saline": "Смесь воды с солью. Обычно используется для лечения обезвоживания или низкого содержания жидкости в крови.",
+    "reagent-name-lacerinol": "лацеринол",
+    "reagent-desc-lacerinol": "Довольно нереактивное химическое вещество, усиливающее синтез коллагена до невероятных уровней и заживляющее резаные раны.",
+    "reagent-name-puncturase": "пунктураз",
+    "reagent-desc-puncturase": "Шипучее химическое вещество, залечивающее колотые ранения, ценой небольшого количества ушибов.",
+    "reagent-name-bruizine": "бруизин",
+    "reagent-desc-bruizine": "Изначально разрабатывавшееся как лекарство от кашля, это химическое вещество оказалось необычайно эффективным при лечении размозженных ран.",
+    "reagent-name-holywater": "святая вода",
+    "reagent-desc-holywater": "Чистейшая и непорочнейшая вода, прямиком из рук Бога, известна тем, что волшебным образом исцеляет раны.",
+    "reagent-name-pyrazine": "пиразин",
+    "reagent-desc-pyrazine": "Эффективно лечит ожоги, полученные в самых жарких пожарах. При передозировке вызывает обширное внутреннее кровотечение.",
+    "reagent-name-insuzine": "инсузин",
+    "reagent-desc-insuzine": "Быстро восстанавливает ткани, омертвевшие в результате поражения электрическим током, но при этом слегка охлаждает. Полностью замораживает пациента при передозировке.",
+    "reagent-name-necrosol": "некрозол",
+    "reagent-desc-necrosol": "Некротическое вещество, которое, похоже, способно излечивать обмороженные трупы. В небольших дозах он способен лечить и оживлять растения.",
+    "reagent-name-aloxadone": "алоксадон",
+    "reagent-desc-aloxadone": "Криогенное химическое вещество. Используется для лечения тяжёлых ожогов третьей степени путём регенерации обожжённых тканей. Работает независимо от того, жив пациент или мертв.",
+    "reagent-name-aluminium": "алюминий",
+    "reagent-desc-aluminium": "Серебристый, мягкий, немагнитный и ковкий металл.",
+    "reagent-name-ash": "пепел",
+    "reagent-desc-ash": "Светло-серый рассыпчатый порошок.",
+    "reagent-name-carbon": "углерод",
+    "reagent-desc-carbon": "Чёрное кристаллическое твердое вещество.",
+    "reagent-name-charcoal": "уголь",
+    "reagent-desc-charcoal": "Чёрное, пористое твердое вещество.",
+    "reagent-name-chlorine": "хлор",
+    "reagent-desc-chlorine": "Жёлто-зелёный газ, токсичный для человека.",
+    "reagent-name-copper": "медь",
+    "reagent-desc-copper": "Мягкий, ковкий и пластичный металл с очень высокой тепло- и электропроводностью.",
+    "reagent-name-fluorine": "фтор",
+    "reagent-desc-fluorine": "Высокотоксичный бледно-жёлтый газ. Чрезвычайно реактивный.",
+    "reagent-name-gold": "золото",
+    "reagent-desc-gold": "Плотный, мягкий, блестящий металл, самый ковкий и пластичный из всех известных.",
+    "reagent-name-hydrogen": "водород",
+    "reagent-desc-hydrogen": "Легкий, легковоспламеняющийся газ.",
+    "reagent-name-iodine": "йод",
+    "reagent-desc-iodine": "Обычно добавляется в поваренную соль в качестве питательного вещества. Сам по себе он гораздо менее приятен на вкус.",
+    "reagent-name-iron": "железо",
+    "reagent-desc-iron": "Серебристо-серый металл, образующий оксиды железа (ржавчину) при контакте с воздухом. Часто сплавляется с другими элементами для получения сплавов, таких как сталь.",
+    "reagent-name-lithium": "литий",
+    "reagent-desc-lithium": "Мягкий, серебристо-белый щелочной металл. Он очень реактивен и воспламеняется при контакте с водой.",
+    "reagent-name-mercury": "ртуть",
+    "reagent-desc-mercury": "Серебристый металл, который находится в жидком состоянии при комнатной температуре. Он очень токсичен для человека.",
+    "reagent-name-potassium": "калий",
+    "reagent-desc-potassium": "Мягкий, блестящий серый металл. Еще более реактивный, чем литий.",
+    "reagent-name-phosphorus": "фосфор",
+    "reagent-desc-phosphorus": "Реактивный металл, используемый в пиротехнике и оружии.",
+    "reagent-name-radium": "радий",
+    "reagent-desc-radium": "Радиоактивный металл, серебристо-белый в чистом виде. Он светится из-за своей радиоактивности и очень токсичен.",
+    "reagent-name-silicon": "кремний",
+    "reagent-desc-silicon": "Твердое и хрупкое кристаллическое вещество серо-голубого цвета.",
+    "reagent-name-silver": "серебро",
+    "reagent-desc-silver": "Мягкий, белый, блестящий переходный металл обладает самой высокой электропроводностью среди всех элементов и самой высокой теплопроводностью среди всех металлов.",
+    "reagent-name-sulfur": "сера",
+    "reagent-desc-sulfur": "Жёлтое кристаллическое твердое вещество.",
+    "reagent-name-sodium": "натрий",
+    "reagent-desc-sodium": "Серебристо-белый щелочной металл. Высоко реактивный в чистом виде.",
+    "reagent-name-uranium": "уран",
+    "reagent-desc-uranium": "Серый металлический химический элемент из серии актинидов, слабо радиоактивный.",
+    "reagent-name-bananium": "бананиум",
+    "reagent-desc-bananium": "Жёлтое радиоактивное органическое твёрдое вещество.",
+    "reagent-name-zinc": "цинк",
+    "reagent-desc-zinc": "Серебристый, хрупкий металл, часто используемый в батареях для хранения заряда.",
+    "reagent-name-toxin": "токсин",
+    "reagent-desc-toxin": "Как ни странно, токсичный химикат. Доступен в емагнутом химическом раздатчике.",
+    "reagent-name-carpotoxin": "карпотоксин",
+    "reagent-desc-carpotoxin": "Высокотоксичный химикат, содержащийся в космических карпах. Вызывает болезненное чувство жжения.",
+    "reagent-name-mold": "плесень",
+    "reagent-desc-mold": "Грибковое образование, часто встречающееся в темных, влажных местах или на просроченном хлебе. При попадании в организм вызывает заболевания.",
+    "reagent-name-polytrinic-acid": "политриновая кислота",
+    "reagent-desc-polytrinic-acid": "Чрезвычайно едкое химическое вещество. Сильно обжигает всех, кто вступит с ней в непосредственный контакт.",
+    "reagent-name-chloral-hydrate": "хлоральгидрат",
+    "reagent-desc-chloral-hydrate": "Успокаивающее и гипнотическое химическое вещество. Обычно используется для усыпления других людей, независимо от того, хотят они этого или нет.",
+    "reagent-name-ferrochromic-acid": "феррохромовая кислота",
+    "reagent-desc-ferrochromic-acid": "Слабый едкий раствор, не способный причинить серьёзный вред здоровью, только если не вдыхать его.",
+    "reagent-name-fluorosulfuric-acid": "фторсерная кислота",
+    "reagent-desc-fluorosulfuric-acid": "Очень едкое химическое вещество, способное оставить заметный след на коже.",
+    "reagent-name-sulfuric-acid": "серная кислота",
+    "reagent-desc-sulfuric-acid": "Едкий химикат. Держать подальше от лица.",
+    "reagent-name-unstable-mutagen": "нестабильный мутаген",
+    "reagent-desc-unstable-mutagen": "Вызывает мутации при введении в живых людей или растения. Высокие дозы могут быть смертельными, особенно для людей.",
+    "reagent-name-heartbreaker-toxin": "токсин хартбрейкер",
+    "reagent-desc-heartbreaker-toxin": "Галлюциногенное соединение, получаемое из токсина майндбрейкер. Блокирует нейронные сигналы в дыхательной системе, вызывая удушье.",
+    "reagent-name-lexorin": "лексорин",
+    "reagent-desc-lexorin": "Быстродействующее химическое вещество, используемое для быстрого удушения людей. Однако Дексалин, Дексалин плюс и Эпинефрин способны вывести его из организма.",
+    "reagent-name-mindbreaker-toxin": "токсин майндбрейкер",
+    "reagent-desc-mindbreaker-toxin": "Сильнодействующее галлюциногенное соединение, ранее известное как ЛСД.",
+    "reagent-name-histamine": "гистамин",
+    "reagent-desc-histamine": "Химическое вещество, образующееся в результате реакции аллергенов с антителами. Смертельно опасен в больших количествах.",
+    "reagent-name-theobromine": "теобромин",
+    "reagent-desc-theobromine": "Теобромин - это горький алкалоид, выделяемый из семян какао, который можно встретить в шоколаде и некоторых других продуктах. Не давать животным.",
+    "reagent-name-amatoxin": "аматоксин",
+    "reagent-desc-amatoxin": "Смертельно опасный токсин, содержащийся в некоторых грибах, прежде всего в мухоморах. Смертелен в малых дозах.",
+    "reagent-name-vent-crud": "вентиляционная грязь",
+    "reagent-desc-vent-crud": "Черное вещество, которое можно встретить в плохо обслуживаемых вентиляционных системах. Может вызывать вентиляционный кашель.",
+    "reagent-name-romerol": "ромерол",
+    "reagent-desc-romerol": "Сверхъестественное вещество, способное оживлять мертвецов. Если его не лечить, эффект будет необратимым и приведет к гибели станции. Обращайтесь с осторожностью.",
+    "reagent-name-uncooked-animal-proteins": "непрожаренные животные протеины",
+    "reagent-desc-uncooked-animal-proteins": "Крайне опасны для желудков более слабых форм жизни.",
+    "reagent-name-allicin": "аллицин",
+    "reagent-desc-allicin": "Сероорганическое соединение, содержащееся в растениях-аллиумах, таких, как чеснок, лук и других.",
+    "reagent-name-pax": "пакс",
+    "reagent-desc-pax": "Психиатрический препарат, который не позволяет употребившему причинять вред кому-либо напрямую.",
+    "reagent-name-honk": "хонк",
+    "reagent-desc-honk": "Токсин, содержащийся в бананиуме. Вызывает обильное хонканье и внутреннее кровотечение, также может вызвать мутацию употребившего.",
+    "reagent-name-lead": "свинец",
+    "reagent-desc-lead": "Медленно действующий, но невероятно смертоносный токсин, содержащийся в стали, хотя и в незначительных количествах. Не имеет вкуса.",
+    "reagent-name-bungotoxin": "бунготоксин",
+    "reagent-desc-bungotoxin": "Яд умеренно медленного действия, содержащийся в косточках плода бунго.",
+    "reagent-name-vestine": "вестин",
+    "reagent-desc-vestine": "Оказывает негативное воздействие на организм, вызывая сильную дрожь. Хотя сам по себе он не особенно полезен, его можно использовать для производства ряда других химических веществ.",
+    "reagent-name-tazinide": "тазинид",
+    "reagent-desc-tazinide": "Очень опасная металлическая смесь, которая может нарушить возможность передвигаться благодаря электризующему воздействию.",
+    "reagent-name-oxygen": "кислород",
+    "reagent-desc-oxygen": "Окисляющий, бесцветный газ.",
+    "reagent-name-plasma": "плазма",
+    "reagent-desc-plasma": "Причудливая, космически-магическая пыльца фей. Вам, наверное, не стоит это есть, но мы оба знаем, что вы все равно это сделаете.",
+    "reagent-name-tritium": "тритий",
+    "reagent-desc-tritium": "Радиоактивная космически-магическая пыльца фей.",
+    "reagent-name-carbon-dioxide": "диоксид углерода",
+    "reagent-desc-carbon-dioxide": "Он же углекислый газ. Вы совершенно не представляете, что это такое.",
+    "reagent-name-nitrogen": "азот",
+    "reagent-desc-nitrogen": "Он же нитроген. Бесцветный, не имеющий запаха нереактивный газ. Очень стабилен.",
+    "reagent-name-miasma": "миазма",
+    "reagent-desc-miasma": "Ух ох, как воняет!",
+    "reagent-name-nitrous-oxide": "оксид азота",
+    "reagent-desc-nitrous-oxide": "Знаешь, как всё кажется смешнее, когда ты устал? Так вот...",
+    "reagent-name-frezon": "фрезон",
+    "reagent-desc-frezon": "Высокоэффективный хладагент... и галлюциноген.",
+    "reagent-name-coffee": "кофе",
+    "reagent-desc-coffee": "Напиток, приготовленный из заваренных кофейных зерен. Содержит умеренное количество кофеина.",
+    "reagent-name-cream": "сливки",
+    "reagent-desc-cream": "Жирная, но еще жидкая часть молока. Почему бы вам не смешать это с виски, а?",
+    "reagent-name-cafe-latte": "кофе латте",
+    "reagent-desc-cafe-latte": "Приятный, крепкий и вкусный напиток на время чтения.",
+    "reagent-name-green-tea": "зелёный чай",
+    "reagent-desc-green-tea": "Вкусный зелёный чай.",
+    "reagent-name-grenadine": "сироп гренадин",
+    "reagent-desc-grenadine": "Не с вишневым вкусом!",
+    "reagent-name-iced-coffee": "айс-кофе",
+    "reagent-desc-iced-coffee": "Кофе со льдом, бодрящий и прохладный.",
+    "reagent-name-iced-green-tea": "зелёный чай со льдом",
+    "reagent-desc-iced-green-tea": "Холодный зеленый чай.",
+    "reagent-name-iced-tea": "чай со льдом",
+    "reagent-desc-iced-tea": "Он же айс-ти. Не имеет отношения к определенному рэп-исполнителю/актеру.",
+    "reagent-name-lemonade": "лимонад",
+    "reagent-desc-lemonade": "Напиток из лимонного сока, воды и подсластителя, например, тростникового сахара или меда.",
+    "reagent-name-milk": "молоко",
+    "reagent-desc-milk": "Непрозрачная белая жидкость, вырабатываемая молочными железами млекопитающих.",
+    "reagent-name-milk-goat": "козье молоко",
+    "reagent-desc-milk-goat": "Непрозрачная белая жидкость, производимая козами. Высокая концентрация обезжиренных сливок.",
+    "reagent-name-milk-oat": "овсяное молоко",
+    "reagent-desc-milk-oat": "На удивление вкусное.",
+    "reagent-name-milk-soy": "соевое молоко",
+    "reagent-desc-milk-soy": "Любимчик потребителей.",
+    "reagent-name-milk-spoiled": "прогорклое молоко",
+    "reagent-desc-milk-spoiled": "Это молоко испортилось.",
+    "reagent-name-nothing": "ничего",
+    "reagent-desc-nothing": "Абсолютно ничего.",
+    "reagent-name-nuclear-cola": "ядерная кола",
+    "reagent-desc-nuclear-cola": "Кола, кола никогда не меняется.",
+    "reagent-name-soda-water": "газированная вода",
+    "reagent-desc-soda-water": "Она же содовая. Почему бы не сделать виски с содовой?",
+    "reagent-name-soy-latte": "соевый латте",
+    "reagent-desc-soy-latte": "Кофейный напиток, приготовленный из эспрессо и подогретого соевого молока.",
+    "reagent-name-tea": "чай",
+    "reagent-desc-tea": "Напиток, приготовленный путем кипячения листьев чайного дерева Camellia sinensis.",
+    "reagent-name-tonic-water": "тоник",
+    "reagent-desc-tonic-water": "Вкус у него странный, но, по крайней мере, хинин препятствует распространению космической малярии.",
+    "reagent-name-water": "вода",
+    "reagent-desc-water": "Бесцветная жидкость, необходимая человекам для выживания.",
+    "reagent-name-ice": "лёд",
+    "reagent-desc-ice": "Застывшая вода.",
+    "reagent-name-dry-ramen": "сухой рамэн",
+    "reagent-desc-dry-ramen": "Сухая лапша и соль.",
+    "reagent-name-hot-ramen": "горячий рамэн",
+    "reagent-desc-hot-ramen": "Горячая лапша.",
+    "reagent-name-pilk": "пилк",
+    "reagent-desc-pilk": "Тошнотворная смесь молока и колы.",
+    "reagent-name-posca": "поска",
+    "reagent-desc-posca": "Напиток бедных воинов из забытой эпохи.",
+    "reagent-name-the-martinez": "Мартинес",
+    "reagent-desc-the-martinez": "Легенда среди киберпанков. Вспоминается по напитку, забывается по пьяни.",
+    "reagent-name-white-gilgamesh": "белый Гильгамеш",
+    "reagent-desc-white-gilgamesh": "Тошнотворная смесь молока и пива. Вызывает ощущение одеревенелости.",
+    "reagent-name-mopwata": "швабода",
+    "reagent-desc-mopwata": "Грязная, застоявшаяся вода из-под швабры, швабровая вода.",
+    "reagent-name-flour": "мука",
+    "reagent-desc-flour": "Используется в выпечке.",
+    "reagent-name-cornmeal": "кукурузная мука",
+    "reagent-desc-cornmeal": "Используется в выпечке.",
+    "reagent-name-oats": "овёс",
+    "reagent-desc-oats": "Используется для различных вкусных целей.",
+    "reagent-name-enzyme": "универсальный фермент",
+    "reagent-desc-enzyme": "Используется в приготовлении различных блюд.",
+    "reagent-name-egg": "приготовленное яйцо",
+    "reagent-desc-egg": "Приготовленный зародыш курицы, вкусно.",
+    "reagent-name-raw-egg": "сырое яйцо",
+    "reagent-desc-raw-egg": "Используется в выпечке.",
+    "reagent-name-sugar": "сахар",
+    "reagent-desc-sugar": "Вкусный космический сахар!",
+    "reagent-name-blackpepper": "чёрный перец",
+    "reagent-desc-blackpepper": "Часто используется как приправа к пище, или чтобы заставить людей чихать.",
+    "reagent-name-vinegar": "уксус",
+    "reagent-desc-vinegar": "Часто используется как приправа к пище.",
+    "reagent-name-rice": "рис",
+    "reagent-desc-rice": "Твёрдые, маленькие белые зёрнышки.",
+    "reagent-name-oil-olive": "оливковое масло",
+    "reagent-desc-oil-olive": "Вязкое и ароматное.",
+    "reagent-name-oil": "масло",
+    "reagent-desc-oil": "Используется поварами для приготовления пищи.",
+    "reagent-name-capsaicin-oil": "капсаициновое масло",
+    "reagent-desc-capsaicin-oil": "Капсаициновое масло - это ингредиент, содержащийся в различных сортах острого перца.",
+    "reagent-name-astrotame": "Астротем",
+    "reagent-desc-astrotame": "Слаще тысячи ложек сахара, но без калорий.",
+    "reagent-name-bbq-sauce": "соус барбекю",
+    "reagent-desc-bbq-sauce": "Салфетки в комплект не входят.",
+    "reagent-name-cornoil": "кукурузное масло",
+    "reagent-desc-cornoil": "Кукурузное масло. Вкусное масло, используемое в готовке. Изготавливается из кукурузы.",
+    "reagent-name-frostoil": "холодный соус",
+    "reagent-desc-frostoil": "Заставляет язык онеметь.",
+    "reagent-name-horseradish-sauce": "хрен",
+    "reagent-desc-horseradish-sauce": "Пакетик душистого хрена.",
+    "reagent-name-hotsauce": "острый соус",
+    "reagent-desc-hotsauce": "Вкус просто огонь.",
+    "reagent-name-ketchup": "кетчуп",
+    "reagent-desc-ketchup": "Приготовлен из томатного пюре с добавлением специй.",
+    "reagent-name-ketchunaise": "кетчунез",
+    "reagent-desc-ketchunaise": "Так называемый Русский соус, популярный среди космо-американцев.",
+    "reagent-name-mayo": "майонез",
+    "reagent-desc-mayo": "Жирный соус, приготовленный из масла, яиц, и какой-либо (пищевой) кислоты.",
+    "reagent-name-mustard": "горчица",
+    "reagent-desc-mustard": "Простая горчица жёлтого цвета, изготовленная из семян горчицы.",
+    "reagent-name-vinaigrette": "винегретная заправка",
+    "reagent-desc-vinaigrette": "Простая заправка для салатов, приготовленная из масла, уксуса и приправ.",
+    "reagent-name-soysauce": "соевый соус",
+    "reagent-desc-soysauce": "Соленая приправа на основе сои.",
+    "reagent-name-table-salt": "столовая соль",
+    "reagent-desc-table-salt": "Хлорид натрия, широко известный как соль, часто используется в качестве пищевой приправы или для мгновенного уничтожения мозговых червей.",
+    "reagent-name-blood": "кровь",
+    "reagent-desc-blood": "Я надеюсь, что это кетчуп.",
+    "reagent-name-insect-blood": "кровь насекомого",
+    "reagent-desc-insect-blood": "Окей, а это реально мерзко. Она выглядит почти... живой?",
+    "reagent-name-slime": "слизь",
+    "reagent-desc-slime": "Сначала вам показалось, что это градиент крови, но вы ошиблись.",
+    "reagent-name-hemocyanin-blood": "голубая кровь",
+    "reagent-desc-hemocyanin-blood": "Содержит медь, а не железо, что придаёт ей ярко выраженный голубой цвет.",
+    "reagent-name-zombie-blood": "кровь зомби",
+    "reagent-desc-zombie-blood": "Не рекомендуется употреблять в пищу. Может быть использована для создания прививки от инфекции.",
+    "reagent-name-ichor": "ихор",
+    "reagent-desc-ichor": "Чрезвычайно мощное регенеративное химическое вещество, доведенное до совершенства эволюцией космической фауны. Производится в пищеварительной системе дракона и считается экзотическим товаром, поскольку охота на него требует огромных усилий.",
+    "reagent-name-fat": "жир",
+    "reagent-desc-fat": "Независимо от того, как он был получен, его применение важно.",
+    "reagent-name-vomit": "рвота",
+    "reagent-desc-vomit": "Вы можете увидеть в ней несколько кусков чьей-то последней еды.",
+    "reagent-name-desoxyephedrine": "дезоксиэфедрин",
+    "reagent-desc-desoxyephedrine": "Более эффективный Эфедрин, имеющий более выраженные побочные эффекты. Требует меньшей дозы для профилактики нарколепсии.",
+    "reagent-name-ephedrine": "эфедрин",
+    "reagent-desc-ephedrine": "Кофеиновый адреналиновый стимулятор, который делает вас быстрее и устойчивее на ногах. Также помогает противостоять нарколепсии в дозах выше 30, но ценой сильного нервного стресса.",
+    "reagent-name-stimulants": "стимулятор",
+    "reagent-desc-stimulants": "Химический коктейль, разработанный компанией Donk Co., который позволяет агентам быстрее оправляться от оглушения, быстрее передвигаться, и легко излечивает в критическом состоянии. Из-за комплексной природы этого вещества организму гораздо труднее вывести его из организма естественным путем.",
+    "reagent-name-experimental-stimulants": "экспериментальный стимулятор",
+    "reagent-desc-experimental-stimulants": "Опытная, усиленная версия стимулятора. Её использование даёт практически полную невосприимчивость к оглушающему оружию, ускоренную регенерацию ран, огромную скорость передвижения за счёт понижения выработки молочной кислоты и общее чувство эйфории. Среди побочных эффектов можно выделить низкую свёртываемость крови, тоннельное зрение, сильное скопление токсинов в кровеносной системе и быстрое отмирание печени. Беречь от животных.",
+    "reagent-name-thc": "ТГК",
+    "reagent-desc-thc": "Он же тетрагидроканнабинол. Основное психоактивное вещество в конопле.",
+    "reagent-name-thc-oil": "масло ТГК",
+    "reagent-desc-thc-oil": "Чистое масло ТГК, полученное из листьев конопли. Оно намного сильнее, чем в натуральной форме, и может использоваться для снятия хронической боли у пациентов.",
+    "reagent-name-bananadine": "бананадин",
+    "reagent-desc-bananadine": "Слабый психоделик, который содержится в небольших количествах в банановой кожуре.",
+    "reagent-name-nicotine": "никотин",
+    "reagent-desc-nicotine": "Опасен и вызывает сильное привыкание, но так утверждает пропаганда.",
+    "reagent-name-impedrezene": "импедризин",
+    "reagent-desc-impedrezene": "Наркотик, который лишает человека дееспособности, замедляя высшие функции клеток мозга.",
+    "reagent-name-space-drugs": "космические наркотики",
+    "reagent-desc-space-drugs": "Запрещенное вещество, вызывающее ряд таких эффектов, как потеря равновесия и нарушения зрения.",
+    "reagent-name-nocturine": "ноктюрин",
+    "reagent-desc-nocturine": "Высокоэффективное снотворное и гипнотическое средство, разработанное Синдикатом для тайных операций. Билет в один конец в хонкоград.",
+    "reagent-name-mute-toxin": "токсин немоты",
+    "reagent-desc-mute-toxin": "Густой препарат, воздействующий на голосовые связки и лишающий пользователя возможности говорить пока усваивается организмом.",
+    "reagent-name-norepinephric-acid": "норэпинефриновая кислота",
+    "reagent-desc-norepinephric-acid": "Мягкое химическое вещество, которое блокирует оптические рецепторы, делая употребившего слепым пока усваивается организмом.",
+    "reagent-name-tear-gas": "слезоточивый газ",
+    "reagent-desc-tear-gas": "Химическое вещество, вызывающее слёзы и сильное раздражение, обычно используется для подавления массовых беспорядков.",
+    "reagent-name-e-z-nutrient": "EZ-нутриенты",
+    "reagent-desc-e-z-nutrient": "Дайте вашим растениям немного этих ЛЁГКИХ питательных веществ! Дионы считают это аппетитным.",
+    "reagent-name-left4-zed": "left-4-zed",
+    "reagent-desc-left4-zed": "Коктейль из различных мутагенов, которые насыщают питательными веществами, но вредят и влияют на геном жизни растения.",
+    "reagent-name-pest-killer": "пестициды",
+    "reagent-desc-pest-killer": "Смесь, предназначенная для борьбы с вредителями. Несмотря на свою полезность, они медленно отравляют растения токсинами, поэтому будьте осторожны при использовании.",
+    "reagent-name-plant-b-gone": "plant-B-gone",
+    "reagent-desc-plant-b-gone": "Вредная токсичная смесь для уничтожения растительной жизни. Очень эффективно против кудзу.",
+    "reagent-name-robust-harvest": "робаст харвест",
+    "reagent-desc-robust-harvest": "Высокоэффективное удобрение с небольшим эффектом усиления потенции растений. Будьте осторожны при его использовании, так как его избыток может привести к снижению урожайности растений. Оказывает положительный эффект на дион.",
+    "reagent-name-weed-killer": "гербициды",
+    "reagent-desc-weed-killer": "Смесь, предназначенная для борьбы с сорняками. Очень эффективна против кудзу. Несмотря на свою полезность, они медленно отравляют растения токсинами, поэтому будьте осторожны при использовании.",
+    "reagent-name-ammonia": "аммиак",
+    "reagent-desc-ammonia": "Эффективное удобрение, дающее растениям питательные вещества.",
+    "reagent-name-diethylamine": "диэтиламин",
+    "reagent-desc-diethylamine": "Очень мощное удобрение, насыщает растения питательными веществами, уничтожает вредителей, а иногда даже ускоряет рост.",
+    "reagent-name-absinthe": "абсент",
+    "reagent-desc-absinthe": "Спиртной напиток со вкусом аниса, полученный из растений.",
+    "reagent-name-ale": "эль",
+    "reagent-desc-ale": "Тёмный алкогольный напиток, приготовленный из ячменного солода и дрожжей.",
+    "reagent-name-beer": "пиво",
+    "reagent-desc-beer": "Алкогольный напиток, изготовленный из солода, хмеля, дрожжей и воды.",
+    "reagent-name-blue-curacao": "голубой кюрасао",
+    "reagent-desc-blue-curacao": "Экзотично-голубой фруктовый напиток, дистиллированный из апельсинов.",
+    "reagent-name-cognac": "коньяк",
+    "reagent-desc-cognac": "Сладкий и крепкий алкогольный напиток, дважды дистиллированный и оставленный для выдержки на несколько лет. Сладкий, как блуд.",
+    "reagent-name-dead-rum": "мёртвый ром",
+    "reagent-desc-dead-rum": "Дистиллированный алкогольный напиток, изготовленный из морской воды.",
+    "reagent-name-ethanol": "этанол",
+    "reagent-desc-ethanol": "Он же этиловый спирт. Простейший алкоголь, при употреблении пьянит, легко воспламеняется.",
+    "reagent-name-gin": "джин",
+    "reagent-desc-gin": "Дистиллированный алкогольный напиток, в котором преобладает аромат ягод можжевельника.",
+    "reagent-name-coffeeliqueur": "кофейный ликёр",
+    "reagent-desc-coffeeliqueur": "Ликёр, со вкусом кофе колд брю и специй.",
+    "reagent-name-melon-liquor": "дынный ликёр",
+    "reagent-desc-melon-liquor": "Довольно сладкий фруктовый ликер крепостью 23 градуса.",
+    "reagent-name-n-t-cahors": "НеоТеологический кагор",
+    "reagent-desc-n-t-cahors": "Крепленое десертное вино, изготовленное из каберне совиньон, саперави и других сортов винограда.",
+    "reagent-name-poison-wine": "ядовитое вино",
+    "reagent-desc-poison-wine": "Это вообще вино? Ядовитое! Галлюциногенное! Вероятно, ваше руководство потребляет его в огромных количествах!",
+    "reagent-name-rum": "ром",
+    "reagent-desc-rum": "Дистиллированный алкогольный напиток, изготовленный из субпродуктов сахарного тростника.",
+    "reagent-name-sake": "саке",
+    "reagent-desc-sake": "Алкогольный напиток, изготовленный путем брожения шлифованного риса.",
+    "reagent-name-tequila": "текила",
+    "reagent-desc-tequila": "Крепкий и слабо ароматизированный спирт производства Мексики.",
+    "reagent-name-vermouth": "вермут",
+    "reagent-desc-vermouth": "Ароматизированное, крепленое белое вино, со вкусом различных трав.",
+    "reagent-name-vodka": "водка",
+    "reagent-desc-vodka": "Прозрачный дистиллированный алкогольный напиток, происходящий из Польши и России.",
+    "reagent-name-whiskey": "виски",
+    "reagent-desc-whiskey": "Тип дистиллированного алкогольного напитка, изготовленного из забродившего зернового сусла.",
+    "reagent-name-wine": "вино",
+    "reagent-desc-wine": "Алкогольный напиток премиум-класса, изготовленный из дистиллированного виноградного сока.",
+    "reagent-name-champagne": "шампанское",
+    "reagent-desc-champagne": "Премиальное игристое вино.",
+    "reagent-name-acid-spit": "кислотный плевок",
+    "reagent-desc-acid-spit": "Напиток для смелых, но при неправильном приготовлении может оказаться смертельно опасным!",
+    "reagent-name-allies-cocktail": "коктейль Союзники",
+    "reagent-desc-allies-cocktail": "Напиток из ваших союзников, не так сладок, как если бы из ваших врагов.",
+    "reagent-name-aloe": "алоэ",
+    "reagent-desc-aloe": "Очень, очень, очень хорошо.",
+    "reagent-name-amasec": "амасек",
+    "reagent-desc-amasec": "Официальный напиток Оружейного клуба!",
+    "reagent-name-andalusia": "андалусия",
+    "reagent-desc-andalusia": "Хороший напиток со странным названием.",
+    "reagent-name-antifreeze": "антифриз",
+    "reagent-desc-antifreeze": "Непревзойденная свежесть.",
+    "reagent-name-atomic-bomb": "атомная бомба",
+    "reagent-desc-atomic-bomb": "Распространение ядерного оружия никогда не было таким вкусным.",
+    "reagent-name-b52": "B-52",
+    "reagent-desc-b52": "Кофе, айриш крим и коньяк. Просто бомба.",
+    "reagent-name-bahama-mama": "багама-мама",
+    "reagent-desc-bahama-mama": "Тропический коктейль.",
+    "reagent-name-banana-honk": "банана-хонк",
+    "reagent-desc-banana-honk": "Напиток из Бананового Рая.",
+    "reagent-name-barefoot": "домохозяйка",
+    "reagent-desc-barefoot": "Дети, кухня, церковь.",
+    "reagent-name-beepsky-smash": "удар бипски",
+    "reagent-desc-beepsky-smash": "Откажись выпить - и приготовься к ЗАКОНУ.",
+    "reagent-name-bilk": "миво",
+    "reagent-desc-bilk": "Это пиво, смешанное с молоком. Отвратительно.",
+    "reagent-name-black-russian": "чёрный русский",
+    "reagent-desc-black-russian": "Для людей с непереносимостью лактозы. Так же прекрасен, как и белый русский.",
+    "reagent-name-bloody-mary": "кровавая Мэри",
+    "reagent-desc-bloody-mary": "Странная, но приятная смесь из водки, томата и сока лайма.",
+    "reagent-name-booger": "козявка",
+    "reagent-desc-booger": "Фууу...",
+    "reagent-name-brave-bull": "храбрый бык",
+    "reagent-desc-brave-bull": "Так же эффективен, как и голландский кураж!",
+    "reagent-name-cuba-libre": "куба-либре",
+    "reagent-desc-cuba-libre": "Ром, смешанный с колой. Да здравствует революция.",
+    "reagent-name-demons-blood": "кровь демона",
+    "reagent-desc-demons-blood": "ААААХ!!!!",
+    "reagent-name-devils-kiss": "поцелуй дьявола",
+    "reagent-desc-devils-kiss": "Жуткое время!",
+    "reagent-name-doctors-delight": "радость доктора",
+    "reagent-desc-doctors-delight": "Глоток сделал - Медибот свободен. Это, наверное, даже к лучшему.",
+    "reagent-name-driest-martini": "самый сухой мартини",
+    "reagent-desc-driest-martini": "Только для опытных. Вы уверены, что видите плавающие в бокале песчинки.",
+    "reagent-name-erika-surprise": "сюрприз Эрики",
+    "reagent-desc-erika-surprise": "Сюрприз в том, что он зеленый!",
+    "reagent-name-gargle-blaster": "пангалактический грызлодёр",
+    "reagent-desc-gargle-blaster": "Ого, эта штука выглядит нестабильной!",
+    "reagent-name-gin-fizz": "шипучий джин",
+    "reagent-desc-gin-fizz": "Освежающе лимонный, восхитительно сухой.",
+    "reagent-name-gin-tonic": "джин-тоник",
+    "reagent-desc-gin-tonic": "Классический мягкий коктейль всех времен и народов.",
+    "reagent-name-gildlager": "гильдлагер",
+    "reagent-desc-gildlager": "50-градусный коричный шнапс, созданный для девочек-подростков на весенних каникулах.",
+    "reagent-name-grog": "грог",
+    "reagent-desc-grog": "Ром, разбавленный водой, одобрено пиратами!",
+    "reagent-name-hippies-delight": "радость хиппи",
+    "reagent-desc-hippies-delight": "Ты просто не понимаешь, чувааак.",
+    "reagent-name-hooch": "суррогат",
+    "reagent-desc-hooch": "Либо чья-то неудача в приготовлении коктейля, либо чья-то попытка производства алкоголя. В любом случае, вы действительно хотите это выпить?",
+    "reagent-name-iced-beer": "пиво со льдом",
+    "reagent-desc-iced-beer": "Пиво настолько морозное, что воздух вокруг него замерзает.",
+    "reagent-name-irish-car-bomb": "ирландская автомобильная бомба",
+    "reagent-desc-irish-car-bomb": "Тревожная смесь крема айриш и эля.",
+    "reagent-name-irish-cream": "ирландские сливки",
+    "reagent-desc-irish-cream": "Сливки с добавлением виски. Что еще можно ожидать от ирландцев.",
+    "reagent-name-irish-coffee": "ирландский кофе",
+    "reagent-desc-irish-coffee": "Кофе с ирландскими сливками. Обычные сливки - это совсем не то!",
+    "reagent-name-kira-special": "кира специальный",
+    "reagent-desc-kira-special": "Да здравствует парень, которого все принимали за девушку. Бака!",
+    "reagent-name-long-island-iced-tea": "лонг-айленд айс ти",
+    "reagent-desc-long-island-iced-tea": "Винный шкаф, собранный в вкусную смесь. Предназначен только для женщин-алкоголиков среднего возраста.",
+    "reagent-name-manhattan": "манхэттен",
+    "reagent-desc-manhattan": "Любимый напиток Детектива под прикрытием. Он никогда не переносил джин...",
+    "reagent-name-manhattan-project": "манхэттенский проект",
+    "reagent-desc-manhattan-project": "Напиток для учёных, размышляющих о том, как взорвать станцию.",
+    "reagent-name-manly-dorf": "мужественный дворф",
+    "reagent-desc-manly-dorf": "Пиво и эль, соединённые в восхитительный коктейль. Предназначено только для крепких гномов.",
+    "reagent-name-margarita": "маргарита",
+    "reagent-desc-margarita": "На каёмке лайм с солью. Аррива~!",
+    "reagent-name-martini": "классический мартини",
+    "reagent-desc-martini": "Вермут с джином. Не совсем как пил 007, но все равно вкусно.",
+    "reagent-name-mead": "медовуха",
+    "reagent-desc-mead": "Напиток викингов, хоть и дешевый.",
+    "reagent-name-mojito": "мохито",
+    "reagent-desc-mojito": "Если это достаточно хорошо для Космической Кубы, то подойдет и для вас.",
+    "reagent-name-moonshine": "самогон",
+    "reagent-desc-moonshine": "Самодельный напиток, изготавливаемый в домашних условиях. Что может пойти не так?",
+    "reagent-name-neurotoxin": "нейротоксин",
+    "reagent-desc-neurotoxin": "Сильный нейротоксин, который вводит субъекта в состояние, напоминающее смерть.",
+    "reagent-name-patron": "покровитель",
+    "reagent-desc-patron": "Текила с серебром в своем составе, фаворит женщин-алкоголичек из клубной тусовки.",
+    "reagent-name-red-mead": "красная медовуха",
+    "reagent-desc-red-mead": "Настоящий напиток викингов! Несмотря на то, что он имеет странный красный цвет.",
+    "reagent-name-rewriter": "переписчик",
+    "reagent-desc-rewriter": "Тайна святилища Библиотекаря...",
+    "reagent-name-sbiten": "сбитень",
+    "reagent-desc-sbiten": "Пикантная водка! Может быть немного жгучей для малышей!",
+    "reagent-name-screwdriver-cocktail": "отвёртка",
+    "reagent-desc-screwdriver-cocktail": "Водка, смешанная с обычным апельсиновым соком. Результат на удивление вкусный.",
+    "reagent-name-cogchamp": "когчамп",
+    "reagent-desc-cogchamp": "Даже Четыре Генерала Ратвара не могли устоять перед этим! Qevax Jryy! Коктейль передней линии бара.",
+    "reagent-name-silencer": "глушитель",
+    "reagent-desc-silencer": "Напиток из рая мимов.",
+    "reagent-name-singulo": "сингуло",
+    "reagent-desc-singulo": "Блю-спейс напиток!",
+    "reagent-name-snow-white": "белый снег",
+    "reagent-desc-snow-white": "Морозная свежесть.",
+    "reagent-name-sui-dream": "мечты суи",
+    "reagent-desc-sui-dream": "'Состав: Белая газировка, голубой кюрасао, дынный ликер.'",
+    "reagent-name-syndicate-bomb": "бомба синдиката",
+    "reagent-desc-syndicate-bomb": "Кто-то подложил нам бомбу!",
+    "reagent-name-tequila-sunrise": "текила санрайз",
+    "reagent-desc-tequila-sunrise": "Текила и апельсиновый сок. Очень похож на \"Отвертку\", только мексиканскую.",
+    "reagent-name-three-mile-island": "чай со льдом три-майл-айленд",
+    "reagent-desc-three-mile-island": "\"Сделан для женщин, достаточно крепок для мужчин.\"",
+    "reagent-name-toxins-special": "особый токсин",
+    "reagent-desc-toxins-special": "Эта штука ОГОНЬ! ВЫЗЫВАЙТЕ ЧЁРТОВ ШАТТЛ!",
+    "reagent-name-vodka-martini": "водка мартини",
+    "reagent-desc-vodka-martini": "Водка вместо джина. Не совсем как пил 007, но все равно вкусно.",
+    "reagent-name-vodka-tonic": "водка тоник",
+    "reagent-desc-vodka-tonic": "Для тех случаев, когда джин-тоник недостаточно русский.",
+    "reagent-name-whiskey-cola": "виски кола",
+    "reagent-desc-whiskey-cola": "Виски, смешанный с колой. Удивительно освежает.",
+    "reagent-name-whiskey-soda": "виски с содовой",
+    "reagent-desc-whiskey-soda": "Невероятно освежающе!",
+    "reagent-name-white-russian": "белый русский",
+    "reagent-desc-white-russian": "Но это только твоё мнение, чувак.",
+    "reagent-name-acetone": "ацетон",
+    "reagent-desc-acetone": "Прозрачная, слегка канцерогенная жидкость. Имеет множество простых способов применения в повседневной жизни.",
+    "reagent-name-phenol": "фенол",
+    "reagent-desc-phenol": "Ароматическое кольцо углерода с гидроксильной группой. Полезный ингредиент для ряда лекарств, но сам по себе не обладает лечебными свойствами.",
+    "reagent-name-sodium-carbonate": "карбонат натрия",
+    "reagent-desc-sodium-carbonate": "Белая, не имеющая запаха соль, хорошо растворимая в воде и образующая при этом щелочной раствор. Также известна как сода кальцинированная.",
+    "reagent-name-artifexium": "артифексиум",
+    "reagent-desc-artifexium": "Лавандовая смесь микроскопических фрагментов артефактов и сильной кислоты. Обладает способностью активировать артефакты.",
+    "reagent-name-benzene": "бензол",
+    "reagent-desc-benzene": "Ароматическое, слегка канцерогенное кольцо углерода, составляющее основу многих органических соединений.",
+    "reagent-name-hydroxide": "гидроксид",
+    "reagent-desc-hydroxide": "Сильное щелочное химическое вещество, составляющее основу многих органических соединений.",
+    "reagent-name-sodium-hydroxide": "гидроксид натрия",
+    "reagent-desc-sodium-hydroxide": "Белая соль без запаха, растворяющаяся в воде, образующая при этом сильный щелочной раствор. При попадании в организм вызывает ожоги и рвоту.",
+    "reagent-name-fersilicite": "силицид железа",
+    "reagent-desc-fersilicite": "Интерметаллическое соединение, обладающее необычными магнитными свойствами при низких температурах.",
+    "reagent-name-sodium-polyacrylate": "полиакрилат натрия",
+    "reagent-desc-sodium-polyacrylate": "Суперпоглощающий полимер с широким спектром применения в промышленности.",
+    "reagent-name-cellulose": "целлюлозные волокна",
+    "reagent-desc-cellulose": "Кристаллический полимер полидекстрозы, растения дорожат этим веществом.",
+    "reagent-name-juice-apple": "яблочный сок",
+    "reagent-desc-juice-apple": "Это маленький кусочек Эдема.",
+    "reagent-name-juice-banana": "банановый сок",
+    "reagent-desc-juice-banana": "Жидкая суть банана. ХОНК.",
+    "reagent-name-juice-berry": "ягодный сок",
+    "reagent-desc-juice-berry": "Вкусная смесь нескольких видов ягод.",
+    "reagent-name-juice-berry-poison": "ядовитый ягодный сок",
+    "reagent-desc-juice-berry-poison": "Удивительно вкусный сок, приготовленный из различных видов очень смертоносных и ядовитых ягод.",
+    "reagent-name-juice-carrot": "морковный сок",
+    "reagent-desc-juice-carrot": "Как морковь, но не хрустит.",
+    "reagent-name-juice-grape": "виноградный сок",
+    "reagent-desc-juice-grape": "Свежевыжатый сок из красного винограда. Довольно сладкий.",
+    "reagent-name-juice-lemon": "лимонный сок",
+    "reagent-desc-juice-lemon": "Этот сок ОЧЕНЬ кислый.",
+    "reagent-name-juice-lime": "лаймовый сок",
+    "reagent-desc-juice-lime": "Кисло-сладкий сок лайма.",
+    "reagent-name-juice-orange": "апельсиновый сок",
+    "reagent-desc-juice-orange": "И вкусно, и богато витамином С. Чего ещё желать?",
+    "reagent-name-juice-pineapple": "ананасовый сок",
+    "reagent-desc-juice-pineapple": "Вкусный сок ананаса.",
+    "reagent-name-juice-potato": "картофельный сок",
+    "reagent-desc-juice-potato": "Сок картофеля. Фу.",
+    "reagent-name-juice-tomato": "томатный сок",
+    "reagent-desc-juice-tomato": "Томаты превращенные в сок. Какая трата хороших помидоров, а?",
+    "reagent-name-juice-watermelon": "арбузный сок",
+    "reagent-desc-juice-watermelon": "Вкусный сок арбуза.",
+    "reagent-name-cola": "кола",
+    "reagent-desc-cola": "Сладкий газированный безалкогольный напиток. Не содержит кофеина.",
+    "reagent-name-changeling-sting": "жало генокрада",
+    "reagent-desc-changeling-sting": "Вы делаете маленький глоток и чувствуете жжение...",
+    "reagent-name-dr-gibb": "доктор Гибб",
+    "reagent-desc-dr-gibb": "Восхитительная смесь из 42 различных вкусов.",
+    "reagent-name-energy-drink": "энергетический напиток",
+    "reagent-desc-energy-drink": "Доза энергии! Nanotrasen не несет ответственности, если у вас вырастут птичьи придатки.",
+    "reagent-name-grape-soda": "виноградная газировка",
+    "reagent-desc-grape-soda": "Это Винограааааад!",
+    "reagent-name-ice-cream": "мороженое",
+    "reagent-desc-ice-cream": "Ешьте скорее, пока не превратилось в суп-мороженое!",
+    "reagent-name-lemon-lime": "лимон-лайм",
+    "reagent-desc-lemon-lime": "Терпкая газировка из лимона и лайма",
+    "reagent-name-pwr-game": "Pwr Game",
+    "reagent-desc-pwr-game": "Единственный напиток, обладающий СИЛОЙ, которую жаждут настоящие геймеры. Когда геймеры говорят о геймерском топливе, они имеют в виду именно это.",
+    "reagent-name-root-beer": "рутбир",
+    "reagent-desc-root-beer": "Очень сладкий, газированный напиток, напоминающий сарспариллу. Хорошо сочетается с мороженым.",
+    "reagent-name-root-beer-float": "рутбир с мороженым",
+    "reagent-desc-root-beer-float": "Рутбир, но теперь с мороженым сверху! Это действительно магнум опус канадских летних напитков.",
+    "reagent-name-space-mountain-wind": "космический маунтин винд",
+    "reagent-desc-space-mountain-wind": "Проходит сквозь, словно космический ветер.",
+    "reagent-name-space-up": "спейс-ап",
+    "reagent-desc-space-up": "На вкус как пробоина в корпусе у вас во рту.",
+    "reagent-name-starkist": "старкист",
+    "reagent-desc-starkist": "Сладкий безалкогольный напиток со вкусом апельсина.",
+    "reagent-name-fourteen-loko": "фоуртин локо",
+    "reagent-desc-fourteen-loko": "Сильно переработанная жидкая субстанция, едва ли соответствующая межгалактическим стандартам безопасности для безалкогольного напитка.",
+    "reagent-name-shamblers-juice": "сок Shambler",
+    "reagent-desc-shamblers-juice": "~Встряхните мне немного этого сока Shambler!~",
+    "reagent-name-thermite": "термит",
+    "reagent-desc-thermite": "Смесь, которая становится крайне горячей при воспламенении.",
+    "reagent-name-napalm": "напалм",
+    "reagent-desc-napalm": "Немножко огнеопасен.",
+    "reagent-name-phlogiston": "флогистон",
+    "reagent-desc-phlogiston": "Подожжёт и заставит вас гореть.",
+    "reagent-name-chlorine-trifluoride": "CLF3",
+    "reagent-desc-chlorine-trifluoride": "Он же трифторид хлора. Вы очень, ОЧЕНЬ не хотите, чтобы эта дрянь оказалась рядом с вами.",
+    "reagent-name-foaming-agent": "пенообразующий агент",
+    "reagent-desc-foaming-agent": "Делает пену, подобную той, что требуется для гранат с металлической пеной.",
+    "reagent-name-welding-fuel": "сварочное топливо",
+    "reagent-desc-welding-fuel": "Используется сварщиками для сварки.",
+    "reagent-name-fluorosurfactant": "фторсурфактант",
+    "reagent-desc-fluorosurfactant": "Перфторированная сульфоновая кислота, образующая пену при смешивании с водой."
+  }
+}

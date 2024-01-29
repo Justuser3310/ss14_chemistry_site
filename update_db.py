@@ -41,19 +41,26 @@ BOTANY = "https://raw.githubusercontent.com/SerbiaStrong-220/space-station-14/ma
 BOTANY_LOCALISATION_URL = "https://github.com/SerbiaStrong-220/space-station-14/raw/master/Resources/Locale/ru-RU/reagents/meta/botany.ftl"
 
 # все съедобное и питьевое
-#FOOD = "https://github.com/SerbiaStrong-220/space-station-14/raw/master/Resources/Prototypes/Reagents/Consumable/Food/condiments.yml"
 FOOD_R = "https://raw.githubusercontent.com/SerbiaStrong-220/space-station-14/master/Resources/Prototypes/Reagents/Consumable/Food/condiments.yml"
 FOOD_R_EX = "https://raw.githubusercontent.com/SerbiaStrong-220/space-station-14/dev/Resources/Prototypes/Reagents/Consumable/Food/food.yml"
+INGREDIENTS = "https://github.com/SerbiaStrong-220/space-station-14/raw/master/Resources/Prototypes/Reagents/Consumable/Food/ingredients.yml"
 
-INGREDIENTS_URL = "https://github.com/SerbiaStrong-220/space-station-14/raw/master/Resources/Prototypes/Reagents/Consumable/Food/ingredients.yml"
-DRINKS_URL = "https://github.com/SerbiaStrong-220/space-station-14/raw/master/Resources/Prototypes/Reagents/Consumable/Drink/drinks.yml"
-ALCOHOL_URL = "https://github.com/SerbiaStrong-220/space-station-14/raw/master/Resources/Prototypes/Reagents/Consumable/Drink/alcohol.yml"
+DRINKS_R = "https://github.com/SerbiaStrong-220/space-station-14/raw/master/Resources/Prototypes/Reagents/Consumable/Drink/drinks.yml"
+ALCOHOL_R = "https://github.com/SerbiaStrong-220/space-station-14/raw/master/Resources/Prototypes/Reagents/Consumable/Drink/alcohol.yml"
+DRINKS = "https://raw.githubusercontent.com/SerbiaStrong-220/space-station-14/master/Resources/Prototypes/Recipes/Reactions/drinks.yml"
+SODA_R = "https://raw.githubusercontent.com/SerbiaStrong-220/space-station-14/master/Resources/Prototypes/Reagents/Consumable/Drink/soda.yml"
+JUICES_R = "https://raw.githubusercontent.com/SerbiaStrong-220/space-station-14/master/Resources/Prototypes/Reagents/Consumable/Drink/juice.yml"
+
+PYROTECHNIC_R = "https://raw.githubusercontent.com/SerbiaStrong-220/space-station-14/master/Resources/Prototypes/Reagents/pyrotechnic.yml"
+
 INGREDIENTS_LOCALISATION_URL = "https://github.com/SerbiaStrong-220/space-station-14/raw/master/Resources/Locale/ru-RU/reagents/meta/consumable/food/ingredients.ftl"
 ALCOHOL_LOCALISATION_URL = "https://github.com/SerbiaStrong-220/space-station-14/raw/master/Resources/Locale/ru-RU/reagents/meta/consumable/drink/alcohol.ftl"
 CONDIMENTS_LOCALISATION_URL = "https://github.com/SerbiaStrong-220/space-station-14/raw/master/Resources/Locale/ru-RU/reagents/meta/consumable/food/condiments.ftl"
 DRINKS_LOCALISATION_URL = "https://github.com/SerbiaStrong-220/space-station-14/raw/master/Resources/Locale/ru-RU/reagents/meta/consumable/drink/drinks.ftl"
+SODA_LOCALISATION = "https://raw.githubusercontent.com/SerbiaStrong-220/space-station-14/master/Resources/Locale/ru-RU/reagents/meta/consumable/drink/soda.ftl"
+JUICES_LOCALISATION = "https://raw.githubusercontent.com/SerbiaStrong-220/space-station-14/master/Resources/Locale/ru-RU/reagents/meta/consumable/drink/juice.ftl"
 FOOD_LOCALISATION_URL = "https://github.com/SerbiaStrong-220/space-station-14/raw/master/Resources/Locale/ru-RU/reagents/meta/consumable/food/ingredients.ftl"
-
+PYROTECHNIC_LOCALISATION = "https://raw.githubusercontent.com/SerbiaStrong-220/space-station-14/master/Resources/Locale/ru-RU/reagents/meta/pyrotechnic.ftl"
 
 class Reagent:
 	def __init__(self, init_data: dict):
@@ -99,18 +106,21 @@ class Reagent:
 from db import *
 def load_localisation():
 	data = {"elements": {}, "placeholders": {}}
-	elements_urls = [ELEMENTS_URL, MEDICINE_R, TOXINS_R, GASES_URL, FOOD_R, FOOD_R_EX, DRINKS_URL, BIOLOGY_URL,
-								FOOD_R, BOTANY_R, ALCOHOL_URL, CHEMICALS_R, INGREDIENTS_URL, NARCOTICS_R]
+	elements_urls = [ELEMENTS_URL, MEDICINE_R, TOXINS_R, GASES_URL, FOOD_R, FOOD_R_EX, DRINKS_R, BIOLOGY_URL,
+								BOTANY_R, ALCOHOL_R, CHEMICALS_R, INGREDIENTS, NARCOTICS_R, SODA_R, PYROTECHNIC_R, JUICES_R]
 	for url in elements_urls:
 		response = yaml.load(requests.get(url).content.decode("utf-8"), Loader=yaml.SafeLoader)
 		for i in response:
-			data["elements"][i["id"]] = {"name": i["name"], "desc": i["desc"]}
+			try:
+				data["elements"][i["id"]] = {"name": i["name"], "desc": i["desc"]}
+			except:
+				print("No name: ", i)
 
 	localisation_urls = [MEDICINE_LOCALISATION, ELEMENTS_LOCALISATION_URL, TOXINS_LOCALISATION_URL,
 											GASES_LOCALISATION_URL, DRINKS_LOCALISATION_URL, FOOD_LOCALISATION_URL,
 											CONDIMENTS_LOCALISATION_URL, BIOLOGY_LOCALISATION_URL, NARCOTICS_LOCALISATION_URL,
 											BOTANY_LOCALISATION_URL, ALCOHOL_LOCALISATION_URL, CHEMICALS_LOCALISATION,
-											INGREDIENTS_LOCALISATION_URL]
+											INGREDIENTS_LOCALISATION_URL, JUICES_LOCALISATION, SODA_LOCALISATION, PYROTECHNIC_LOCALISATION]
 
 	for url in localisation_urls:
 			response = requests.get(url).content.decode("utf-8")
@@ -150,7 +160,10 @@ def yml_load(url):
 
 def load_reagents(url,name):
 	for item in tqdm(yml_load(url), desc=name+'_reagents'):
-		content[item["id"]] = {"name": item["name"], "desc": item["desc"]}
+		try:
+			content[item["id"]] = {"name": item["name"], "desc": item["desc"]}
+		except:
+			print("No name: ", item)
 
 def load_recipes(url,name):
 	global content
@@ -173,11 +186,17 @@ load_reagents(NARCOTICS_R, 'narcotics')
 load_reagents(CHEMICALS_R, 'chemicals')
 load_reagents(FOOD_R, 'food')
 load_reagents(FOOD_R_EX, 'food_ex')
-
+load_reagents(INGREDIENTS, 'ingredients')
+load_reagents(DRINKS_R, 'drinks')
+load_reagents(ALCOHOL_R, 'alcohol')
+load_reagents(SODA_R, 'soda')
+load_reagents(PYROTECHNIC_R, 'pyrotechnic')
+load_reagents(JUICES_R, 'juices')
 
 load_recipes(MEDICINE, 'medicine')
 load_recipes(CHEMICALS, 'chemicals')
 load_recipes(BOTANY, 'botany')
+load_recipes(DRINKS, 'drinks')
 
 #                                                                TODO: Включать ли токсины без крафта? (некоторые имеют крафт)
 reagents = [Reagent(init_data=content[item]) for item in content if "reactants" in content[item]]
