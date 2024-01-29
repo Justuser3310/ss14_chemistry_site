@@ -7,7 +7,7 @@ els = list(db.keys())
 ###### ОФОРМЛЕНИЕ #######
 
 from dash import Dash, dcc, html, Input, Output,callback
-app = Dash(__name__, title="SS14 Tools")
+app = Dash(__name__, title="SS14 Tools", update_title=None)
 
 
 # Форматируем список для красоты
@@ -19,14 +19,20 @@ def list_form(ll):
 					'chemicals': '🧪'}
 
 	for i in ll:
+		if type(i) == int:
+			formatted.append(i)
 		#print(db[i][1])
-		if db[i][1] in imgs:
+		elif db[i][1] in imgs:
+#			formatted.append({"label": html.Span(f"{imgs[db[i][1]]} {i}", style={'background-color': 'rgb(27, 29, 30)', 'color': 'rgb(0,0,0)'}),
+#			'value': f"{imgs[db[i][1]]} {i}"})
+#			formatted.append(html.P(f"{imgs[db[i][1]]} {i}", style={'background-color': 'rgb(27, 29, 30)', 'color': 'rgb(0,0,0)'}))
 			formatted.append(imgs[db[i][1]] + ' ' + i)
 		else:
 			formatted.append(i)
 
 	return formatted
 
+# 'background-color': 'rgb(27, 29, 30)', 'color': 'rgb(255,255,255)'
 
 app.layout = html.Div([
 
@@ -34,14 +40,15 @@ app.layout = html.Div([
 html.Div([
 	# Реакция
 	html.Div([
-		dcc.Dropdown(list_form(els), id='reaction', placeholder="Реакция", maxHeight=500, style={'font-size': '120%'})
+		dcc.Dropdown(list_form(els), id='reaction', placeholder="Реакция", maxHeight=500,
+		style={'font-size': '120%'}) #, 'background-color': 'rgb(27, 29, 30)'})
 	], style={'flex': 4}),
 
 	# Объём
 	html.Div([
-		dcc.Dropdown([30, 50, 100, 300, 1000], 100, id='amount', clearable=False, searchable=False
-			, style={'font-family': '"Source Sans Pro", sans-serif', 'font-size': '120%'})
-	], style={'flex': 1, 'padding-left': 25})
+		dcc.Dropdown(list_form([30, 50, 100, 300, 1000]), 100, id='amount', clearable=False, searchable=False
+			, style={'font-family': '"Source Sans Pro", sans-serif', 'font-size': '120%'}) #, 'background-color': 'rgb(27, 29, 30)'})
+	], style={'flex': 1, 'padding-left': 25}) #, 'background-color': 'rgb(27, 29, 30)'})
 
 ], style={'display': 'flex', 'flexDirection': 'row'}),
 
@@ -50,6 +57,9 @@ html.Div([
 
 ], style={'padding': '5%', 'margin-left': '30%', 'margin-right': '30%'})
 
+# vh - высота окна, vw - ширина окна
+#
+# 'background-color': '#242829',
 # padding - отступ
 #    [#####]
 # margin - сужение
@@ -78,11 +88,11 @@ def update_output(reaction, amount):
 		result = []
 		for i in comps:
 			result.append( html.Div(i + ': ' + str(comps[i])
-, style={'background-color': '#3f3b17', 'margin-top': 10, 'border-radius': 10, 'padding': 15, 'font-family': '"Source Sans Pro", sans-serif', 'font-size': '120%'}) )
+, style={'background-color': 'rgb(213, 193, 86)', 'color': '#ffffff', 'margin-top': 10, 'border-radius': 10, 'padding': 15, 'font-family': '"Source Sans Pro", sans-serif', 'font-size': '120%'}) )
 
 		# Выходное вещество
 		result.append( html.Div(f'{reaction}: {res}'
-, style={'background-color': '#183929', 'margin-top': 10, 'border-radius': 10, 'padding': 15, 'font-family': '"Source Sans Pro", sans-serif', 'font-size': '120%'}) )
+, style={'background-color': 'rgb(61, 164, 113)', 'color': '#ffffff', 'margin-top': 10, 'border-radius': 10, 'padding': 15, 'font-family': '"Source Sans Pro", sans-serif', 'font-size': '120%'}) )
 
 
 		return result
