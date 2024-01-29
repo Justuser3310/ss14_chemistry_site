@@ -9,12 +9,12 @@ if not os.path.exists('db.json'):
 	print('Created new db.json')
 
 
-def read_db():
-	with open("db.json", "r", encoding="utf-8") as openfile:
+def read_db(file = 'db.json'):
+	with open(file, "r", encoding="utf-8") as openfile:
 		db = json.load(openfile)
 	return db
 
-def write_db(db):
+def write_db(db, file = 'db.json'):
 	js = json.dumps(db, indent=2, ensure_ascii=False)
-	with open("db.json", "w", encoding="utf-8") as outfile:
+	with open(file, "w", encoding="utf-8") as outfile:
 		outfile.write(js)
