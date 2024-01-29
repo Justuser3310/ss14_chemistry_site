@@ -7,26 +7,6 @@ db = read_db()
 recipe = {}
 
 '''
-# Функция для спец. округления
-# 16.666...8 => 15
-def sround(num):
-	num = floor(num)
-#	num = round(num)
-
-	# Подмены
-	rep = [[16,15], [33,30], [21,20], [12,10], [8,5], [6,5]]
-
-	if num == 0:
-		return 1
-
-	for i in rep:
-		if num == i[0]:
-			print('ПОДМЕНА: ', num)
-			num = i[1]
-
-	return num
-'''
-
 def sround(num, parts):
 	acc = [1,2,3,4,5, 10, 15, 20, 25, 30, 35, 40, 45, 50, 55, 60, 65, 70, 75, 80, 85, 90, 95, 100]
 	amount = num*parts
@@ -55,18 +35,32 @@ def sround(num, parts):
 					break
 			st += 1
 
-#		if num*parts > amount:
-#			num = num - 3
-#			good = False
-
 		# Ловим частые повторения
 		tries += 1
 		if tries > 500:
-			return 0
+			return sround1(num, parts)
 
-	print(num)
+	if num*parts > amount:
+		return sround1(num, parts)
+
 	return num
+'''
 
+
+def sround(num, parts):
+	acc = [1,2,3,4,5]
+	num = floor(num)
+
+	if num in acc:
+		return num
+	elif num%5 == 0:
+		return num
+	elif num == 0:
+		return 1
+
+	while num%5 != 0:
+		num -= 1
+	return num
 
 def calc(el, amount, main = False):
 	global db, recipe
@@ -130,4 +124,5 @@ def calc(el, amount, main = False):
 
 #print( calc("Лексорин", 100, True))
 #print( calc("Бикаридин", 100, True))
-print( calc("Эфедрин", 100, True))
+#print( calc("Диловен", 100, True))
+#print( calc("Эфедрин", 100, True))
