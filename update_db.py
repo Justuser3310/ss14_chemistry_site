@@ -37,6 +37,7 @@ BIOLOGY_LOCALISATION_URL = "https://github.com/SerbiaStrong-220/space-station-14
 
 # ботаника
 BOTANY_R = "https://github.com/SerbiaStrong-220/space-station-14/raw/master/Resources/Prototypes/Reagents/botany.yml"
+BOTANY = "https://raw.githubusercontent.com/SerbiaStrong-220/space-station-14/master/Resources/Prototypes/Recipes/Reactions/botany.yml"
 BOTANY_LOCALISATION_URL = "https://github.com/SerbiaStrong-220/space-station-14/raw/master/Resources/Locale/ru-RU/reagents/meta/botany.ftl"
 
 # все съедобное и питьевое
@@ -80,7 +81,7 @@ class Reagent:
 		# Добавляем количество в итоге
 		react_res = self.__product
 		for i in react_res:
-			if i.lower() == self.__name.replace('reagent-name-','',1).replace('-','',1):
+			if i.lower() == self.__name.replace('reagent-name-','',1).replace('-',''):
 				result.append(react_res[i])
 
 		# Добавляем категорию
@@ -176,6 +177,7 @@ load_reagents(FOOD_R_EX, 'food_ex')
 
 load_recipes(MEDICINE, 'medicine')
 load_recipes(CHEMICALS, 'chemicals')
+load_recipes(BOTANY, 'botany')
 
 #                                                                TODO: Включать ли токсины без крафта? (некоторые имеют крафт)
 reagents = [Reagent(init_data=content[item]) for item in content if "reactants" in content[item]]

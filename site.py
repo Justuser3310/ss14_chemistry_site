@@ -16,16 +16,13 @@ def list_form(ll):
 
 	formatted = []
 	imgs = {'medicine': '💊',
-					'chemicals': '🧪'}
+					'chemicals': '🧪',
+					'botany': '🪴'}
 
 	for i in ll:
 		if type(i) == int:
 			formatted.append(i)
-		#print(db[i][1])
 		elif db[i][1] in imgs:
-#			formatted.append({"label": html.Span(f"{imgs[db[i][1]]} {i}", style={'background-color': 'rgb(27, 29, 30)', 'color': 'rgb(0,0,0)'}),
-#			'value': f"{imgs[db[i][1]]} {i}"})
-#			formatted.append(html.P(f"{imgs[db[i][1]]} {i}", style={'background-color': 'rgb(27, 29, 30)', 'color': 'rgb(0,0,0)'}))
 			formatted.append(imgs[db[i][1]] + ' ' + i)
 		else:
 			formatted.append(i)
