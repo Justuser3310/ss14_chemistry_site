@@ -27,6 +27,33 @@ body {
 	color: white;
 }
 
+/* Верхняя панель */
+.panel {
+	background-color: #161819;
+	margin: -8px;
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-start;
+}
+
+/* Иконка + текст слева в панели */
+.img_text_panel {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	flex: 1;
+}
+
+/* Кнопки социалок */
+.soc_buttons {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	flex: 1;
+	justify-content: center;
+	gap: 10px;
+}
+
 
 /* Div для социалок */
 .socials {
@@ -35,11 +62,14 @@ body {
   display: flex;
   flex-direction: row;
   padding-left: 1%;
-  padding-right: 1%;
+  padding-right: 4%;
+	align-items: center;
+	height: 60%;
 }
 /* Текст социалок */
-.socials_text {
+.soc_text {
   color: white;
   text-decoration: auto;
   padding-left: 8%;
+	font-size: 1rem;
 }

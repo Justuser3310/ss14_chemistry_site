@@ -21,7 +21,32 @@ app.index_string = '''
 </head>
 <body>
 
+<div class="panel">
 
+<div class=img_text_panel>
+	<img height="auto" src="assets/favicon.ico" style="padding: 10px;" width="35px">
+	<div style="color: rgb(255, 255, 255); font-weight: bold; font-size: 1.3rem;">SS14 Tools</div>
+</div>
+
+<div class=soc_buttons>
+
+<a href="https://discord.gg/VxHbM3cedQ" target="_blank" class="socials">
+	<img src="assets/discord.svg" height="auto" width="30px">
+	<p class="soc_text">Discord</p>
+</a>
+<a href="https://github.com/Justuser3310/ss14_chemistry_site" target="_blank">
+	<img src="assets/github-mark-white.svg" height="auto" width="30px">
+</a>
+<a href="https://t.me/ss14tools" target="_blank" class="socials">
+	<img src="assets/telegram.svg" height="auto" width="30px">
+	<p class="soc_text">Telegram</p>
+</a>
+
+</div>
+
+<div style="flex: 1 1 0%;"></div>
+
+</div>
 
 {%app_entry%}
 <footer>
@@ -56,33 +81,12 @@ def list_form(ll):
 
 	return formatted
 
-# 'background-color': 'rgb(27, 29, 30)', 'color': 'rgb(255,255,255)'
-
 # Типо контейнер для всего
 # [
 # Div,
 # Div
 # ]
 app.layout = html.Div([
-
-# Соцсети и исходный код + название
-html.Div([
-
-html.Div([
-html.Img(src='assets/favicon.ico', width='50px', height='auto', style={'padding':10}),
-html.Div(children='''SS14 Tools'''
-, style={'color':'rgb(255,255,255)', 'font-weight': 'bold', 'font-size': '1.5rem'})
-], style={'display': 'flex', 'flex-wrap': 'wrap', 'align-items': 'center', 'flex': 1}),
-
-html.Div([
-dcc.Link('Discord',href='https://discord.gg/VxHbM3cedQ'),
-dcc.Link('Telegram',href='https://t.me/ss14tools')
-], style={'display': 'flex', 'flex-wrap': 'wrap', 'align-items': 'center', 'flex': 1}),
-
-#Пустой контейнер (для правильного отображения)
-html.Div(style={'flex':1})
-
-], style={'background-color': '#161819', 'margin': -8, 'display': 'flex', 'flexDirection': 'row', 'justify-content': 'flex-start'}),
 
 # Название + объём + вывод
 html.Div([
