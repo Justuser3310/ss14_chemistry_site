@@ -124,3 +124,9 @@ body {
 	}
 
 }
+/* Сверхузкие телефоны */
+@media (max-width: 400px) {
+	.panel {
+		flex-direction: column;
+	}
+}
