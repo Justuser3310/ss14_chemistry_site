@@ -44,7 +44,7 @@ app.index_string = '''
 
 </div>
 
-<div style="flex: 1 1 0%;"></div>
+<div class="empty_box"></div>
 
 </div>
 

@@ -108,3 +108,19 @@ body {
 	font-family: 'Mulish', sans-serif;
 }
 
+.empty_box {
+	flex: 1;
+}
+
+
+/* Действия при разрешении телефона */
+@media (max-width: 900px) {
+
+	.empty_box {
+		flex: 0;
+	}
+	.soc_buttons {
+		justify-content: right;
+	}
+
+}
