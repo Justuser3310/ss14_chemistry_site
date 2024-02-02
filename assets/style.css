@@ -17,6 +17,7 @@ body {
 .Select-control {
   background-color: rgb(25, 25, 25) !important;
 	color: #fff;
+	font-family: 'Mulish', sans-serif;
 }
 .Select-menu-outer {
 	background-color: rgb(27, 29, 30);
@@ -26,6 +27,14 @@ body {
 .has-value.Select--single>.Select-control .Select-value .Select-value-label, .has-value.is-pseudo-focused.Select--single>.Select-control .Select-value .Select-value-label{
 	color: white;
 }
+
+.Select-value {
+	font-family: 'Mulish', sans-serif;
+}
+.Select-placeholder {
+	font-family: 'Mulish', sans-serif;
+}
+
 
 /* Верхняя панель */
 .panel {
@@ -65,6 +74,7 @@ body {
   padding-right: 4%;
 	align-items: center;
 	height: 60%;
+	max-height: 35px;
 }
 /* Текст социалок */
 .soc_text {
@@ -72,4 +82,5 @@ body {
   text-decoration: auto;
   padding-left: 8%;
 	font-size: 1rem;
+	font-family: 'Mulish', sans-serif;
 }

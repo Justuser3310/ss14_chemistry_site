@@ -96,20 +96,20 @@ html.Div([
 	html.Div([
 		dcc.Dropdown(list_form(els), id='reaction', placeholder="Реакция", maxHeight=500,
 		style={'font-size': '120%', 'font-family': 'NotaSans'})
-	], style={'flex': 4}),
+	], style={'flex': 4, 'min-width': '200px'}),
 
 	# Объём
 	html.Div([
 		dcc.Dropdown(list_form([30, 50, 100, 300, 1000]), 100, id='amount', clearable=False, searchable=False
-			, style={'font-family': '"Source Sans Pro", sans-serif', 'font-size': '120%'}) #, 'background-color': 'rgb(27, 29, 30)'})
-	], style={'flex': 1, 'padding-left': 25})
+			, style={'font-family': '"Mulish", sans-serif', 'font-size': '120%'})
+	], style={'flex': 1, 'padding-left': 25, 'min-width': '100px'})
 
 ], style={'display': 'flex', 'flexDirection': 'row'}),
 
 	# Вывод
 	html.Div(id='output', style={'text-align': 'center', 'padding-left': '15%', 'padding-right': '15%'})
 
-], style={'padding': '5%', 'margin-left': '30%', 'margin-right': '30%'})
+], style={'padding': '5%', 'margin-left': '25vw', 'margin-right': '25vw'})
 
 ])
 # vh - высота окна, vw - ширина окна
@@ -158,5 +158,5 @@ def update_output(reaction, amount):
 
 
 if __name__ == '__main__':
-#	app.run(debug=True)
-	app.run(debug=False)
+	app.run(debug=True)
+#	app.run(debug=False)
