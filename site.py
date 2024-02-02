@@ -24,21 +24,21 @@ app.index_string = '''
 <div class="panel">
 
 <div class=img_text_panel>
-	<img height="auto" src="assets/favicon.ico" style="padding: 10px;" width="35px">
-	<div style="color: rgb(255, 255, 255); font-weight: bold; font-size: 4vh;">SS14 Tools</div>
+	<img height="auto" src="assets/favicon.ico" class="logo">
+	<div style="color: rgb(255, 255, 255); font-weight: bold; font-size: 2vh;">SS14 Tools</div>
 </div>
 
 <div class=soc_buttons>
 
 <a href="https://discord.gg/VxHbM3cedQ" target="_blank" class="socials">
-	<img src="assets/discord.svg" height="auto" width="30px">
+	<img src="assets/discord.svg" class="soc_logo">
 	<p class="soc_text">Discord</p>
 </a>
 <a href="https://github.com/Justuser3310/ss14_chemistry_site" target="_blank">
-	<img src="assets/github-mark-white.svg" height="auto" width="30px">
+	<img src="assets/github-mark-white.svg" class="git_logo">
 </a>
 <a href="https://t.me/ss14tools" target="_blank" class="socials">
-	<img src="assets/telegram.svg" height="auto" width="30px">
+	<img src="assets/telegram.svg" class="soc_logo">
 	<p class="soc_text">Telegram</p>
 </a>
 
@@ -109,9 +109,10 @@ html.Div([
 	# Вывод
 	html.Div(id='output', style={'text-align': 'center', 'padding-left': '15%', 'padding-right': '15%'})
 
-], style={'padding': '5%', 'margin-left': '25vw', 'margin-right': '25vw'})
+], className="react_vol_out")
+#], style={'padding': '5%', 'margin-left': '25vw', 'margin-right': '25vw'})
 
-])
+], style={'justify-content': 'center', 'display': 'flex'})
 # vh - высота окна, vw - ширина окна
 #
 # 'background-color': '#242829',
@@ -158,5 +159,5 @@ def update_output(reaction, amount):
 
 
 if __name__ == '__main__':
-	app.run(debug=True)
-#	app.run(debug=False)
+#	app.run(debug=True)
+	app.run(debug=False)

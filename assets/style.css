@@ -7,6 +7,8 @@ body {
 .Select {
 	background-color: rgb(27, 29, 30);
 	color: #fff;
+	font-family: 'Mulish', sans-serif;
+	font-size: 2vh;
 }
 .Select-input > input {
 	color: #fff;
@@ -18,6 +20,7 @@ body {
   background-color: rgb(25, 25, 25) !important;
 	color: #fff;
 	font-family: 'Mulish', sans-serif;
+	font-size: 2vh;
 }
 .Select-menu-outer {
 	background-color: rgb(27, 29, 30);
@@ -30,9 +33,11 @@ body {
 
 .Select-value {
 	font-family: 'Mulish', sans-serif;
+	font-size: 2vh;
 }
 .Select-placeholder {
 	font-family: 'Mulish', sans-serif;
+	font-size: 2vh;
 }
 
 
@@ -44,6 +49,23 @@ body {
 	flex-direction: row;
 	justify-content: flex-start;
 }
+
+.logo {
+	padding: 10px;
+	width: 4vh;0
+}
+.git_logo {
+	width: 3.2vh;
+}
+.soc_logo {
+	width: 3.2vh;
+}
+
+.react_vol_out {
+	padding-top: 10vh;
+	width: 80vh;
+}
+
 
 /* Иконка + текст слева в панели */
 .img_text_panel {
@@ -73,7 +95,8 @@ body {
   padding-left: 1%;
   padding-right: 4%;
 	align-items: center;
-	height: 60%;
+/*	height: 60%; */
+	height: 4vh;
 	max-height: 35px;
 }
 /* Текст социалок */
@@ -81,6 +104,7 @@ body {
   color: white;
   text-decoration: auto;
   padding-left: 8%;
-	font-size: 1rem;
+	font-size: 1.6vh;
 	font-family: 'Mulish', sans-serif;
 }
+
