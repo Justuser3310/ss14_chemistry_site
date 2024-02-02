@@ -25,7 +25,7 @@ app.index_string = '''
 
 <div class=img_text_panel>
 	<img height="auto" src="assets/favicon.ico" style="padding: 10px;" width="35px">
-	<div style="color: rgb(255, 255, 255); font-weight: bold; font-size: 1.3rem;">SS14 Tools</div>
+	<div style="color: rgb(255, 255, 255); font-weight: bold; font-size: 4vh;">SS14 Tools</div>
 </div>
 
 <div class=soc_buttons>
