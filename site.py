@@ -102,9 +102,9 @@ html.Div([
 	html.Div([
 		dcc.Dropdown(list_form([30, 50, 100, 300, 1000]), 100, id='amount', clearable=False, searchable=False
 			, style={'font-family': '"Mulish", sans-serif', 'font-size': '120%'})
-	], style={'flex': 1, 'padding-left': 25, 'min-width': '100px'})
+	], className="vol")
 
-], style={'display': 'flex', 'flexDirection': 'row'}),
+], className="react_vol"),
 
 	# Вывод
 	html.Div(id='output', style={'text-align': 'center', 'padding-left': '15%', 'padding-right': '15%'})

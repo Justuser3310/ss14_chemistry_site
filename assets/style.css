@@ -66,6 +66,15 @@ body {
 	width: 80vh;
 }
 
+.react_vol {
+	display: flex;
+	flexDirection: row;
+}
+.vol {
+	flex: 1;
+	padding-left: 25;
+	min-width: 100px;
+}
 
 /* Иконка + текст слева в панели */
 .img_text_panel {
@@ -126,7 +135,9 @@ body {
 }
 /* Сверхузкие телефоны */
 @media (max-width: 400px) {
-	.panel {
+	.react_vol {
 		flex-direction: column;
 	}
+	.vol {
+		padding-top: 8px;
 }
