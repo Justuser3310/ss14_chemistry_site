@@ -63,6 +63,7 @@ body {
 }
 .soc_logo {
 	width: 3.2vh;
+	filter: brightness(0) invert(1);
 }
 
 .react_vol_out {
@@ -115,7 +116,6 @@ body {
 /* Текст социалок */
 .soc_text {
   color: white;
-  text-decoration: auto;
   padding-left: 8%;
 	font-size: 1.6vh;
 	font-family: 'Mulish', sans-serif;
@@ -123,6 +123,11 @@ body {
 
 .empty_box {
 	flex: 1;
+}
+
+/* Отключить декорацию всего (сделано для убирания подчёркивания ссылок) */
+a {
+	text-decoration: none;
 }
 
 
