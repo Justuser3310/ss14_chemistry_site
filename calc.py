@@ -73,9 +73,10 @@ def ll_find(ll, pat):
 def calc(el, amount, main = False):
 	global db, recipe
 	if main:
-		recipe = [] #{}
+		recipe = []
 
-	comps = db[el][2:] # Получаем составные
+	comps = db[el][3:] # Получаем составные
+	heat = db[el][2]
 	out = db[el][0] #Количество на выходе
 
 	# Считаем количество частей
@@ -87,14 +88,11 @@ def calc(el, amount, main = False):
 	while out < parts:
 		# Предварительная часть
 		part = sround(amount/parts, parts)
-		#print(el, ': ',out,' < ', parts)
 		# Если итоговый объём <= входного объёма
 		if (parts+1)*part <= amount:
 			parts += 1
 		else:
 			break
-
-#		parts = out
 
 	# Считаем 1 часть
 	part = sround(amount/parts, parts)
@@ -103,43 +101,33 @@ def calc(el, amount, main = False):
 	for i in comps:
 		if i[0] in db:
 			lpart = calc(i[0], part*i[1])
+			# Если наша часть больше чем составная
+			if lpart < part:
+				part = lpart
 	# lpart - количество составного в итоге
 	# 50/3, часть = 16, ИТОГ: 16*3=48 <
-	try:
-		if lpart < part:
-			print("LPART: ",lpart)
-			part = lpart
-	except:
-		pass
+
+	if heat and not main:
+		recipe = [['heat']] + recipe
+	if heat and main:
+		recipe.append(['heat'])
 
 	# Перебираем элементарные вещества
 	for i in comps:
 		if i[0] not in db:
 			if i[0] == 'Плазма':
-				#recipe[i[0]] = 1
-
-				# Проверяем есть ли уже плазма
-				#exist = False
-				#for chk in recipe:
-				#	if chk[0] == 'Плазма':
-				#		exist = True
-				#		break
-				#if not exist:
-
 				if ll_find(recipe, 'Плазма') == None:
-					#recipe.append([i[0], 1])
 					recipe = [[i[0], 1]] + recipe
 			else:
-				#if i[0] not in recipe:
-				#	recipe[i[0]] = part*i[1]
-				#else:
-				#	recipe[i[0]] += part*i[1]
-				recipe.append([i[0], part*i[1]])
+				if heat:
+					recipe = [[i[0], part*i[1]]] + recipe
+				else:
+					recipe.append([i[0], part*i[1]])
 
 	# ЕСЛИ ЕСТЬ БАГИ ВЕРОЯТНО ЭТО ТУТ
 	# Если нету плазмы - соединяем вещества
 	if main:
-		if ll_find(recipe, 'Плазма') == None:
+		if ll_find(recipe, 'Плазма') == None and not heat:
 			print('START: ', recipe)
 			new_recipe = []
 			#for i in recipe:
@@ -172,6 +160,8 @@ def calc(el, amount, main = False):
 		print('PART: ', part)
 		return [recipe, out*part]
 	else:
+		print(recipe)
+		print(el)
 		print('PART: ', part)
 		return part*parts
 
@@ -179,4 +169,6 @@ def calc(el, amount, main = False):
 #print( calc("Бикаридин", 100, True))
 #print( calc("Диловен", 100, True))
 #print( calc("Эфедрин", 100, True))
-print( calc("Криоксадон", 100, True) )
+#print( calc("Криоксадон", 100, True) )
+#print( calc("Гидроксид", 100, True) )
+#print( calc("Пунктураз", 100, True) )
