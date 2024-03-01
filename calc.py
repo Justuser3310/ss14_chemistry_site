@@ -62,10 +62,18 @@ def sround(num, parts):
 		num -= 1
 	return num
 
+# Поиск элемента в списке рецепта
+def ll_find(ll, pat):
+	find = False
+	for i in range(len(ll)):
+		if ll[i][0] == pat:
+			return i
+	return None
+
 def calc(el, amount, main = False):
 	global db, recipe
 	if main:
-		recipe = {}
+		recipe = [] #{}
 
 	comps = db[el][2:] # Получаем составные
 	out = db[el][0] #Количество на выходе
@@ -108,12 +116,57 @@ def calc(el, amount, main = False):
 	for i in comps:
 		if i[0] not in db:
 			if i[0] == 'Плазма':
-				recipe[i[0]] = 1
+				#recipe[i[0]] = 1
+
+				# Проверяем есть ли уже плазма
+				#exist = False
+				#for chk in recipe:
+				#	if chk[0] == 'Плазма':
+				#		exist = True
+				#		break
+				#if not exist:
+
+				if ll_find(recipe, 'Плазма') == None:
+					#recipe.append([i[0], 1])
+					recipe = [[i[0], 1]] + recipe
 			else:
-				if i[0] not in recipe:
-					recipe[i[0]] = part*i[1]
-				else:
-					recipe[i[0]] += part*i[1]
+				#if i[0] not in recipe:
+				#	recipe[i[0]] = part*i[1]
+				#else:
+				#	recipe[i[0]] += part*i[1]
+				recipe.append([i[0], part*i[1]])
+
+	# ЕСЛИ ЕСТЬ БАГИ ВЕРОЯТНО ЭТО ТУТ
+	# Если нету плазмы - соединяем вещества
+	if main:
+		if ll_find(recipe, 'Плазма') == None:
+			print('START: ', recipe)
+			new_recipe = []
+			#for i in recipe:
+			while recipe != []:
+				print("ORIG:", recipe)
+				el = recipe[0]
+				new_recipe.append(el)
+				del recipe[0]
+
+				# Текущий id
+				id = ll_find(new_recipe, el[0])
+
+				# Если есть ещё такой элемент
+				while ll_find(recipe, el[0]):
+					same_id = ll_find(recipe, el[0])
+					print('OLD: ', new_recipe[id][1])
+					new_recipe[id][1] += recipe[same_id][1]
+					print('NEW: ', new_recipe[id][1] + recipe[same_id][1])
+					# Удаляем этот элемент
+					#recipe.pop( same_id )
+					del recipe[same_id]
+
+				print("NEW:", new_recipe)
+
+
+			recipe = new_recipe
+
 
 	if main:
 		print('PART: ', part)
@@ -126,3 +179,4 @@ def calc(el, amount, main = False):
 #print( calc("Бикаридин", 100, True))
 #print( calc("Диловен", 100, True))
 #print( calc("Эфедрин", 100, True))
+print( calc("Криоксадон", 100, True) )

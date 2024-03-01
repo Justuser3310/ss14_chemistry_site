@@ -143,7 +143,7 @@ def update_output(reaction, amount):
 		# Форматирование для HTML
 		result = []
 		for i in comps:
-			result.append( html.Div(i + ': ' + str(comps[i])
+			result.append( html.Div(i[0] + ': ' + str(i[1])
 , style={'background-color': 'rgb(213, 193, 86)', 'color': '#ffffff', 'margin-top': 10, 'border-radius': 10, 'padding': 15, 'font-family': '"Source Sans Pro", sans-serif', 'font-size': '120%'}) )
 
 		# Выходное вещество
