@@ -1,0 +1,51 @@
+<mxfile host="app.diagrams.net" modified="2024-04-01T16:29:26.277Z" agent="Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/118.0" etag="2Je_fr_wu3mHw-hys32a" version="24.2.0" type="device">
+  <diagram name="Page-1" id="Rpvc9EjizXgK4u0YfwZ1">
+    <mxGraphModel dx="768" dy="414" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="9GxXwJ9rFdMoL2Du00uo-6" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="1" source="9GxXwJ9rFdMoL2Du00uo-1" target="9GxXwJ9rFdMoL2Du00uo-5">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="9GxXwJ9rFdMoL2Du00uo-1" value="Парсер" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="170" y="420" width="100" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="9GxXwJ9rFdMoL2Du00uo-2" value="github.com/SerbiaStrong-220" style="ellipse;shape=cloud;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="370" y="415" width="250" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="9GxXwJ9rFdMoL2Du00uo-3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.07;entryY=0.4;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="9GxXwJ9rFdMoL2Du00uo-1" target="9GxXwJ9rFdMoL2Du00uo-2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="9GxXwJ9rFdMoL2Du00uo-4" value="Запрос данных" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="9GxXwJ9rFdMoL2Du00uo-3">
+          <mxGeometry x="-0.1787" y="-1" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="9GxXwJ9rFdMoL2Du00uo-10" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="1" source="9GxXwJ9rFdMoL2Du00uo-5" target="9GxXwJ9rFdMoL2Du00uo-7">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="9GxXwJ9rFdMoL2Du00uo-5" value="recipes.json" style="shape=hexagon;perimeter=hexagonPerimeter2;whiteSpace=wrap;html=1;fixedSize=1;" vertex="1" parent="1">
+          <mxGeometry x="175" y="340" width="90" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="9GxXwJ9rFdMoL2Du00uo-12" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="9GxXwJ9rFdMoL2Du00uo-7" target="9GxXwJ9rFdMoL2Du00uo-11">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="9GxXwJ9rFdMoL2Du00uo-7" value="calc.py" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="170" y="240" width="110" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="9GxXwJ9rFdMoL2Du00uo-8" value="Получение рецептов и т.п." style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry y="430" width="170" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="9GxXwJ9rFdMoL2Du00uo-9" value="Составление рецепта вещества" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry y="250" width="170" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="9GxXwJ9rFdMoL2Du00uo-11" value="site.py" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="390" y="242.5" width="100" height="45" as="geometry" />
+        </mxCell>
+        <mxCell id="9GxXwJ9rFdMoL2Du00uo-13" value="Отображение самого рецепта в виде компонентов" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="490" y="250" width="220" height="30" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
