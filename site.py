@@ -7,7 +7,6 @@ els = list(db.keys())
 from dash import Dash, dcc, html, Input, Output,callback
 app = Dash(__name__, title="SS14 Tools", update_title=None)
 
-
 #### ФОРМАТ СТРАНИЦЫ ####
 
 app.index_string = '''
@@ -164,4 +163,4 @@ def update_output(reaction, amount):
 
 if __name__ == '__main__':
 #	app.run(debug=True)
-	app.run(debug=False)
+	app.run(debug=False, port = 9000)

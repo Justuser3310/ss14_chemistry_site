@@ -71,7 +71,7 @@ class Reagent:
 		self.__category = init_data.get("category")
 		# raw значения которые обработаны
 
-		self.heat: bool = init_data.get("heat")
+		self.__heat: bool = init_data.get("heat")
 
 	@property
 	def name(self):
@@ -94,6 +94,9 @@ class Reagent:
 		# Добавляем категорию
 		print(self.__category)
 		result.append(self.__category)
+
+		# Добавляем нужен ли нагрев
+		result.append(self.__heat)
 
 		if not self.__recipe:
 			return None
@@ -171,7 +174,12 @@ def load_recipes(url,name):
 #		print(item["id"])
 		if item["id"] not in content:
 			continue
-		content[item["id"]]["heat"] = "minTemp" in item
+		if "minTemp" in item:
+			content[item["id"]]["heat"] = True
+		else:
+			content[item["id"]]["heat"] = False
+#		if "minTemp" in item:
+#			print(item["minTemp"])
 		content[item["id"]]["reactants"] = {
 			element: {"amount": item["reactants"][element]["amount"], "reagent": element in content} for element in
 			item["reactants"]}
