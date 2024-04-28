@@ -7,7 +7,11 @@ def parse_yml(url = 'https://raw.githubusercontent.com/SerbiaStrong-220/space-st
 
 def parse_ftl(url = 'https://raw.githubusercontent.com/SerbiaStrong-220/space-station-14/master/Resources/Locale/ru-RU/reagents/meta/medicine.ftl'):
 	raw = get(url).content.decode('utf-8')
-	print(raw)
-
-
-parse_ftl()
+	locales = {}
+	for i in raw.splitlines():
+		if 'name' in i:
+			splitted = i.split()
+			name = splitted[0][13:]
+			locale = splitted[2]
+			locales[name] = locale
+	return locales
