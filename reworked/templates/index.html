@@ -4,6 +4,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>SS14Tools</title>
+        <link rel="icon" type="image/x-icon" href="../assets/favicon.ico">
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
     </head>
@@ -33,30 +34,30 @@
         <center>
             <div class="container">
                 <div class="row">
-                    <div class="col p-5 gxl--">
-                        <div class="dropdown">
-                            <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" py-5>
-                                <span class="mx-10">Реакция</span>
-                            </button>
-                            <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="#">Пример 1</a></li>
-                                <li><a class="dropdown-item" href="#">Пример 2</a></li>
-                                <li><a class="dropdown-item" href="#">Пример 3</a></li>
-                            </ul>
-                        </div>
+                    <div class="col py-5">
+                        <select class="form-select" aria-label="Реакция">
+                            <option selected><p class="gx-5">Выберите (бля а что мы конкретно выбираем)</p></option>
+                            <option value="1">Пример 1</option>
+                            <option value="2">Пример 2</option>
+                            <option value="3">Пример 3</option>
+                        </select>
                     </div>
-                    <div class="col p-5 gxr--">
-                        <div class="dropdown">
-                            <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                Сколько?
-                            </button>
-                            <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="#">30</a></li>
-                                <li><a class="dropdown-item" href="#">50</a></li>
-                                <li><a class="dropdown-item" href="#">100</a></li>
-                                <li><a class="dropdown-item" href="#">300</a></li>
-                                <li><a class="dropdown-item" href="#">1000</a></li>
-                            </ul>
+                    <div class="col py-5">
+                        <div class="btn-group" role="group" aria-label="Базовая группа переключателей радио">
+                            <input type="radio" class="btn-check" name="btnradio" id="30" autocomplete="off" checked>
+                            <label class="btn btn-outline-primary" for="30">30</label>
+
+                            <input type="radio" class="btn-check" name="btnradio" id="50" autocomplete="off">
+                            <label class="btn btn-outline-primary" for="50">50</label>
+
+                            <input type="radio" class="btn-check" name="btnradio" id="100" autocomplete="off">
+                            <label class="btn btn-outline-primary" for="100">100</label>
+
+                            <input type="radio" class="btn-check" name="btnradio" id="300" autocomplete="off">
+                            <label class="btn btn-outline-primary" for="300">300</label>
+
+                            <input type="radio" class="btn-check" name="btnradio" id="1000" autocomplete="off">
+                            <label class="btn btn-outline-primary" for="1000">1000</label>
                         </div>
                     </div>
                 </div>
