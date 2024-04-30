@@ -8,3 +8,4 @@ class reag__:
 		self.out = out
 	def get_all(self):
 		return [self.category, self.comps, self.out]
+
