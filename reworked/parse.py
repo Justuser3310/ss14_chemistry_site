@@ -17,15 +17,15 @@ def parse_ftl(url = 'https://raw.githubusercontent.com/SerbiaStrong-220/space-st
 			locales[name] = locale
 	return locales
 
-def load_recipe(yml = parse_yml()):
-    recipes = {}
-    for element in yml:
-        category = "medicine"
-        product = element["id"]
-        comps = {}
-        for elem in element["reactants"]:
-            comps[elem] = element["reactants"][elem]["amount"]
-        for id, value in element["products"].items():
-            out =  value
-        recipes[product] = reag__(category=category, comps=comps, out=out)
-    return recipes
+def load_recipes(url = 'https://raw.githubusercontent.com/SerbiaStrong-220/space-station-14/master/Resources/Prototypes/Recipes/Reactions/medicine.yml', category = '-'):
+	yml = parse_yml(url)
+	recipes = {}
+	for element in yml:
+		product = element["id"]
+		comps = {}
+		for elem in element["reactants"]:
+			comps[elem] = element["reactants"][elem]["amount"]
+		for id, value in element["products"].items():
+			out =  value
+			recipes[product] = reag__(category=category, comps=comps, out=out)
+	return recipes
