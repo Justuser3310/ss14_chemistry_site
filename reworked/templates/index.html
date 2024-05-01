@@ -35,12 +35,15 @@
             <div class="container">
                 <div class="row py-5">
                     <div class="col-xl-9">
-                        <select class="form-select" aria-label="Реакция">
-                            <option selected><p class="gx-5">Выберите (бля а что мы конкретно выбираем)</p></option>
-                            <option value="1">Пример 1</option>
-                            <option value="2">Пример 2</option>
-                            <option value="3">Пример 3</option>
-                        </select>
+                        <form action="/submit" method="post">
+                            <select class="form-select" name="getrecept" aria-label="Реакция">
+                                <option selected><p class="gx-5">Выберите (бля а что мы конкретно выбираем)</p></option>
+                                <option value="1">Пример 1</option>
+                                <option value="2">Пример 2</option>
+                                <option value="3">Пример 3</option>
+                            </select>
+                            <input type="submit" value="Submit">
+                        </form>
                     </div>
                     <div class="container-fluid col">
                         <div class="btn-group" role="group" aria-label="Базовая группа переключателей радио">
