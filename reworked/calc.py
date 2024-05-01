@@ -1,12 +1,15 @@
-def expand_recipe(recipe, recipes, main = False):
+def expand_recipe(recipe, recipes):
 	global expanded
 
 	ok = False
-	part = 1
+	part = 1 # Одна часть
 	while not ok:
 		ok = True
+		# Перебираем элементы
 		for el in recipe:
+			# Если составное
 			if el in recipes:
+				# Одна часть должна делиться без остатка!
 				if part % recipes[el].out != 0:
 					ok = False
 					part += 1
@@ -26,7 +29,7 @@ def calc(element, amount, recipes):
 
 	global expanded
 	expanded = {}
-	expand_recipe(recipe, recipes, True)
+	expand_recipe(recipe, recipes)
 
 	return expanded
 
