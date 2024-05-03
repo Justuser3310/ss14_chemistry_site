@@ -31,28 +31,28 @@ def load_recipes(url = 'https://raw.githubusercontent.com/SerbiaStrong-220/space
 	return recipes
 
 def localize(ftl = parse_ftl()):
-    recipes = load_recipes()
-    for k, v in list(recipes.items()):
-        for word in ftl:
-            if k.lower() == word:
-                new_key = ftl[word].capitalize()
-                recipes[new_key] = recipes.pop(k)
-                for k1, v1 in list(recipes[new_key].comps.items()):
-                    for word1 in ftl:
-                        if k1.lower() == word1:
-                            new_key1 = ftl[word1]
-                            recipes[new_key].comps[new_key1] = recipes[new_key].comps.pop(k1)
-            else:
-                try:
-                    for k1, v1 in list(recipes[k].comps.items()):
-                        for word1 in ftl:
-                            if k1.lower() == word1:
-                                new_key1 = ftl[word1].capitalize()
-                                recipes[k].comps[new_key1] = recipes[k].comps.pop(k1)
-                except:
-                    for k1, v1 in list(recipes[new_key].comps.items()):
-                        for word1 in ftl:
-                            if k1.lower() == word1:
-                                new_key1 = ftl[word1].capitalize()
-                                recipes[new_key].comps[new_key1] = recipes[new_key].comps.pop(k1)
-    return recipes
+	recipes = load_recipes()
+	for k, v in list(recipes.items()):
+		for word in ftl:
+			if k.lower() == word:
+				new_key = ftl[word].capitalize()
+				recipes[new_key] = recipes.pop(k)
+				for k1, v1 in list(recipes[new_key].comps.items()):
+					for word1 in ftl:
+						if k1.lower() == word1:
+							new_key1 = ftl[word1]
+							recipes[new_key].comps[new_key1] = recipes[new_key].comps.pop(k1)
+			else:
+				try:
+					for k1, v1 in list(recipes[k].comps.items()):
+						for word1 in ftl:
+							if k1.lower() == word1:
+								new_key1 = ftl[word1].capitalize()
+								recipes[k].comps[new_key1] = recipes[k].comps.pop(k1)
+				except:
+					for k1, v1 in list(recipes[new_key].comps.items()):
+						for word1 in ftl:
+							if k1.lower() == word1:
+								new_key1 = ftl[word1].capitalize()
+								recipes[new_key].comps[new_key1] = recipes[new_key].comps.pop(k1)
+	return recipes
