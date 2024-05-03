@@ -30,29 +30,44 @@ def load_recipes(url = 'https://raw.githubusercontent.com/SerbiaStrong-220/space
 			recipes[product] = reag__(category=category, comps=comps, out=out)
 	return recipes
 
-def localize(ftl = parse_ftl()):
-    recipes = load_recipes()
-    for k, v in list(recipes.items()):
-        for word in ftl:
-            if k.lower() == word:
-                new_key = ftl[word].capitalize()
-                recipes[new_key] = recipes.pop(k)
-                for k1, v1 in list(recipes[new_key].comps.items()):
-                    for word1 in ftl:
-                        if k1.lower() == word1:
-                            new_key1 = ftl[word1]
-                            recipes[new_key].comps[new_key1] = recipes[new_key].comps.pop(k1)
-            else:
-                try:
-                    for k1, v1 in list(recipes[k].comps.items()):
-                        for word1 in ftl:
-                            if k1.lower() == word1:
-                                new_key1 = ftl[word1].capitalize()
-                                recipes[k].comps[new_key1] = recipes[k].comps.pop(k1)
-                except:
-                    for k1, v1 in list(recipes[new_key].comps.items()):
-                        for word1 in ftl:
-                            if k1.lower() == word1:
-                                new_key1 = ftl[word1].capitalize()
-                                recipes[new_key].comps[new_key1] = recipes[new_key].comps.pop(k1)
-    return recipes
+
+def localize(recipes, locale):
+	loc_recipes = {}
+	# Итерируем элементы
+	for element in recipes:
+		# Итерируем составные
+		el = recipes[element]
+		# Локализованные составные
+		loc_comps = {}
+		for comp in el.comps:
+			# Ищем перевод
+			if comp.lower() in locale:
+				loc = locale[comp.lower()].capitalize()
+				loc_comps[loc] = el.comps[comp]
+			else:
+				loc_comps[comp] = el.comps[comp]
+		# Заменяем на локализованное
+		el.comps = loc_comps
+
+		# Локализуем ключ
+		if element.lower() in locale:
+			loc = locale[element.lower()].capitalize()
+			loc_recipes[loc] = recipes[element]
+		else:
+			loc_recipes[element] = recipes[element]
+
+	return loc_recipes
+
+
+
+
+recipes = load_recipes()
+locales = parse_ftl()
+
+recipes = localize(recipes, locales)
+
+from icecream import ic
+ic.configureOutput(prefix='')
+for i in recipes:
+	el = [i, recipes[i].comps]
+	ic(el)
