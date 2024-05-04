@@ -8,7 +8,7 @@ def expand_recipe(recipe, recipes, main = False):
 	part = 1 # Одна часть
 	while not ok:
 		ok = True
-		min_vol = 0 # Объём мин. рецепта (вход)
+		vol_in = 0 # Объём мин. рецепта (вход)
 		# Перебираем элементы
 		for el in recipe:
 			# Если составное
@@ -20,19 +20,19 @@ def expand_recipe(recipe, recipes, main = False):
 					expanded = {}
 					break
 				else:
-					min_vol += expand_recipe(recipes[el].comps, recipes)
+					vol_in += expand_recipe(recipes[el].comps, recipes)
 			else:
 				if el in expanded:
 					expanded[el] += recipe[el]*part
 				else:
 					expanded[el] = recipe[el]*part
 
-				min_vol += recipe[el]*part
+				vol_in += recipe[el]*part
 
 	if main:
-		return expanded, min_vol, part
+		return expanded, vol_in, part
 	else:
-		return min_vol
+		return vol_in
 
 def calc(element, amount, recipes):
 	# Получаем характеристику элемента
