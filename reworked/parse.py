@@ -2,11 +2,10 @@ from requests import get
 from yaml import load, SafeLoader
 from reag__ import reag__
 
-def parse_yml(url = 'https://raw.githubusercontent.com/SerbiaStrong-220/space-station-14/master/Resources/Prototypes/Recipes/Reactions/medicine.yml'):
-	yml = load(get(url).content.decode('utf-8'), Loader=SafeLoader)
-	return yml
+#### Локализация ####
 
-def parse_ftl(url = 'https://raw.githubusercontent.com/SerbiaStrong-220/space-station-14/master/Resources/Locale/ru-RU/reagents/meta/medicine.ftl'):
+def parse_ftl(el, prefix = 'https://raw.githubusercontent.com/SerbiaStrong-220/space-station-14/master/Resources/Locale/ru-RU/reagents/meta'):
+	url = f'{prefix}/{el}.ftl'
 	raw = get(url).content.decode('utf-8')
 	locales = {}
 	for i in raw.splitlines():
@@ -17,19 +16,35 @@ def parse_ftl(url = 'https://raw.githubusercontent.com/SerbiaStrong-220/space-st
 			locales[name] = locale
 	return locales
 
-def load_recipes(url = 'https://raw.githubusercontent.com/SerbiaStrong-220/space-station-14/master/Resources/Prototypes/Recipes/Reactions/medicine.yml', category = '-'):
-	yml = parse_yml(url)
-	recipes = {}
-	for element in yml:
-		product = element["id"]
-		comps = {}
-		for elem in element["reactants"]:
-			comps[elem] = element["reactants"][elem]["amount"]
-		for id, value in element["products"].items():
-			out =  value
-			recipes[product] = reag__(category=category, comps=comps, out=out)
+def load_locales(locales_url):
+	locales = {}
+	for el in locales_url:
+		locales = locales | parse_ftl(el)
+	return locales
+
+#### Рецепты ####
+
+def parse_yml(el, prefix = 'https://raw.githubusercontent.com/SerbiaStrong-220/space-station-14/master/Resources/Prototypes/Recipes/Reactions'):
+	url = f'{prefix}/{el}.yml'
+	yml = load(get(url).content.decode('utf-8'), Loader=SafeLoader)
+	return yml
+
+def load_recipes(recipes_url, prefix = 'https://raw.githubusercontent.com/SerbiaStrong-220/space-station-14/master/Resources/Prototypes/Recipes/Reactions'):
+	for el in recipes_url:
+		yml = parse_yml(el, prefix)
+		recipes = {}
+		for element in yml:
+			product = element["id"]
+			comps = {}
+			for elem in element["reactants"]:
+				comps[elem] = element["reactants"][elem]["amount"]
+			for id, value in element["products"].items():
+				out =  value
+				recipes[product] = reag__(category=el, comps=comps, out=out)
 	return recipes
 
+
+#### Локализируем ####
 
 def localize(recipes, locale):
 	loc_recipes = {}
