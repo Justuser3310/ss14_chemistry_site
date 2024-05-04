@@ -1,3 +1,5 @@
+from precalc__ import precalc__
+
 global expanded
 def expand_recipe(recipe, recipes, main = False):
 	global expanded
@@ -48,3 +50,9 @@ def calc(element, amount, recipes):
 
 	return expanded, vol_in, vol_out
 
+
+def calc_all(recipes, amount):
+	precalc = {}
+	for el in recipes:
+		precalc[el] = precalc__(calc(el, amount, recipes))
+	return precalc

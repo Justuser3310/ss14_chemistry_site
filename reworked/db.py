@@ -1,13 +1,14 @@
 import os
 import json
 from reag__ import reag__
+from precalc__ import precalc__
 
-if not os.path.exists('db.json'):
+if not os.path.exists('precalc.json'):
 	db = {}
 	js = json.dumps(db, indent=2)
-	with open('db.json', 'w') as outfile:
+	with open('precalc.json', 'w') as outfile:
 		outfile.write(js)
-	print('Created new db.json')
+	print('Created new precalc.json')
 if not os.path.exists('raw_db.json'):
   db = {}
   js = json.dumps(db, indent=2)
@@ -35,9 +36,13 @@ def save(db, file):
 		raw[el] = class_data
 	write_db(raw, file)
 
-def load(file):
+def load(file, type = 'raw'):
 	raw = read_db(file)
 	db = {}
-	for el in raw:
-		db[el] = reag__(raw[el][0], raw[el][1], raw[el][2])
+	if type == 'raw':
+		for el in raw:
+			db[el] = reag__(raw[el][0], raw[el][1], raw[el][2])
+	elif type == 'precalc':
+		for el in raw:
+			db[el] = precalc__(raw[el])
 	return db
