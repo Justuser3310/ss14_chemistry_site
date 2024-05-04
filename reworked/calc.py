@@ -1,6 +1,8 @@
-global expanded ; expanded = {}
+global expanded
 def expand_recipe(recipe, recipes, main = False):
 	global expanded
+	if main:
+		expanded = {}
 
 	ok = False
 	part = 1 # Одна часть
@@ -34,19 +36,15 @@ def expand_recipe(recipe, recipes, main = False):
 
 def calc(element, amount, recipes):
 	# Получаем характеристику элемента
-	recipe, out = recipes[element].comps, recipes[element].out
+	recipe, vol_out = recipes[element].comps, recipes[element].out
 	# Расчитываем минимальный рецепт
-	expanded, vol, part = expand_recipe(recipe, recipes, True)
+	expanded, vol_in, part = expand_recipe(recipe, recipes, True)
 
-	# Домнажаем на сколько нужно
-	need = amount//vol
+	need = amount//vol_in
 	for i in expanded:
 		expanded[i] = expanded[i]*need
-	out = part*out*need
+	vol_in *= need
+	vol_out *= part*need
 
-	return expanded, out
+	return expanded, vol_in, vol_out
 
-
-from parse import *
-#print( load_recipes() )
-print( calc('Leporazine', 100, load_recipes()) )
