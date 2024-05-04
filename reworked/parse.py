@@ -57,17 +57,3 @@ def localize(recipes, locale):
 			loc_recipes[element] = recipes[element]
 
 	return loc_recipes
-
-
-
-
-recipes = load_recipes()
-locales = parse_ftl()
-
-recipes = localize(recipes, locales)
-
-from icecream import ic
-ic.configureOutput(prefix='')
-for i in recipes:
-	el = [i, recipes[i].comps]
-	ic(el)
