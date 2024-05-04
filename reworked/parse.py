@@ -40,7 +40,7 @@ def load_recipes(recipes_url, prefix = 'https://raw.githubusercontent.com/Serbia
 				comps[elem] = element["reactants"][elem]["amount"]
 			for id, value in element["products"].items():
 				out =  value
-				recipes[product] = reag__(category=el, comps=comps, out=out)
+				recipes[product] = reag__(comps=comps, out=out, category=el)
 	return recipes
 
 
