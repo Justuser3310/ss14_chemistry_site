@@ -1,11 +1,14 @@
 from requests import get
 from yaml import load, SafeLoader
 from reag__ import reag__
+from tqdm import tqdm
 
 #### Локализация ####
 
 def parse_ftl(el, prefix = 'https://raw.githubusercontent.com/SerbiaStrong-220/space-station-14/master/Resources/Locale/ru-RU/reagents/meta'):
-	url = f'{prefix}/{el}.ftl'
+	if '.ftl' not in el:
+		el += '.ftl'
+	url = f'{prefix}/{el}'
 	raw = get(url).content.decode('utf-8')
 	locales = {}
 	for i in raw.splitlines():
@@ -18,27 +21,33 @@ def parse_ftl(el, prefix = 'https://raw.githubusercontent.com/SerbiaStrong-220/s
 
 def load_locales(locales_url):
 	locales = {}
-	for el in locales_url:
+	for el in tqdm(locales_url):
 		locales = locales | parse_ftl(el)
 	return locales
 
 #### Рецепты ####
 
+SafeLoader.add_multi_constructor('', lambda loader, tag_suffix, node: None)
+
 def parse_yml(el, prefix = 'https://raw.githubusercontent.com/SerbiaStrong-220/space-station-14/master/Resources/Prototypes/Recipes/Reactions'):
-	url = f'{prefix}/{el}.yml'
+	if '.yml' not in el:
+		el += '.yml'
+	url = f'{prefix}/{el}'
 	yml = load(get(url).content.decode('utf-8'), Loader=SafeLoader)
 	return yml
 
 def load_recipes(recipes_url, prefix = 'https://raw.githubusercontent.com/SerbiaStrong-220/space-station-14/master/Resources/Prototypes/Recipes/Reactions'):
-	for el in recipes_url:
+	recipes = {}
+	for el in tqdm(recipes_url):
 		yml = parse_yml(el, prefix)
-		recipes = {}
 		for element in yml:
-			product = element["id"]
+			if 'products' not in element or 'reactants' not in element:
+				continue
+			product = element['id']
 			comps = {}
-			for elem in element["reactants"]:
-				comps[elem] = element["reactants"][elem]["amount"]
-			for id, value in element["products"].items():
+			for elem in element['reactants']:
+				comps[elem] = element['reactants'][elem]['amount']
+			for id, value in element['products'].items():
 				out =  value
 				recipes[product] = reag__(comps=comps, out=out, category=el)
 	return recipes

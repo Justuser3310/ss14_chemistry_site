@@ -12,11 +12,15 @@ vols = [30, 50, 100]
 if inp == '1':
 	print('Парсим и обрабатываем данные...')
 	# Загружаем локализацию
-	locales_url = ['medicine', 'chemicals']
+	locales_url = ['biological', 'botany', 'chemicals', 'cleaning', 'elements', 'fun',
+								'gases', 'medicine', 'narcotics', 'physical-desc', 'pyrotechnic', 'toxins',
+								'consumable/drink/alcohol', 'consumable/drink/drinks', 'consumable/drink/juice', 'consumable/drink/soda',
+								'consumable/food/condiments', 'consumable/food/food', 'consumable/food/ingredients']
 	locales = load_locales(locales_url)
 
 	# Загружаем сырые рецепты
-	recipes_url = ['medicine']
+	recipes_url = ['biological', 'botany', 'chemicals', 'cleaning', 'drinks', 'food',  
+								'fun', 'gas', 'medicine', 'pyrotechnic']
 	raw_recipes = load_recipes(recipes_url)
 
 	# Локализируем
