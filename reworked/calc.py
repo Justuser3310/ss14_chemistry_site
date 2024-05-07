@@ -1,4 +1,5 @@
 from precalc__ import precalc__
+from db import load
 
 global expanded
 def expand_recipe(recipe, recipes, main = False):
@@ -50,9 +51,17 @@ def calc(element, amount, recipes):
 
 	return expanded, vol_in, vol_out
 
-
 def calc_all(recipes, amount):
 	precalc = {}
 	for el in recipes:
 		precalc[el] = precalc__(calc(el, amount, recipes))
 	return precalc
+
+
+def precalc(element, amount):
+	try:
+		# Загружаем рецепты с нужным количеством
+		recipes = load(f'{amount}_calc.json', 'precalc')
+	except:
+		return 'Нету такого файла или вещества'
+	return recipes[element]
